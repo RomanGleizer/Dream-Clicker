@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using CryptoProject.Income;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
