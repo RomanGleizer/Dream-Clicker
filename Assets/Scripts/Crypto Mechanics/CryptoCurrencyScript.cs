@@ -1,9 +1,7 @@
-﻿using CryptoProject.Income;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace CryptoProject;
 
-public class CryptoCurrencyScript : ICryptoCurrency
+public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
     private readonly PlayerData _data;
     public bool IsInGame;
