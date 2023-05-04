@@ -20,10 +20,8 @@ public class Task : MonoBehaviour
 }
 
 
-
 #region
 //Зачатки вывода задач
-
 
 //public string[] taskTitles;
 //public Sprite[] taskSprites;
