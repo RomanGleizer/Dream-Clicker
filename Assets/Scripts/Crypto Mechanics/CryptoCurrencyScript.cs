@@ -36,4 +36,8 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
             task.IsGet = true;
         }
     }
+    public void Spend(double count)
+    {
+        _data.TotalCurrencyCnt -= count;
+    }
 }
