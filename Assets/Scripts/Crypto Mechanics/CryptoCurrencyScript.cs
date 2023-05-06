@@ -13,28 +13,17 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         _data = data;
     }
 
-    public void AddIncomeItem(IncomeItem item)
+    public void BuyOrUpgrade(Item item)
     {
-        _data.IncomeList.Add(item);
-        if (item.Type == IncomeType.Active)
-            _data.Incomes.Active += item.Quantity;
-        else
-            _data.Incomes.Passive += item.Quantity;
+        if (_data.TotalCurrencyCnt >= item.Price) item.BuyOrUpgrade(_data);
     }
 
-    public void Tap()
-    {
-        _data.TotalCurrencyCnt += _data.Incomes.Active;
-    }
-
-    public void Spend(double count)
-    {
-        _data.TotalCurrencyCnt -= count;
-    }
+    public void Tap() => _data.TotalCurrencyCnt += _data.TotalIncomes.Active;
 
     public void AddPassiveIncome()
     {
-        _data.TotalCurrencyCnt += IsInGame ? _data.Incomes.Passive : _data.Incomes.Passive * PassiveIncomeCoefficient;
+        _data.TotalCurrencyCnt +=
+            IsInGame ? _data.TotalIncomes.Passive : _data.TotalIncomes.Passive * PassiveIncomeCoefficient;
     }
 
     public void BuyTask(Task task)
