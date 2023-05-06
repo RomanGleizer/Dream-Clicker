@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
@@ -23,5 +24,16 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     {
         _data.TotalCurrencyCnt +=
             IsInGame ? _data.TotalIncomes.Passive : _data.TotalIncomes.Passive * PassiveIncomeCoefficient;
+    }
+
+    public void BuyTask(Task task)
+    {
+        if (_data.TotalCurrencyCnt >= task.Cost && task.Requirements.All(x => _data.IncomeList.Contains(x)))
+        {
+            Spend(task.Cost);
+            _data.TotalCurrencyCnt += task.SingleBonus;
+            GetComponent<Image>().sprite = task.ButtonPressed;
+            task.IsGet = true;
+        }
     }
 }
