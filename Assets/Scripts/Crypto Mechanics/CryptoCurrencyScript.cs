@@ -43,7 +43,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         {
             Spend(task.Cost);
             _data.TotalCurrencyCnt += task.SingleBonus;
-            //GetComponent<Image>().sprite = task.ButtonPressed;
+            GetComponent<Image>().sprite = task.ButtonPressed;
             task.IsGet = true;
         }
     }

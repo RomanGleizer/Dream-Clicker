@@ -9,7 +9,7 @@ public class Task : MonoBehaviour
     public readonly double Cost;
     public readonly double SingleBonus;
     public bool IsGet = false;
-    //public Sprite Button, ButtonPressed;
+    public Sprite Button, ButtonPressed;
 
     public Task (List<IncomeItem> requirements, double cost, double singleBonus)
     {
