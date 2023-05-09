@@ -1,4 +1,4 @@
-﻿public abstract class Incomes
+public abstract class Incomes
 {
     public double TotalIncome => Passive + Active;
     public double Passive;
