@@ -13,8 +13,8 @@ EditorBuildSettings:
     guid: e425a8b745075f546a70316498c5c7ea
   - enabled: 1
     path: Assets/Scenes/Actives.unity
-    guid: 2e42c0a9f46573c43827e5b57c936712
+    guid: 0e2c5570852e13f48a169dcffb185ad5
   - enabled: 1
     path: Assets/Scenes/Tasks.unity
-    guid: 1da91187508b4c3478a5cc1943e25532
+    guid: 2866cf6c4dad6494ab341364015d8c84
   m_configObjects: {}
