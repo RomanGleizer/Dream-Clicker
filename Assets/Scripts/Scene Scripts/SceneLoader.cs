@@ -5,28 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    void Start()
-    {
-        LoadScene("LoadScene");
-    }
+    //void Start()
+    //{
+    //    LoadScene("LoadScene");
+    //}
 
-    public void LoadScene (int id)
-    {
-        SceneManager.LoadScene(id);
-    }
-    public void LoadScene(string sceneName)
-    {
-        StartCoroutine(LoadSceneAsync(sceneName));
-    }
+    //public void LoadScene (int id)
+    //{
+    //    SceneManager.LoadScene(id);
+    //}
+    //public void LoadScene(string sceneName)
+    //{
+    //    StartCoroutine(LoadSceneAsync(sceneName));
+    //}
 
-    IEnumerator LoadSceneAsync(string sceneName)
-    {
-        AsyncOperation LoadingScene = SceneManager.LoadSceneAsync(sceneName);
+    //IEnumerator LoadSceneAsync(string sceneName)
+    //{
+    //    AsyncOperation LoadingScene = SceneManager.LoadSceneAsync(sceneName);
 
-        while (!LoadingScene.isDone)
-        {
-            int progress = Mathf.RoundToInt(LoadingScene.progress * 100);
-            yield return null;
-        }
-    }
+    //    while (!LoadingScene.isDone)
+    //    {
+    //        int progress = Mathf.RoundToInt(LoadingScene.progress * 100);
+    //        yield return null;
+    //    }
+    //}
 }
