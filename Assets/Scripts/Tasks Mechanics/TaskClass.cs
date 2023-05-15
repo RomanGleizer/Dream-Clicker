@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Task : MonoBehaviour
 {
-    public readonly List<IncomeItem> Requirements;
+    public readonly List<Item> Requirements;
     public readonly double Cost;
     public readonly double SingleBonus;
     public bool IsGet = false;
     public Sprite Button, ButtonPressed;
 
-    public Task (List<IncomeItem> requirements, double cost, double singleBonus)
+    public Task (List<Item> requirements, double cost, double singleBonus)
     {
         Requirements = requirements;
         Cost = cost;

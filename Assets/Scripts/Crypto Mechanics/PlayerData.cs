@@ -1,23 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Crypto_Mechanics
 {
     public class PlayerData : MonoBehaviour
     {
-        public string Name { get; set; }
-        public double TotalCurrencyCnt { get; set; }
-        public List<IncomeItem> IncomeList;
-        public Incomes Incomes;
+        [SerializeField] private string Name;
+        [SerializeField] public double TotalCurrencyCnt;
         public List<UpgradableItem> UpgradableItemList;
-        public List<OneTimeItem> OneTimeItemList;
-        public readonly TotalIncomes TotalIncomes;
+        public List<Task> Tasks; 
+        public TotalIncomes TotalIncomes;
 
-        public PlayerData(string name)
+        private void Start()
         {
-            Name = name;
             UpgradableItemList = new List<UpgradableItem>();
-            OneTimeItemList = new List<OneTimeItem>();
+            Tasks = new List<Task>();
             TotalIncomes = new TotalIncomes();
         }
     }
