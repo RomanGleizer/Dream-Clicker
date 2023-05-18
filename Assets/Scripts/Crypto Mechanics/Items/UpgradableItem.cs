@@ -1,4 +1,6 @@
+using System;
 using Crypto_Mechanics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,41 +8,38 @@ public class UpgradableItem : Item
 {
     private const int MaxLevel = 10;
     private const double UpgradeCoefficient = 1.8;
-    public int Level { get; private set; }
-    public readonly IncomeType Type;
-    public double Income { get; protected set; }
+    [SerializeField] private int Level;
+    [SerializeField] private IncomeType Type;
+    [SerializeField] private double Income;
+    [SerializeField] private double price;
+    [SerializeField] private TextMeshProUGUI _text;
 
-    public UpgradableItem(
-        string name,
-        IncomeType type,
-        double income,
-        double price,
-        Image image,
-        string description
-    ) : base(name, price, image, description)
+    private void Start()
     {
-        Type = type;
-        Income = income;
+        _text.text = price.ToString();
     }
 
     public override void BuyOrUpgrade(PlayerData playerData)
     {
-        if (Level == MaxLevel) return;
+        Debug.Log("Hello");
+        if (playerData.TotalCurrencyCnt < price || Level == MaxLevel) return;
+        double deltaIncome = Income;
         if (Level == 0) playerData.UpgradableItemList.Add(this);
         else
         {
             var previousIncome = Income;
             Income *= UpgradeCoefficient;
-            var deltaIncome = Income - previousIncome;
-
-            if (Type == IncomeType.Active)
-                playerData.TotalIncomes.Active += deltaIncome;
-            else
-                playerData.TotalIncomes.Passive += deltaIncome;
+            deltaIncome = Income - previousIncome;
         }
-
-        playerData.TotalCurrencyCnt -= Price;
+        if (Type == IncomeType.Active)
+            playerData.TotalIncomes.Active += deltaIncome;
+        else
+            playerData.TotalIncomes.Passive += deltaIncome;
+        playerData.TotalCurrencyCnt -= price;
         Level++;
-        Price *= UpgradeCoefficient;
+        price *= UpgradeCoefficient;
+        price = Math.Ceiling(price);
+        if (Level == MaxLevel) _text.text = "Макс. ур.";
+        else _text.text = price.ToString();
     }
 }

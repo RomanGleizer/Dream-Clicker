@@ -1,25 +1,34 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Crypto_Mechanics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
-    private readonly PlayerData _data;
+    [SerializeField] PlayerData _data;
     public bool IsInGame;
     private const double PassiveIncomeCoefficient = 0.3;
-
-    public CryptoCurrencyScript(PlayerData data)
-    {
-        _data = data;
-    }
+    [SerializeField] public TextMeshProUGUI TextIncome;
 
     public void BuyOrUpgrade(Item item)
     {
-        if (_data.TotalCurrencyCnt >= item.Price) item.BuyOrUpgrade(_data);
+        item.BuyOrUpgrade(_data);
+        TextIncome.text = _data.TotalCurrencyCnt.ToString();
     }
 
-    public void Tap() => _data.TotalCurrencyCnt += _data.TotalIncomes.Active;
+    private void Start()
+    {
+        TextIncome.text = _data.TotalCurrencyCnt.ToString();
+    }
+
+    public void Tap()
+    {
+        _data.TotalCurrencyCnt += _data.TotalIncomes.Active;
+        _data.TotalCurrencyCnt = Math.Ceiling(_data.TotalCurrencyCnt);
+        TextIncome.text = _data.TotalCurrencyCnt.ToString();
+    } 
 
     public void AddPassiveIncome()
     {
@@ -29,7 +38,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void BuyTask(Task task)
     {
-        if (_data.TotalCurrencyCnt >= task.Cost && task.Requirements.All(x => _data.IncomeList.Contains(x)))
+        if (_data.TotalCurrencyCnt >= task.Cost && task.Requirements.All(x => _data.UpgradableItemList.Contains(x)))
         {
             Spend(task.Cost);
             _data.TotalCurrencyCnt += task.SingleBonus;
