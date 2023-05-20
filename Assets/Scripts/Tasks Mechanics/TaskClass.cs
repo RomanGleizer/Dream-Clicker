@@ -1,21 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Crypto_Mechanics;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+using TMPro;
 
 public class Task : MonoBehaviour
 {
-    public readonly List<Item> Requirements;
-    public readonly double Cost;
-    public readonly double SingleBonus;
-    public bool IsGet = false;
-    public Sprite Button, ButtonPressed;
+    [SerializeField] public List<string> Requirements;
+    [SerializeField] public double Cost;
+    [SerializeField] public double SingleBonus;
+    [SerializeField] private TextMeshProUGUI _text;
 
-    public Task (List<Item> requirements, double cost, double singleBonus)
+    private void Start()
     {
-        Requirements = requirements;
-        Cost = cost;
-        SingleBonus = singleBonus;
+        _text.text = Cost.ToString();
+    }
+    public void Buy(PlayerData data)
+    {
+        if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableItemList.Contains(x)))
+        {
+            data.TotalCurrencyCnt += SingleBonus;
+            data.Tasks.Add(this);
+            _text.text = "Приобретено";
+        }
     }
 }
 

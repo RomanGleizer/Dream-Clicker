@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UpgradableItem : Item
 {
+    [SerializeField] public string Name;
     private const int MaxLevel = 10;
     private const double UpgradeCoefficient = 1.8;
     [SerializeField] private int Level;
@@ -21,10 +22,9 @@ public class UpgradableItem : Item
 
     public override void BuyOrUpgrade(PlayerData playerData)
     {
-        Debug.Log("Hello");
         if (playerData.TotalCurrencyCnt < price || Level == MaxLevel) return;
         double deltaIncome = Income;
-        if (Level == 0) playerData.UpgradableItemList.Add(this);
+        if (Level == 0) playerData.UpgradableItemList.Add(Name);
         else
         {
             var previousIncome = Income;
