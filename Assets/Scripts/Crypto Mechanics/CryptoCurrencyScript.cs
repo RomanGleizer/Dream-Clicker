@@ -11,23 +11,25 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     public bool IsInGame;
     private const double PassiveIncomeCoefficient = 0.3;
     [SerializeField] public TextMeshProUGUI TextIncome;
+    [SerializeField] public TextMeshProUGUI TextPassive;
 
     public void BuyOrUpgrade(Item item)
     {
         item.BuyOrUpgrade(_data);
-        TextIncome.text = _data.TotalCurrencyCnt.ToString();
+        TextIncome.text = _data.GetTotalCurrency();
+        TextPassive.text = _data.GetPassive();
     }
 
     private void Start()
     {
-        TextIncome.text = _data.TotalCurrencyCnt.ToString();
+        TextIncome.text = _data.GetTotalCurrency();;
     }
 
     public void Tap()
     {
         _data.TotalCurrencyCnt += _data.TotalIncomes.Active;
         _data.TotalCurrencyCnt = Math.Ceiling(_data.TotalCurrencyCnt);
-        TextIncome.text = _data.TotalCurrencyCnt.ToString();
+        TextIncome.text = _data.GetTotalCurrency();;
     } 
 
     public void AddPassiveIncome()
@@ -38,16 +40,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void BuyTask(Task task)
     {
-        if (_data.TotalCurrencyCnt >= task.Cost && task.Requirements.All(x => _data.UpgradableItemList.Contains(x)))
-        {
-            Spend(task.Cost);
-            _data.TotalCurrencyCnt += task.SingleBonus;
-            GetComponent<Image>().sprite = task.ButtonPressed;
-            task.IsGet = true;
-        }
-    }
-    public void Spend(double count)
-    {
-        _data.TotalCurrencyCnt -= count;
+        task.Buy(_data);
     }
 }

@@ -8,15 +8,25 @@ namespace Crypto_Mechanics
     {
         [SerializeField] private string Name;
         [SerializeField] public double TotalCurrencyCnt;
-        public List<UpgradableItem> UpgradableItemList;
+        public List<string> UpgradableItemList;
         public List<Task> Tasks; 
         public TotalIncomes TotalIncomes;
 
         private void Start()
         {
-            UpgradableItemList = new List<UpgradableItem>();
+            UpgradableItemList = new List<string>();
             Tasks = new List<Task>();
             TotalIncomes = new TotalIncomes();
+        }
+
+        public string GetTotalCurrency()
+        {
+            return TotalCurrencyCnt.ToString() + " D";
+        }
+
+        public string GetPassive()
+        {
+            return TotalIncomes.Passive.ToString() + " D/c";
         }
     }
 }
