@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec3b3d8a2bc7af4480227f2698a6bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: {fileID: 0}
+  Name: {fileID: 933279380}
   Description: {fileID: 933279380}
   Image: {fileID: 0}
   Name: 
@@ -1191,7 +1191,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1700961426}
+  levelText: {fileID: 1859475758}
+  incomeText: {fileID: 1349380626}
+  priceText: {fileID: 1700961426}
 --- !u!1 &172818825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3658,7 +3660,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1586704014}
+  levelText: {fileID: 612764874}
+  incomeText: {fileID: 1255418111}
+  priceText: {fileID: 1586704014}
 --- !u!1 &538873267
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,7 +5205,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1904764631}
+  levelText: {fileID: 1607830116}
+  incomeText: {fileID: 601024014}
+  priceText: {fileID: 1904764631}
 --- !u!1 &631964778
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,7 +6443,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1644749509}
+  levelText: {fileID: 1167785812}
+  incomeText: {fileID: 1258261461}
+  priceText: {fileID: 1644749509}
 --- !u!1 &733115650
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,7 +6601,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 219047778}
+  levelText: {fileID: 324275429}
+  incomeText: {fileID: 2031734127}
+  priceText: {fileID: 219047778}
 --- !u!1 &746010086
 GameObject:
   m_ObjectHideFlags: 0
@@ -8011,7 +8021,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 2010264134}
+  levelText: {fileID: 811241110}
+  incomeText: {fileID: 1840490314}
+  priceText: {fileID: 2010264134}
 --- !u!1 &817709046
 GameObject:
   m_ObjectHideFlags: 0
@@ -8167,7 +8179,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 617626682}
+  levelText: {fileID: 22658606}
+  incomeText: {fileID: 1089182248}
+  priceText: {fileID: 617626682}
 --- !u!1 &874741574
 GameObject:
   m_ObjectHideFlags: 0
@@ -8458,7 +8472,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 15774868}
+  levelText: {fileID: 1579901391}
+  incomeText: {fileID: 474059325}
+  priceText: {fileID: 15774868}
 --- !u!1 &915214351
 GameObject:
   m_ObjectHideFlags: 0
@@ -9667,7 +9683,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 369969430}
+  levelText: {fileID: 1872871534}
+  incomeText: {fileID: 1711242243}
+  priceText: {fileID: 369969430}
 --- !u!1 &998208018
 GameObject:
   m_ObjectHideFlags: 0
@@ -9823,7 +9841,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 805691880}
+  levelText: {fileID: 915214353}
+  incomeText: {fileID: 1821585540}
+  priceText: {fileID: 805691880}
 --- !u!1 &1010109596
 GameObject:
   m_ObjectHideFlags: 0
@@ -9979,7 +9999,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 323193087}
+  levelText: {fileID: 1414637529}
+  incomeText: {fileID: 513847156}
+  priceText: {fileID: 323193087}
 --- !u!1 &1018543866
 GameObject:
   m_ObjectHideFlags: 0
@@ -10274,7 +10296,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1816933081}
+  levelText: {fileID: 983227508}
+  incomeText: {fileID: 228194542}
+  priceText: {fileID: 1816933081}
 --- !u!1 &1051763002
 GameObject:
   m_ObjectHideFlags: 0
@@ -10856,7 +10880,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1339578202}
+  levelText: {fileID: 773693584}
+  incomeText: {fileID: 1051763004}
+  priceText: {fileID: 1339578202}
 --- !u!1 &1073123699
 GameObject:
   m_ObjectHideFlags: 0
@@ -18028,7 +18054,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1917007512}
+  levelText: {fileID: 1278221035}
+  incomeText: {fileID: 1986366817}
+  priceText: {fileID: 1917007512}
 --- !u!1 &1660478245
 GameObject:
   m_ObjectHideFlags: 0
@@ -18395,7 +18423,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1115954202}
+  levelText: {fileID: 951810352}
+  incomeText: {fileID: 1171701030}
+  priceText: {fileID: 1115954202}
 --- !u!1 &1671868826
 GameObject:
   m_ObjectHideFlags: 0
@@ -22005,7 +22035,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 576372973}
+  levelText: {fileID: 1512547086}
+  incomeText: {fileID: 131356125}
+  priceText: {fileID: 576372973}
 --- !u!1 &1986366815
 GameObject:
   m_ObjectHideFlags: 0
@@ -22296,7 +22328,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1159894520}
+  levelText: {fileID: 1928947773}
+  incomeText: {fileID: 1753299999}
+  priceText: {fileID: 1159894520}
 --- !u!1 &2010264132
 GameObject:
   m_ObjectHideFlags: 0
@@ -22870,7 +22904,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 433500526}
+  levelText: {fileID: 1438353910}
+  incomeText: {fileID: 679733393}
+  priceText: {fileID: 433500526}
 --- !u!1 &2034896894
 GameObject:
   m_ObjectHideFlags: 0
@@ -23240,7 +23276,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 756970369}
+  levelText: {fileID: 1073123701}
+  incomeText: {fileID: 1238156554}
+  priceText: {fileID: 756970369}
 --- !u!1 &2053618790
 GameObject:
   m_ObjectHideFlags: 0
@@ -23396,7 +23434,9 @@ MonoBehaviour:
   Type: 0
   Income: 100
   price: 200
-  _text: {fileID: 1184105730}
+  levelText: {fileID: 1208524303}
+  incomeText: {fileID: 1596168646}
+  priceText: {fileID: 1184105730}
 --- !u!1 &2111220259
 GameObject:
   m_ObjectHideFlags: 0
