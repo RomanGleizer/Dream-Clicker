@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public abstract class Item : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI Name;
     [SerializeField] TextMeshProUGUI Description;
     [SerializeField] Image Image;
 

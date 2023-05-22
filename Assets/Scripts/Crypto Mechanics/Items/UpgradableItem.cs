@@ -2,29 +2,34 @@ using System;
 using Crypto_Mechanics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UpgradableItem : Item
 {
     [SerializeField] public string Name;
     private const int MaxLevel = 10;
-    private const double UpgradeCoefficient = 1.8;
+    private const double UpgradeCoefficient = 1.3;
     [SerializeField] private int Level;
     [SerializeField] private IncomeType Type;
     [SerializeField] private double Income;
     [SerializeField] private double price;
-    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private TextMeshProUGUI incomeText;
+    [SerializeField] private TextMeshProUGUI priceText;
 
     private void Start()
     {
-        _text.text = price.ToString();
+        levelText.text = $"Приобретено: {Level}";
+        incomeText.text = $"Доход: {Income} D/c";
+        priceText.text = $"{price} D";
     }
 
     public override void BuyOrUpgrade(PlayerData playerData)
     {
         if (playerData.TotalCurrencyCnt < price || Level == MaxLevel) return;
-        double deltaIncome = Income;
-        if (Level == 0) playerData.UpgradableItemList.Add(Name);
+        var deltaIncome = Income;
+        if (Level == 0) playerData.UpgradableItemList.Add(Name.ToString());
         else
         {
             var previousIncome = Income;
@@ -39,7 +44,9 @@ public class UpgradableItem : Item
         Level++;
         price *= UpgradeCoefficient;
         price = Math.Ceiling(price);
-        if (Level == MaxLevel) _text.text = "Макс. ур.";
-        else _text.text = price.ToString();
+        
+        levelText.text = $"Приобретено: {Level}";
+        incomeText.text = $"Доход: {Income} D/c";
+        priceText.text = Level == MaxLevel ? "Макс. ур." : $"{price} D";
     }
 }
