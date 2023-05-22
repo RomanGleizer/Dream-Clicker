@@ -9,7 +9,7 @@ public class UpgradableItem : Item
 {
     [SerializeField] public string Name;
     private const int MaxLevel = 10;
-    private const double UpgradeCoefficient = 1.8;
+    private const double UpgradeCoefficient = 1.3;
     [SerializeField] private int Level;
     [SerializeField] private IncomeType Type;
     [SerializeField] private double Income;
@@ -21,7 +21,7 @@ public class UpgradableItem : Item
     private void Start()
     {
         levelText.text = $"Приобретено: {Level}";
-        incomeText.text = $"Заработок: {Income} D/c";
+        incomeText.text = $"Доход: {Income} D/c";
         priceText.text = $"{price} D";
     }
 
@@ -46,7 +46,7 @@ public class UpgradableItem : Item
         price = Math.Ceiling(price);
         
         levelText.text = $"Приобретено: {Level}";
-        incomeText.text = $"Заработок: {Income} D/c";
+        incomeText.text = $"Доход: {Income} D/c";
         priceText.text = Level == MaxLevel ? "Макс. ур." : $"{price} D";
     }
 }
