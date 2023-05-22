@@ -17,13 +17,13 @@ public class UpgradableItem : Item
 
     private void Start()
     {
-        _text.text = price.ToString();
+        _text.text = price + " D";
     }
 
     public override void BuyOrUpgrade(PlayerData playerData)
     {
         if (playerData.TotalCurrencyCnt < price || Level == MaxLevel) return;
-        double deltaIncome = Income;
+        var deltaIncome = Income;
         if (Level == 0) playerData.UpgradableItemList.Add(Name);
         else
         {
@@ -39,7 +39,6 @@ public class UpgradableItem : Item
         Level++;
         price *= UpgradeCoefficient;
         price = Math.Ceiling(price);
-        if (Level == MaxLevel) _text.text = "Макс. ур.";
-        else _text.text = price.ToString();
+        _text.text = Level == MaxLevel ? "Макс. ур." : price + " D";
     }
 }
