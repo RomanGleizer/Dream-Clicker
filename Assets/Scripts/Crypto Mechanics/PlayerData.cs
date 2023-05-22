@@ -21,12 +21,12 @@ namespace Crypto_Mechanics
 
         public string GetTotalCurrency()
         {
-            return TotalCurrencyCnt.ToString() + " D";
+            return $"{TotalCurrencyCnt} D";
         }
 
         public string GetPassive()
         {
-            return TotalIncomes.Passive.ToString() + " D/c";
+            return $"{TotalIncomes.Passive} D/c";
         }
     }
 }
