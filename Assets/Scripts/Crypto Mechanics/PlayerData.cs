@@ -18,15 +18,5 @@ namespace Crypto_Mechanics
             Tasks = new List<Task>();
             TotalIncomes = new TotalIncomes();
         }
-
-        public string GetTotalCurrency()
-        {
-            return $"{TotalCurrencyCnt} D";
-        }
-
-        public string GetPassive()
-        {
-            return $"{TotalIncomes.Passive} D/c";
-        }
     }
 }
