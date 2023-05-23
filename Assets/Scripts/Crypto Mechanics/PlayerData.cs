@@ -12,7 +12,7 @@ namespace Crypto_Mechanics
         public List<Task> Tasks; 
         public TotalIncomes TotalIncomes;
 
-        private void Start()
+        public PlayerData()
         {
             UpgradableItemList = new List<string>();
             Tasks = new List<Task>();

@@ -5343,7 +5343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  TotalCurrencyCnt: 490
+  TotalCurrencyCnt: 0
   UpgradableItemList: []
   Tasks: []
 --- !u!1 &643496751
