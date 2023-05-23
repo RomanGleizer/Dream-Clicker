@@ -12,21 +12,11 @@ namespace Crypto_Mechanics
         public List<Task> Tasks; 
         public TotalIncomes TotalIncomes;
 
-        private void Start()
+        public PlayerData()
         {
             UpgradableItemList = new List<string>();
             Tasks = new List<Task>();
             TotalIncomes = new TotalIncomes();
-        }
-
-        public string GetTotalCurrency()
-        {
-            return TotalCurrencyCnt.ToString() + " D";
-        }
-
-        public string GetPassive()
-        {
-            return TotalIncomes.Passive.ToString() + " D/c";
         }
     }
 }

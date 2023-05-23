@@ -3,6 +3,7 @@ using System.Linq;
 using Crypto_Mechanics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
@@ -10,26 +11,27 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     [SerializeField] PlayerData _data;
     public bool IsInGame;
     private const double PassiveIncomeCoefficient = 0.3;
-    [SerializeField] public TextMeshProUGUI TextIncome;
-    [SerializeField] public TextMeshProUGUI TextPassive;
+    [SerializeField] public TextMeshProUGUI textTotalCurrencyCnt;
+    [SerializeField] public TextMeshProUGUI textPassive;
+    [SerializeField] public TextMeshProUGUI textCurrencyCntPerClick;
 
     public void BuyOrUpgrade(Item item)
     {
         item.BuyOrUpgrade(_data);
-        TextIncome.text = _data.GetTotalCurrency();
-        TextPassive.text = _data.GetPassive();
+        Start();
     }
 
     private void Start()
     {
-        TextIncome.text = _data.GetTotalCurrency();;
+        textTotalCurrencyCnt.text = $"{Math.Round(_data.TotalCurrencyCnt, 1)} D";
+        textPassive.text = $"{_data.TotalIncomes.Passive} D/s";
+        textCurrencyCntPerClick.text = $"{_data.TotalIncomes.Active} D";
     }
 
     public void Tap()
     {
         _data.TotalCurrencyCnt += _data.TotalIncomes.Active;
-        _data.TotalCurrencyCnt = Math.Ceiling(_data.TotalCurrencyCnt);
-        TextIncome.text = _data.GetTotalCurrency();;
+        textTotalCurrencyCnt.text = $"{Math.Round(_data.TotalCurrencyCnt, 1)} D";
     } 
 
     public void AddPassiveIncome()
