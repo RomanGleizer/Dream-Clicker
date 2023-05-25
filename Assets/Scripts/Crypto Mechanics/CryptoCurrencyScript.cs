@@ -43,5 +43,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     public void BuyTask(Task task)
     {
         task.Buy(_data);
+        Start();
     }
 }
