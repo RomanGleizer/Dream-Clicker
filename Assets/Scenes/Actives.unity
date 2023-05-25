@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 933279380}
   Image: {fileID: 0}
-  Name: 
+  Name: actAn
   Level: 0
   Type: 0
   Income: 100
@@ -3654,7 +3654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1664890433}
   Image: {fileID: 0}
-  Name: 
+  Name: actChar
   Level: 0
   Type: 0
   Income: 100
@@ -5198,7 +5198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 659604102}
   Image: {fileID: 0}
-  Name: 
+  Name: actAd
   Level: 0
   Type: 0
   Income: 100
@@ -6436,7 +6436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1948926878}
   Image: {fileID: 0}
-  Name: 
+  Name: actProg
   Level: 0
   Type: 0
   Income: 100
@@ -6593,7 +6593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1438465628}
   Image: {fileID: 0}
-  Name: 
+  Name: actTel
   Level: 0
   Type: 0
   Income: 100
@@ -8012,7 +8012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 979796376}
   Image: {fileID: 0}
-  Name: 
+  Name: actCool
   Level: 0
   Type: 0
   Income: 150
@@ -8169,7 +8169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 2111220261}
   Image: {fileID: 0}
-  Name: 
+  Name: actPR
   Level: 0
   Type: 0
   Income: 100
@@ -8461,7 +8461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1087886805}
   Image: {fileID: 0}
-  Name: 
+  Name: actCom
   Level: 0
   Type: 0
   Income: 100
@@ -9671,7 +9671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1606591123}
   Image: {fileID: 0}
-  Name: 
+  Name: actInt
   Level: 0
   Type: 0
   Income: 1
@@ -9828,7 +9828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1765266748}
   Image: {fileID: 0}
-  Name: 
+  Name: actTech
   Level: 0
   Type: 0
   Income: 100
@@ -9985,7 +9985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1327460301}
   Image: {fileID: 0}
-  Name: 
+  Name: actApp
   Level: 0
   Type: 0
   Income: 100
@@ -10281,7 +10281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1690706373}
   Image: {fileID: 0}
-  Name: 
+  Name: actCPU
   Level: 0
   Type: 0
   Income: 9
@@ -10834,7 +10834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1887982024}
   Image: {fileID: 0}
-  Name: 
+  Name: actOpt
   Level: 0
   Type: 0
   Income: 300
@@ -18142,7 +18142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 501065492}
   Image: {fileID: 0}
-  Name: 
+  Name: actMan
   Level: 0
   Type: 0
   Income: 100
@@ -18510,7 +18510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 874741576}
   Image: {fileID: 0}
-  Name: 
+  Name: actNet
   Level: 0
   Type: 0
   Income: 100
@@ -22121,7 +22121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1673553892}
   Image: {fileID: 0}
-  Name: 
+  Name: actGPU
   Level: 0
   Type: 0
   Income: 5
@@ -22413,7 +22413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1905045164}
   Image: {fileID: 0}
-  Name: 
+  Name: actStr
   Level: 0
   Type: 0
   Income: 100
@@ -22988,7 +22988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1928581924}
   Image: {fileID: 0}
-  Name: 
+  Name: actSell
   Level: 0
   Type: 0
   Income: 100
@@ -23359,7 +23359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 617630044}
   Image: {fileID: 0}
-  Name: 
+  Name: actCloth
   Level: 0
   Type: 0
   Income: 100
@@ -23516,7 +23516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1762730811}
   Image: {fileID: 0}
-  Name: 
+  Name: actDream
   Level: 0
   Type: 0
   Income: 100
