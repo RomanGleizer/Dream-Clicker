@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Linq;
 using Crypto_Mechanics;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
-    [SerializeField] PlayerData _data;
-    public bool IsInGame;
-    private const double PassiveIncomeCoefficient = 0.3;
+    [SerializeField] public PlayerData _data;
     [SerializeField] public TextMeshProUGUI textTotalCurrencyCnt;
     [SerializeField] public TextMeshProUGUI textPassive;
     [SerializeField] public TextMeshProUGUI textCurrencyCntPerClick;
+
+    public bool IsInGame;
+    private const double PassiveIncomeCoefficient = 0.3;
 
     public void BuyOrUpgrade(Item item)
     {
@@ -43,5 +41,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     public void BuyTask(Task task)
     {
         task.Buy(_data);
+        Start();
     }
 }

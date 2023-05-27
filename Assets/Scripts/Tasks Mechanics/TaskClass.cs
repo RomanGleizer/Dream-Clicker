@@ -15,12 +15,13 @@ public class Task : MonoBehaviour
 
     private void Start()
     {
-        _text.text = Cost.ToString();
+        _text.text = $"{Cost.ToString()} D";
     }
     public void Buy(PlayerData data)
     {
         if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableItemList.Contains(x)))
         {
+            data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
             data.Tasks.Add(this);
             _text.text = "Приобретено";
