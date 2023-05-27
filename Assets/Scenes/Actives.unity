@@ -5326,10 +5326,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 631964784}
-  IsInGame: 0
   textTotalCurrencyCnt: {fileID: 925041011}
   textPassive: {fileID: 538873269}
   textCurrencyCntPerClick: {fileID: 1154454243}
+  IsInGame: 0
 --- !u!114 &631964784
 MonoBehaviour:
   m_ObjectHideFlags: 0
