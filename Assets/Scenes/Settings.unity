@@ -2301,7 +2301,7 @@ GameObject:
   - component: {fileID: 1847198596}
   - component: {fileID: 1847198599}
   m_Layer: 5
-  m_Name: "\u041A\u043D\u043E\u043F\u043A\u0430 \u0437\u0432\u0443\u043A\u0430"
+  m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2371,7 +2371,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1847198597}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 563495079}
+        m_TargetAssemblyTypeName: MusicPlay, Assembly-CSharp
+        m_MethodName: MuteButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1847198599}
+          m_ObjectArgumentAssemblyTypeName: SoundSwitch, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1847198597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2424,8 +2436,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 21300000, guid: 8279d2d2dbf52a24d8b76f84532ab8ec, type: 3}
   button_pressed: {fileID: 21300000, guid: 536b99aa3df25a4489f2a679d9addbd3, type: 3}
-  s_on: {fileID: 0}
-  s_off: {fileID: 0}
 --- !u!1 &1900536093
 GameObject:
   m_ObjectHideFlags: 0
