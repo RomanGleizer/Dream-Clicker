@@ -10,13 +10,15 @@ public class MusicPlay : MonoBehaviour
     public GameObject ObjectMusic;
     private float musicVolume;
     private AudioSource AudioSource;
+    private bool muted;
+    private float previousValue;
+    
 
     private void Start()
     {
         ObjectMusic = GameObject.FindWithTag("GameMusic");
         AudioSource = ObjectMusic.GetComponent<AudioSource>();
-
-        musicVolume = 1f;
+        musicVolume = PlayerPrefs.GetFloat("volume");
         AudioSource.volume = musicVolume;
         volumeSlider.value = musicVolume;
     }
@@ -31,5 +33,21 @@ public class MusicPlay : MonoBehaviour
     {
         musicVolume = value;
     }
-    
+
+    public void MuteButton(SoundSwitch button)
+    {
+        if (muted)
+        {
+            VolumeUpdater(previousValue);
+            volumeSlider.value = previousValue;
+        }
+        else
+        {
+            previousValue = musicVolume;
+            VolumeUpdater(0f);
+            volumeSlider.value = 0f;
+        }
+        button.Mute(muted);
+        muted = !muted;
+    }
 }
