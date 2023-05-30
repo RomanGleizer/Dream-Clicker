@@ -20,14 +20,13 @@ public class UpgradableItem : Item
     [SerializeField] public TextMeshProUGUI incomeText;
     [SerializeField] public TextMeshProUGUI priceText;
 
-    public UpgradableItem Init(SerializableUpItem upItem)
+    public void Init(SerializableUpItem upItem)
     {
         Name = upItem.name;
         Level = upItem.level;
         Type = upItem.type;
         Income = upItem.income;
         price = upItem.price;
-        return this;
     }
 
     private void Start()

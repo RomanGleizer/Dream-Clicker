@@ -10,7 +10,7 @@ namespace Crypto_Mechanics.Serialization
     {
         public string name;
         public double totalCurrencyCnt;
-        public List<SerializableUpItem> upgradableItemList;
+        public List<SerializableUpItem> serializableUpItems;
         public List<Task> tasks;
         public TotalIncomes totalIncomes;
 
@@ -18,7 +18,7 @@ namespace Crypto_Mechanics.Serialization
         {
             name = data.PlayerName;
             totalCurrencyCnt = data.TotalCurrencyCnt;
-            upgradableItemList = data.UpgradableItemList.Select(item => new SerializableUpItem(item)).ToList();
+            serializableUpItems = data.UpgradableItemList.Select(item => new SerializableUpItem(item)).ToList();
             tasks = data.Tasks;
             totalIncomes = data.TotalIncomes;
         }

@@ -21,19 +21,20 @@ namespace Crypto_Mechanics
             TotalIncomes = new TotalIncomes();
         }
 
-        public PlayerData Init(SerializablePlayerData playerData)
+        public void Init(SerializablePlayerData playerData)
         {
+            if (playerData is null) return;
             PlayerName = playerData.name;
             TotalCurrencyCnt = playerData.totalCurrencyCnt;
-            UpgradableItemList = playerData.upgradableItemList.Select(item =>
+            UpgradableItemList = playerData.serializableUpItems.Select(item =>
             {
-                var upItemObject = new GameObject(playerData.name);
+                var upItemObject = new GameObject("UpItemObject");
                 var playerDataComponent = upItemObject.AddComponent<UpgradableItem>();
-                return playerDataComponent.Init(item);
+                playerDataComponent.Init(item);
+                return playerDataComponent;
             }).ToList();
             Tasks = playerData.tasks;
             TotalIncomes = playerData.totalIncomes;
-            return this;
         }
     }
 }

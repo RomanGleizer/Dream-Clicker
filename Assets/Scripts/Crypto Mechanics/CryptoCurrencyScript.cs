@@ -49,14 +49,12 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     {
         data.TotalCurrencyCnt +=
             IsInGame ? data.TotalIncomes.Passive : data.TotalIncomes.Passive * PassiveIncomeCoefficient;
-        SaveData();
     }
 
     public void BuyTask(Task task)
     {
         task.Buy(data);
         Start();
-        SaveData();
     }
 
     private void SaveData()
@@ -71,8 +69,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         var json = File.ReadAllText(SavedDataPath);
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
         
-        var playerDataObject = new GameObject("PlayerDataObject");
-        var playerDataComponent = playerDataObject.AddComponent<PlayerData>();
-        data = playerDataComponent.Init(newData);
+        data.Init(newData);
     }
  }
