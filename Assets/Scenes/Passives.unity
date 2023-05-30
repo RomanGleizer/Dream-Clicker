@@ -6719,7 +6719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533d9f5aae7362f4aac3b7604a82c923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 631964784}
+  data: {fileID: 631964784}
   textTotalCurrencyCnt: {fileID: 777475500}
   textPassive: {fileID: 1490726238}
   textCurrencyCntPerClick: {fileID: 333214660}
@@ -6740,6 +6740,9 @@ MonoBehaviour:
   TotalCurrencyCnt: 0
   UpgradableItemList: []
   Tasks: []
+  TotalIncomes:
+    Passive: 0
+    Active: 1
 --- !u!1 &674583722
 GameObject:
   m_ObjectHideFlags: 0
