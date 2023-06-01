@@ -1,22 +1,33 @@
 using System;
 using Crypto_Mechanics;
+using Crypto_Mechanics.Items;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
+[Serializable] 
 public class UpgradableItem : Item
 {
     [SerializeField] public string Name;
     private const int MaxLevel = 25;
     private const double UpgradeCoefficient = 1.3;
-    [SerializeField] private int Level;
-    [SerializeField] private IncomeType Type;
-    [SerializeField] private double Income;
-    [SerializeField] private double price;
-    [SerializeField] private TextMeshProUGUI levelText;
-    [SerializeField] private TextMeshProUGUI incomeText;
-    [SerializeField] private TextMeshProUGUI priceText;
+    [SerializeField] public int Level;
+    [SerializeField] public IncomeType Type;
+    [SerializeField] public double Income;
+    [SerializeField] public double price;
+    [SerializeField] public TextMeshProUGUI levelText;
+    [SerializeField] public TextMeshProUGUI incomeText;
+    [SerializeField] public TextMeshProUGUI priceText;
+
+    public void Init(SerializableUpItem upItem)
+    {
+        Name = upItem.name;
+        Level = upItem.level;
+        Type = upItem.type;
+        Income = upItem.income;
+        price = upItem.price;
+    }
 
     private void Start()
     {
@@ -29,7 +40,7 @@ public class UpgradableItem : Item
     {
         if (playerData.TotalCurrencyCnt < price || Level == MaxLevel) return;
         var deltaIncome = Income;
-        if (Level == 0) playerData.UpgradableItemList.Add(Name);
+        if (Level == 0) playerData.UpgradableItemList.Add(this);
         else
         {
             var previousIncome = Income;
