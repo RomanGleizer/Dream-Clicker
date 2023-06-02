@@ -4544,7 +4544,7 @@ GameObject:
   - component: {fileID: 614913272}
   - component: {fileID: 614913275}
   m_Layer: 5
-  m_Name: Buy new Phone Button
+  m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4678,7 +4678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Requirements:
-  - actInt
   - actInt
   Cost: 1000
   SingleBonus: 5
@@ -8029,15 +8028,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c572fd7936e9d4d854f58dfa35d88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyScript: {fileID: 1276309522}
-  PlayerName: 
+  Name: 
   TotalCurrencyCnt: 1000
-  UpgradableActiveItemList: []
-  UpgradablePassiveItemList: []
+  UpgradableItemList: []
   Tasks: []
-  TotalIncomes:
-    Passive: 0
-    Active: 1
 --- !u!114 &1276309522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8050,9 +8044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533d9f5aae7362f4aac3b7604a82c923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActiveButtons: []
-  PassiveButtons: []
-  playerData: {fileID: 1276309521}
+  _data: {fileID: 1276309521}
   textTotalCurrencyCnt: {fileID: 786198394}
   textPassive: {fileID: 1069668535}
   textCurrencyCntPerClick: {fileID: 318217312}
@@ -8994,7 +8986,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9355,7 +9347,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11349,14 +11341,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309523}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12329,7 +12321,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
