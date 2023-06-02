@@ -15,11 +15,11 @@ public class Task : MonoBehaviour
 
     private void Start()
     {
-        _text.text = $"{Cost.ToString()} D";
+        _text.text = $"{Cost} D";
     }
     public void Buy(PlayerData data)
     {
-        if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableItemList.Contains(x)))
+        if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableActiveItemList.Select(item => item.name).Contains(x)))
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
@@ -28,7 +28,6 @@ public class Task : MonoBehaviour
         }
     }
 }
-
 
 #region
 //Зачатки вывода задач
