@@ -1,25 +1,49 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Crypto_Mechanics;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Linq;
 using TMPro;
+using Crypto_Mechanics.Serialization;
+using System.IO;
 
 public class Task : MonoBehaviour
 {
+    [SerializeField] public int PlaceInParent;
     [SerializeField] public List<string> Requirements;
     [SerializeField] public double Cost;
     [SerializeField] public double SingleBonus;
     [SerializeField] private TextMeshProUGUI _text;
 
+    private bool _isPossibleToBuy = false;
+
     private void Start()
     {
-        _text.text = $"{Cost} D";
+        var json = File.ReadAllText("Assets/Resources/savedData.json");
+        var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
+
+        if (PlaceInParent == newData.Tasks.Count) _text.text = $"Приобретено";
+        else _text.text = $"{Cost} D";
     }
+
     public void Buy(PlayerData data)
     {
-        if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableActiveItemList.Select(item => item.name).Contains(x)))
+        for (int i = 0; i < Requirements.Count; i++)
+        {
+            for (int j = 0; j < data.UpgradableActiveItemList.Count; j++)
+                if (Requirements[i] == data.UpgradableActiveItemList[i].Name)
+                {
+                    _isPossibleToBuy = true;
+                    break;
+                }
+
+            for (int j = 0; j < data.UpgradablePassiveItemList.Count; j++)
+                if (Requirements[i] == data.UpgradablePassiveItemList[i].Name)
+                {
+                    _isPossibleToBuy = true;
+                    break;
+                }
+        }
+
+        if (data.TotalCurrencyCnt >= Cost && _isPossibleToBuy && _text.text != "Приобретено")
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;

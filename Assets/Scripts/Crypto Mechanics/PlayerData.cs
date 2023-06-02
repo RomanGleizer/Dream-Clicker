@@ -37,14 +37,6 @@ namespace Crypto_Mechanics
 
             for (int i = 0; i < UpgradablePassiveItemList.Count; i++)
                 InitilizeUpgradablePassiveItemList(i, currencyScript.PassiveButtons);
-
-            //UpgradableItemList = playerData.serializableUpItems.Select(item =>
-            //{
-            //    var upItemObject = new GameObject("UpItemObject");
-            //    var playerDataComponent = upItemObject.AddComponent<UpgradableItem>();
-            //    playerDataComponent.Init(item);
-            //    return playerDataComponent;
-            //}).ToList();
         }
 
         private void InitilizeUpgradableActiveItemList(int i, UpgradableItem[] buttons)

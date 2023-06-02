@@ -4,6 +4,7 @@ using Crypto_Mechanics;
 using Crypto_Mechanics.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
@@ -32,6 +33,8 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void Start()
     {
+        InvokeRepeating("GetPassiveIncome", 1f, 1f);
+
         textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
         textPassive.text = $"{playerData.TotalIncomes.Passive} D/s";
         textCurrencyCntPerClick.text = $"{playerData.TotalIncomes.Active} D";
@@ -108,4 +111,10 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
             playerData.UpgradablePassiveItemList[i].Price = buttons[i].Price;
         }
     }
- }
+
+    private void GetPassiveIncome()
+    {
+        playerData.TotalCurrencyCnt += playerData.TotalIncomes.Passive;
+        textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
+    }
+}

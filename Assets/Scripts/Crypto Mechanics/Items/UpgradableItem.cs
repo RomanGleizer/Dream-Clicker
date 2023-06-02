@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using Crypto_Mechanics;
 using Crypto_Mechanics.Items;
@@ -14,6 +13,9 @@ public class UpgradableItem : Item
     public const int MaxLevel = 25;
     private const double UpgradeCoefficient = 1.3;
 
+    [SerializeField] public string Name;
+    [SerializeField] private Task task;
+    [SerializeField] private UpgradableItem[] items;
     [SerializeField] public int NumberInParent;
     [SerializeField] private PlayerData playerData;
     [SerializeField] public int Level;
@@ -26,7 +28,7 @@ public class UpgradableItem : Item
 
     public void Init(SerializableUpActiveItem upItem)
     {
-        name = upItem.Name;
+        Name = upItem.Name;
         Level = upItem.Level;
         Type = upItem.Type;
         Income = upItem.Income;
