@@ -8,18 +8,20 @@ namespace Crypto_Mechanics.Serialization
     [Serializable]
     public class SerializablePlayerData
     {
-        public string name;
-        public double totalCurrencyCnt;
-        public List<SerializableUpItem> serializableUpItems;
-        public List<Task> tasks;
+        public string Name;
+        public double TotalCurrencyCnt;
+        public List<SerializableUpActiveItem> SerializableUpActiveItems;
+        public List<SerializableUpPassiveItem> SerializableUpPassiveItems;
+        public List<Task> Tasks;
         public TotalIncomes totalIncomes;
 
         public SerializablePlayerData(PlayerData data)
         {
-            name = data.PlayerName;
-            totalCurrencyCnt = data.TotalCurrencyCnt;
-            serializableUpItems = data.UpgradableItemList.Select(item => new SerializableUpItem(item)).ToList();
-            tasks = data.Tasks;
+            Name = data.PlayerName;
+            TotalCurrencyCnt = data.TotalCurrencyCnt;
+            SerializableUpActiveItems = data.UpgradableActiveItemList.Select(item => new SerializableUpActiveItem(item)).ToList();
+            SerializableUpPassiveItems = data.UpgradablePassiveItemList.Select(item => new SerializableUpPassiveItem(item)).ToList();
+            Tasks = data.Tasks;
             totalIncomes = data.TotalIncomes;
         }
     }

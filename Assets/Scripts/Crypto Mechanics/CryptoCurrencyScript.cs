@@ -7,68 +7,105 @@ using UnityEngine;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
-    [SerializeField] public PlayerData data;
-    [SerializeField] public TextMeshProUGUI textTotalCurrencyCnt;
-    [SerializeField] public TextMeshProUGUI textPassive;
-    [SerializeField] public TextMeshProUGUI textCurrencyCntPerClick;
     private const string SavedDataPath = "Assets/Resources/savedData.json";
+
+    [SerializeField] public UpgradableItem[] ActiveButtons;
+    [SerializeField] public UpgradableItem[] PassiveButtons;
+    [SerializeField] private PlayerData playerData;
+    [SerializeField] private TextMeshProUGUI textTotalCurrencyCnt;
+    [SerializeField] private TextMeshProUGUI textPassive;
+    [SerializeField] private TextMeshProUGUI textCurrencyCntPerClick;
 
     public bool IsInGame;
     private const double PassiveIncomeCoefficient = 0.3;
 
     public void BuyOrUpgrade(Item item)
     {
-        item.BuyOrUpgrade(data);
+        item.BuyOrUpgrade(playerData);
         Start();
+    }
+
+    private void Awake()
+    {
+        LoadData();
     }
 
     private void Start()
     {
-        textTotalCurrencyCnt.text = $"{Math.Round(data.TotalCurrencyCnt, 1)} D";
-        textPassive.text = $"{data.TotalIncomes.Passive} D/s";
-        textCurrencyCntPerClick.text = $"{data.TotalIncomes.Active} D";
+        textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
+        textPassive.text = $"{playerData.TotalIncomes.Passive} D/s";
+        textCurrencyCntPerClick.text = $"{playerData.TotalIncomes.Active} D";
     }
 
-    private void OnEnable()
+    public void Update()
     {
-        LoadData();
-    }
-    
-    private void OnDisable()
-    {
-        SaveData();
+        SaveUpgradableActiveItemListData();
+        SaveUpgradablePassiveItemListData();
     }
 
     public void Tap()
     {
-        data.TotalCurrencyCnt += data.TotalIncomes.Active;
-        textTotalCurrencyCnt.text = $"{Math.Round(data.TotalCurrencyCnt, 1)} D";
+        playerData.TotalCurrencyCnt += playerData.TotalIncomes.Active;
+        textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
     }
 
     public void AddPassiveIncome()
     {
-        data.TotalCurrencyCnt +=
-            IsInGame ? data.TotalIncomes.Passive : data.TotalIncomes.Passive * PassiveIncomeCoefficient;
+        playerData.TotalCurrencyCnt +=
+            IsInGame ? playerData.TotalIncomes.Passive : playerData.TotalIncomes.Passive * PassiveIncomeCoefficient;
     }
 
     public void BuyTask(Task task)
     {
-        task.Buy(data);
+        task.Buy(playerData);
         Start();
     }
 
-    private void SaveData()
+    public void SaveUpgradableActiveItemListData()
     {
-        var json = JsonUtility.ToJson(new SerializablePlayerData(data));
+        for (int i = 0; i < playerData.UpgradableActiveItemList.Count; i++)
+            InitilizeUpgradableActiveItemList(i, ActiveButtons);
+
+        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
         File.WriteAllText(SavedDataPath, json);
-        Debug.Log(json);
+        print(json);
     }
 
-    private void LoadData()
+    public void SaveUpgradablePassiveItemListData()
+    {
+        for (int i = 0; i < playerData.UpgradablePassiveItemList.Count; i++)
+            InitilizeUpgradablePassiveItemList(i, PassiveButtons);
+
+        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
+        File.WriteAllText(SavedDataPath, json);
+        print(json);
+    }
+
+    public void LoadData()
     {
         var json = File.ReadAllText(SavedDataPath);
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
-        
-        data.Init(newData);
+
+        if (newData != null && playerData != null) playerData.Init(newData);
+    }
+
+    public void InitilizeUpgradableActiveItemList(int i, UpgradableItem[] buttons)
+    {
+        if (buttons[i] != null)
+        {
+            playerData.UpgradableActiveItemList[i].Level = buttons[i].Level;
+            playerData.UpgradableActiveItemList[i].Income = buttons[i].Income;
+            playerData.UpgradableActiveItemList[i].Price = buttons[i].Price;
+        }
+    }
+
+    public void InitilizeUpgradablePassiveItemList(int i, UpgradableItem[] buttons)
+    {
+        if (buttons[i] != null)
+        {
+            playerData.UpgradablePassiveItemList[i].Level = buttons[i].Level;
+            playerData.UpgradablePassiveItemList[i].Income = buttons[i].Income;
+            playerData.UpgradablePassiveItemList[i].Price = buttons[i].Price;
+        }
     }
  }
