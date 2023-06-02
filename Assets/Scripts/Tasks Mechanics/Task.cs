@@ -19,7 +19,7 @@ public class Task : MonoBehaviour
     }
     public void Buy(PlayerData data)
     {
-        if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableItemList.Select(item => item.Name).Contains(x)))
+        if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableActiveItemList.Select(item => item.name).Contains(x)))
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
