@@ -19,7 +19,11 @@ public class Task : MonoBehaviour
     }
     public void Buy(PlayerData data)
     {
+<<<<<<< HEAD:Assets/Scripts/Tasks Mechanics/TaskClass.cs
         if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableItemList.Contains(x)))
+=======
+        if (data.TotalCurrencyCnt >= Cost && Requirements.All(x => data.UpgradableItemList.Select(item => item.Name).Contains(x)))
+>>>>>>> parent of 5ef249d (Merge pull request #16 from RomanGleizer/Save-System-Branch):Assets/Scripts/Tasks Mechanics/Task.cs
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
