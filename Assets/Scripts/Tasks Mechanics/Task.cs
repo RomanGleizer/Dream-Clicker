@@ -29,7 +29,6 @@ public class Task : MonoBehaviour
     }
 }
 
-
 #region
 //Зачатки вывода задач
 
