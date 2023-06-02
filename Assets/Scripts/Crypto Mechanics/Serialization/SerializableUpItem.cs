@@ -16,7 +16,7 @@ namespace Crypto_Mechanics.Items
             name = upItem.Name;
             level = upItem.Level;
             income = upItem.Income;
-            price = upItem.price;
+            price = upItem.Price;
             type = upItem.Type;
         }
     }

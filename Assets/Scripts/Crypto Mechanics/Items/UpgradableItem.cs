@@ -15,6 +15,7 @@ public class UpgradableItem : Item
     private const double UpgradeCoefficient = 1.3;
 
     [SerializeField] public int NumberInParent;
+    [SerializeField] public string Name;
     [SerializeField] private PlayerData playerData;
     [SerializeField] public int Level;
     [SerializeField] public IncomeType Type;
