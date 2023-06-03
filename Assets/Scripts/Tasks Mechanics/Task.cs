@@ -7,11 +7,12 @@ using System.IO;
 
 public class Task : MonoBehaviour
 {
+    [SerializeField] private PlayerData data;
+    [SerializeField] public List<UpgradableItem> items;
     [SerializeField] public int PlaceInParent;
-    [SerializeField] public List<string> Requirements;
     [SerializeField] public double Cost;
     [SerializeField] public double SingleBonus;
-    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] public TextMeshProUGUI Text;
 
     private bool _isPossibleToBuy = false;
 
@@ -20,35 +21,25 @@ public class Task : MonoBehaviour
         var json = File.ReadAllText("Assets/Resources/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
-        if (PlaceInParent == newData.Tasks.Count) _text.text = $"Приобретено";
-        else _text.text = $"{Cost} D";
+        if (PlaceInParent <= newData.Tasks.Count && PlaceInParent > 0) Text.text = $"Приобретено";
+        else Text.text = $"{Cost} D";
     }
 
     public void Buy(PlayerData data)
     {
-        for (int i = 0; i < Requirements.Count; i++)
+        for (int i = 0; i < items.Count; i++)
         {
-            for (int j = 0; j < data.UpgradableActiveItemList.Count; j++)
-                if (Requirements[i] == data.UpgradableActiveItemList[i].Name)
-                {
-                    _isPossibleToBuy = true;
-                    break;
-                }
-
-            for (int j = 0; j < data.UpgradablePassiveItemList.Count; j++)
-                if (Requirements[i] == data.UpgradablePassiveItemList[i].Name)
-                {
-                    _isPossibleToBuy = true;
-                    break;
-                }
+            if (items[i].Level > 0) _isPossibleToBuy = true;
+            else _isPossibleToBuy = false;
         }
 
-        if (data.TotalCurrencyCnt >= Cost && _isPossibleToBuy && _text.text != "Приобретено")
+        if ((data.TotalCurrencyCnt >= Cost && _isPossibleToBuy && Text.text != "Приобретено")
+            || (PlaceInParent == 4 && data.Tasks.Count > 0 && data.Tasks[2].Text.text == "Приобретено"))
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
             data.Tasks.Add(this);
-            _text.text = "Приобретено";
+            Text.text = "Приобретено";
         }
     }
 }

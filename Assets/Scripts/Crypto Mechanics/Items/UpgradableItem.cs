@@ -26,6 +26,8 @@ public class UpgradableItem : Item
     [SerializeField] private TextMeshProUGUI incomeText;
     [SerializeField] private TextMeshProUGUI priceText;
 
+    private bool _isPossibleToBuy;
+
     public void Init(SerializableUpActiveItem upItem)
     {
         Name = upItem.Name;
@@ -71,21 +73,33 @@ public class UpgradableItem : Item
     public override void BuyOrUpgrade(PlayerData playerData)
     {
         if (playerData.TotalCurrencyCnt < Price || Level == MaxLevel) return;
-        var deltaIncome = Income;
 
-        var previousIncome = Income;
-        Income = Math.Round(Income * UpgradeCoefficient, 1);
-        deltaIncome = Income - previousIncome;
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].Level > 0) _isPossibleToBuy = true;
+            else _isPossibleToBuy = false;
+        }
 
-        if (Type == IncomeType.Active)
-            playerData.TotalIncomes.Active += deltaIncome;
-        else
-            playerData.TotalIncomes.Passive += deltaIncome;
-        playerData.TotalCurrencyCnt -= Price;
-        Level++;
-        Price = Math.Round(Price * UpgradeCoefficient, 1);
+        if ((task.Text.text == "Приобретено" && _isPossibleToBuy) 
+            || (task.Text.text == "Приобретено" && items.Length == 0)
+            || task.Text.text == "0 D")
+        {
+            var deltaIncome = Income;
 
-        InitializeTextes();
+            var previousIncome = Income;
+            Income = Math.Round(Income * UpgradeCoefficient, 1);
+            deltaIncome = Income - previousIncome;
+
+            if (Type == IncomeType.Active)
+                playerData.TotalIncomes.Active += deltaIncome;
+            else
+                playerData.TotalIncomes.Passive += deltaIncome;
+            playerData.TotalCurrencyCnt -= Price;
+            Level++;
+            Price = Math.Round(Price * UpgradeCoefficient, 1);
+
+            InitializeTextes();
+        }
     }
 
     private void InitializeTextes()
