@@ -33,7 +33,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void Start()
     {
-        InvokeRepeating("GetPassiveIncome", 7f, 10f);
+        InvokeRepeating("GetPassiveIncome", 10f, 10f);
 
         textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
         textPassive.text = $"{playerData.TotalIncomes.Passive} D/s";

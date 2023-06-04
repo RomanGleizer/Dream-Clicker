@@ -68,6 +68,9 @@ public class UpgradableItem : Item
 
         if (gameObject.GetComponent<Button>() && newData.SerializableUpActiveItems.Count < NumberInParent)
             InitializeTextes();
+
+        if (gameObject.GetComponent<Button>() && newData.SerializableUpPassiveItems.Count < NumberInParent)
+            InitializeTextes();
     }
 
     public override void BuyOrUpgrade(PlayerData playerData)
@@ -91,9 +94,10 @@ public class UpgradableItem : Item
             deltaIncome = Income - previousIncome;
 
             if (Type == IncomeType.Active)
-                playerData.TotalIncomes.Active += deltaIncome;
+                playerData.TotalIncomes.Active += Income;
             else
-                playerData.TotalIncomes.Passive += deltaIncome;
+                playerData.TotalIncomes.Passive += Income;
+
             playerData.TotalCurrencyCnt -= Price;
             Level++;
             Price = Math.Round(Price * UpgradeCoefficient, 1);
