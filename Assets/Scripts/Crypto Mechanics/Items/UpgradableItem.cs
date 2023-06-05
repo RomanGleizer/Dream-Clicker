@@ -80,7 +80,11 @@ public class UpgradableItem : Item
         for (int i = 0; i < items.Length; i++)
         {
             if (items[i].Level > 0) _isPossibleToBuy = true;
-            else _isPossibleToBuy = false;
+            else
+            {
+                _isPossibleToBuy = false;
+                break;
+            }
         }
 
         if ((task.Text.text == "Приобретено" && _isPossibleToBuy) 
@@ -94,9 +98,9 @@ public class UpgradableItem : Item
             deltaIncome = Income - previousIncome;
 
             if (Type == IncomeType.Active)
-                playerData.TotalIncomes.Active += Income;
+                playerData.TotalIncomes.Active += deltaIncome;
             else
-                playerData.TotalIncomes.Passive += Income;
+                playerData.TotalIncomes.Passive += deltaIncome;
 
             playerData.TotalCurrencyCnt -= Price;
             Level++;

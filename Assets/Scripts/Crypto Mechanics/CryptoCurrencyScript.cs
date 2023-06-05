@@ -71,7 +71,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
         var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
         File.WriteAllText(SavedDataPath, json);
-        print(json);
     }
 
     public void SaveUpgradablePassiveItemListData()
@@ -81,7 +80,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
         var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
         File.WriteAllText(SavedDataPath, json);
-        print(json);
     }
 
     public void LoadData()

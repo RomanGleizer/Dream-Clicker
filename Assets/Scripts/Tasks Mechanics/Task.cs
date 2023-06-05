@@ -30,7 +30,11 @@ public class Task : MonoBehaviour
         for (int i = 0; i < items.Count; i++)
         {
             if (items[i].Level > 0) _isPossibleToBuy = true;
-            else _isPossibleToBuy = false;
+            else
+            {
+                _isPossibleToBuy = false;
+                break;
+            }
         }
 
         if ((data.TotalCurrencyCnt >= Cost && _isPossibleToBuy && Text.text != "Приобретено")

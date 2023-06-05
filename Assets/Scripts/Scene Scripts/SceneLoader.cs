@@ -7,10 +7,10 @@ public class SceneLoader : MonoBehaviour
 {
     void Start()
     {
-        /*LoadScene("LoadScene");*/
+        LoadScene(1);
     }
 
-    public void LoadScene (int id)
+    public void LoadScene(int id)
     {
         SceneManager.LoadScene(id);
     }
