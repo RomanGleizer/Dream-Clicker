@@ -9,12 +9,13 @@ public class Task : MonoBehaviour
 {
     [SerializeField] private PlayerData data;
     [SerializeField] public List<UpgradableItem> items;
+    [SerializeField] public List<OneTimeItem> oneTimeItems;
     [SerializeField] public int PlaceInParent;
     [SerializeField] public double Cost;
     [SerializeField] public double SingleBonus;
     [SerializeField] public TextMeshProUGUI Text;
 
-    private bool _isPossibleToBuy = false;
+    private bool isPossibleToBuy = false;
 
     private void Start()
     {
@@ -29,16 +30,27 @@ public class Task : MonoBehaviour
     {
         for (int i = 0; i < items.Count; i++)
         {
-            if (items[i].Level > 0) _isPossibleToBuy = true;
+            if (items[i].Level > 0) isPossibleToBuy = true;
             else
             {
-                _isPossibleToBuy = false;
+                isPossibleToBuy = false;
                 break;
             }
         }
 
-        if ((data.TotalCurrencyCnt >= Cost && _isPossibleToBuy && Text.text != "Приобретено")
-            || (PlaceInParent == 4 && data.Tasks.Count > 0 && data.Tasks[2].Text.text == "Приобретено"))
+        for (int i = 0; i < oneTimeItems.Count; i++)
+        {
+            if (oneTimeItems[i].Text.text == "Приобретено") isPossibleToBuy = true;
+            else
+            {
+                isPossibleToBuy = false;
+                break;
+            }
+        }
+
+        if ((data.TotalCurrencyCnt >= Cost && isPossibleToBuy && Text.text != "Приобретено")
+            || (PlaceInParent == 4 && data.Tasks.Count > 0 && data.Tasks[2].Text.text == "Приобретено")
+            )
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;

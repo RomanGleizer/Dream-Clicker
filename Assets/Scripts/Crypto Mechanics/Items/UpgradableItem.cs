@@ -26,7 +26,7 @@ public class UpgradableItem : Item
     [SerializeField] private TextMeshProUGUI incomeText;
     [SerializeField] private TextMeshProUGUI priceText;
 
-    private bool _isPossibleToBuy;
+    private bool isPossibleToBuy;
 
     public void Init(SerializableUpActiveItem upItem)
     {
@@ -79,15 +79,15 @@ public class UpgradableItem : Item
 
         for (int i = 0; i < items.Length; i++)
         {
-            if (items[i].Level > 0) _isPossibleToBuy = true;
+            if (items[i].Level > 0) isPossibleToBuy = true;
             else
             {
-                _isPossibleToBuy = false;
+                isPossibleToBuy = false;
                 break;
             }
         }
 
-        if ((task.Text.text == "Приобретено" && _isPossibleToBuy) 
+        if ((task.Text.text == "Приобретено" && isPossibleToBuy) 
             || (task.Text.text == "Приобретено" && items.Length == 0)
             || task.Text.text == "0 D")
         {
@@ -99,7 +99,7 @@ public class UpgradableItem : Item
 
             if (Type == IncomeType.Active)
                 playerData.TotalIncomes.Active += deltaIncome;
-            else
+            else if (Type == IncomeType.Passive)
                 playerData.TotalIncomes.Passive += deltaIncome;
 
             playerData.TotalCurrencyCnt -= Price;

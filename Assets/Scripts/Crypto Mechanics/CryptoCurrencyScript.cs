@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Crypto_Mechanics;
 using Crypto_Mechanics.Serialization;
@@ -12,6 +13,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     [SerializeField] public UpgradableItem[] ActiveButtons;
     [SerializeField] public UpgradableItem[] PassiveButtons;
+    [SerializeField] public OneTimeItem[] OneTimeButtons;
     [SerializeField] private PlayerData playerData;
     [SerializeField] private TextMeshProUGUI textTotalCurrencyCnt;
     [SerializeField] private TextMeshProUGUI textPassive;
@@ -42,8 +44,9 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void Update()
     {
-        SaveUpgradableActiveItemListData();
-        SaveUpgradablePassiveItemListData();
+        SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
+        SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
+        SaveUpgradableItemListData(playerData.OneTimeItems, OneTimeButtons);
     }
 
     public void Tap()
@@ -64,24 +67,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         Start();
     }
 
-    public void SaveUpgradableActiveItemListData()
-    {
-        for (int i = 0; i < playerData.UpgradableActiveItemList.Count; i++)
-            InitilizeUpgradableActiveItemList(i, ActiveButtons);
-
-        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
-        File.WriteAllText(SavedDataPath, json);
-    }
-
-    public void SaveUpgradablePassiveItemListData()
-    {
-        for (int i = 0; i < playerData.UpgradablePassiveItemList.Count; i++)
-            InitilizeUpgradablePassiveItemList(i, PassiveButtons);
-
-        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
-        File.WriteAllText(SavedDataPath, json);
-    }
-
     public void LoadData()
     {
         var json = File.ReadAllText(SavedDataPath);
@@ -90,23 +75,40 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         if (newData != null && playerData != null) playerData.Init(newData);
     }
 
-    public void InitilizeUpgradableActiveItemList(int i, UpgradableItem[] buttons)
+    public void SaveUpgradableItemListData(List<UpgradableItem> lst, UpgradableItem[] buttons)
+    {
+        for (int i = 0; i < lst.Count; i++)
+            InitilizeUpgradableItemList(lst, i, buttons);
+
+        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
+        File.WriteAllText(SavedDataPath, json);
+    }
+
+    public void SaveUpgradableItemListData(List<OneTimeItem> lst, OneTimeItem[] buttons)
+    {
+        for (int i = 0; i < lst.Count; i++)
+            InitilizeUpgradableItemList(lst, i, buttons);
+
+        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
+        File.WriteAllText(SavedDataPath, json);
+    }
+
+    public void InitilizeUpgradableItemList(List<UpgradableItem> lst, int i, UpgradableItem[] buttons)
     {
         if (buttons[i] != null)
         {
-            playerData.UpgradableActiveItemList[i].Level = buttons[i].Level;
-            playerData.UpgradableActiveItemList[i].Income = buttons[i].Income;
-            playerData.UpgradableActiveItemList[i].Price = buttons[i].Price;
+            lst[i].Level = buttons[i].Level;
+            lst[i].Income = buttons[i].Income;
+            lst[i].Price = buttons[i].Price;
         }
     }
 
-    public void InitilizeUpgradablePassiveItemList(int i, UpgradableItem[] buttons)
+    public void InitilizeUpgradableItemList(List<OneTimeItem> lst, int i, OneTimeItem[] buttons)
     {
         if (buttons[i] != null)
         {
-            playerData.UpgradablePassiveItemList[i].Level = buttons[i].Level;
-            playerData.UpgradablePassiveItemList[i].Income = buttons[i].Income;
-            playerData.UpgradablePassiveItemList[i].Price = buttons[i].Price;
+            lst[i].Price = buttons[i].Price;
+            lst[i].Name = buttons[i].Name;
         }
     }
 
