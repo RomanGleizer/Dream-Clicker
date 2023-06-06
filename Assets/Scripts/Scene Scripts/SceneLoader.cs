@@ -7,7 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     void Start()
     {
-        LoadScene(1);
+        //LoadScene(1);
     }
 
     public void LoadScene(int id)
