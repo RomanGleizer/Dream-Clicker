@@ -4,11 +4,11 @@ using System;
 public class SerializableOneTimeUpgradableItem
 {
     public double Price;
-    public string Name;
+    public string Text;
 
     public SerializableOneTimeUpgradableItem(OneTimeItem oneTimeItem)
     {
         Price = oneTimeItem.Price;
-        Name = oneTimeItem.Name;
+        Text = oneTimeItem.Text.text;
     }
 }

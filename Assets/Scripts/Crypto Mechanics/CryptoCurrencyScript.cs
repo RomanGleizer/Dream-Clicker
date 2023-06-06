@@ -105,11 +105,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void InitilizeUpgradableItemList(List<OneTimeItem> lst, int i, OneTimeItem[] buttons)
     {
-        if (buttons[i] != null)
-        {
-            lst[i].Price = buttons[i].Price;
-            lst[i].Name = buttons[i].Name;
-        }
+        if (buttons[i] != null) lst[i].Price = buttons[i].Price;
     }
 
     private void GetPassiveIncome()

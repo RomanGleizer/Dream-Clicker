@@ -50,6 +50,7 @@ public class Task : MonoBehaviour
 
         if ((data.TotalCurrencyCnt >= Cost && isPossibleToBuy && Text.text != "Приобретено")
             || (PlaceInParent == 4 && data.Tasks.Count > 0 && data.Tasks[2].Text.text == "Приобретено")
+            || (PlaceInParent == 13 && data.Tasks.Count > 0 && data.Tasks[11].Text.text == "Приобретено")
             )
         {
             data.TotalCurrencyCnt -= Cost;

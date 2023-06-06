@@ -12,7 +12,7 @@ namespace Crypto_Mechanics.Serialization
         public double TotalCurrencyCnt;
         public List<SerializableUpActiveItem> SerializableUpActiveItems;
         public List<SerializableUpPassiveItem> SerializableUpPassiveItems;
-        public List<SerializableOneTimeUpgradableItem> OneTimeItems;
+        public List<SerializableOneTimeUpgradableItem> SerializableOneTimeItems;
         public List<Task> Tasks;
         public TotalIncomes totalIncomes;
 
@@ -22,7 +22,7 @@ namespace Crypto_Mechanics.Serialization
             TotalCurrencyCnt = data.TotalCurrencyCnt;
             SerializableUpActiveItems = data.UpgradableActiveItemList.Select(item => new SerializableUpActiveItem(item)).ToList();
             SerializableUpPassiveItems = data.UpgradablePassiveItemList.Select(item => new SerializableUpPassiveItem(item)).ToList();
-            OneTimeItems = data.OneTimeItems.Select(item => new SerializableOneTimeUpgradableItem(item)).ToList();
+            SerializableOneTimeItems = data.OneTimeItems.Select(item => new SerializableOneTimeUpgradableItem(item)).ToList();
             Tasks = data.Tasks;
             totalIncomes = data.TotalIncomes;
         }

@@ -56,10 +56,7 @@ namespace Crypto_Mechanics
         private void InitilizeUpgradableItemList(int i, OneTimeItem[] buttons, List<OneTimeItem> lst)
         {
             if (buttons[i] != null)
-            {
                 buttons[i].Price = lst[i].Price;
-                buttons[i].Name = lst[i].Name;
-            }
         }
     }
 }
