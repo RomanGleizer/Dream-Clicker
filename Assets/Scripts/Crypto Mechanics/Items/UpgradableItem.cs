@@ -96,6 +96,7 @@ public class UpgradableItem : Item
             var previousIncome = Income;
             Income = Math.Round(Income * UpgradeCoefficient, 1);
             deltaIncome = Income - previousIncome;
+            if (Level == 0) deltaIncome = Income;
 
             if (Type == IncomeType.Active)
                 playerData.TotalIncomes.Active += deltaIncome;
