@@ -7,7 +7,7 @@ namespace Crypto_Mechanics
 {
     public class PlayerData : MonoBehaviour
     {
-        [SerializeField] private CryptoCurrencyScript currencyScript;
+        [SerializeField] public CryptoCurrencyScript CurrencyScript;
         [SerializeField] public string PlayerName;
         [SerializeField] public double TotalCurrencyCnt;
         [SerializeField] public List<UpgradableItem> UpgradableActiveItemList;
@@ -34,16 +34,34 @@ namespace Crypto_Mechanics
             TotalIncomes = playerData.totalIncomes;
 
             for (int i = 0; i < UpgradableActiveItemList.Count; i++)
-                InitilizeUpgradableItemList(i, currencyScript.ActiveButtons, UpgradableActiveItemList);
+                InitilizeUpgradableItemList(
+                    i, 
+                    CurrencyScript.ActiveButtons, 
+                    UpgradableActiveItemList);
 
             for (int i = 0; i < UpgradablePassiveItemList.Count; i++)
-                InitilizeUpgradableItemList(i, currencyScript.PassiveButtons, UpgradablePassiveItemList);
+                InitilizeUpgradableItemList(
+                    i, 
+                    CurrencyScript.PassiveButtons, 
+                    UpgradablePassiveItemList);
 
             for (int i = 0; i < OneTimeItems.Count; i++)
-                InitilizeUpgradableItemList(i, currencyScript.OneTimeButtons, OneTimeItems);
+                InitilizeOneTimeItemList(
+                    i, 
+                    CurrencyScript.OneTimeButtons, 
+                    OneTimeItems);
+
+            for (int i = 0; i < Tasks.Count; i++)
+                InitilizeTaskList(
+                    i, 
+                    CurrencyScript.Tasks, 
+                    Tasks);
         }
 
-        private void InitilizeUpgradableItemList(int i, UpgradableItem[] buttons, List<UpgradableItem> lst)
+        private void InitilizeUpgradableItemList(
+            int i, 
+            UpgradableItem[] buttons, 
+            List<UpgradableItem> lst)
         {
             if (buttons[i] != null)
             {
@@ -53,10 +71,22 @@ namespace Crypto_Mechanics
             }
         }
 
-        private void InitilizeUpgradableItemList(int i, OneTimeItem[] buttons, List<OneTimeItem> lst)
+        private void InitilizeOneTimeItemList(
+            int i, 
+            OneTimeItem[] buttons, 
+            List<OneTimeItem> lst)
         {
             if (buttons[i] != null)
                 buttons[i].Price = lst[i].Price;
+        }
+
+        private void InitilizeTaskList(
+            int i, 
+            Task[] buttons, 
+            List<Task> lst)
+        {
+            if (buttons[i] != null)
+                buttons[i].Cost = lst[i].Cost;
         }
     }
 }

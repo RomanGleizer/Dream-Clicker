@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Crypto_Mechanics;
 using Crypto_Mechanics.Items;
@@ -11,7 +12,7 @@ using UnityEngine.UI;
 public class UpgradableItem : Item
 {
     public const int MaxLevel = 25;
-    private const double UpgradeCoefficient = 1.3;
+    private const double UpgradeActiveCoefficient = 1.3;
 
     [SerializeField] public string Name;
     [SerializeField] private Task task;
@@ -44,32 +45,16 @@ public class UpgradableItem : Item
 
         if (gameObject.GetComponent<ActiveButton>()  
             && newData.SerializableUpActiveItems.Count >= NumberInParent)
-        {
-            var currentLevel = Level = newData.SerializableUpActiveItems[NumberInParent - 1].Level;
-            var currentIncome = Income = newData.SerializableUpActiveItems[NumberInParent - 1].Income;
-            var currentPrice = Price = newData.SerializableUpActiveItems[NumberInParent - 1].Price;
-
-            levelText.text = $"Приобретено: {currentLevel}";
-            incomeText.text = $"Доход: {currentIncome} D/s";
-            priceText.text = currentLevel == MaxLevel ? "Макс. ур." : $"{currentPrice} D";
-        }
+            InitializeTextes(newData.SerializableUpActiveItems);
 
         if (gameObject.GetComponent<PassiveButton>()
             && newData.SerializableUpPassiveItems.Count >= NumberInParent)
-            {
-                var currentLevel = Level = newData.SerializableUpPassiveItems[NumberInParent - 1].Level;
-                var currentIncome = Income = newData.SerializableUpPassiveItems[NumberInParent - 1].Income;
-                var currentPrice = Price = newData.SerializableUpPassiveItems[NumberInParent - 1].Price;
+            InitializeTextes(newData.SerializableUpPassiveItems);
 
-                levelText.text = $"Приобретено: {currentLevel}";
-                incomeText.text = $"Доход: {currentIncome} D/s";
-                priceText.text = currentLevel == MaxLevel ? "Макс. ур." : $"{currentPrice} D";
-            }
-
-        if (gameObject.GetComponent<Button>() && newData.SerializableUpActiveItems.Count < NumberInParent)
-            InitializeTextes();
-
-        if (gameObject.GetComponent<Button>() && newData.SerializableUpPassiveItems.Count < NumberInParent)
+        if ((gameObject.GetComponent<Button>() 
+            && newData.SerializableUpActiveItems.Count < NumberInParent)
+            || (gameObject.GetComponent<Button>() 
+            && newData.SerializableUpPassiveItems.Count < NumberInParent))
             InitializeTextes();
     }
 
@@ -92,12 +77,12 @@ public class UpgradableItem : Item
             || task.Text.text == "0 D")
         {
             var deltaIncome = Income;
-
             var previousIncome = Income;
-            Income = Math.Round(Income * UpgradeCoefficient, 1);
-            deltaIncome = Income - previousIncome;
-            if (Level == 0) deltaIncome = Income;
 
+            Income = Math.Round(Income * UpgradeActiveCoefficient, 1);
+            deltaIncome = Income - previousIncome;
+
+            if (Level == 0) deltaIncome = Income;
             if (Type == IncomeType.Active)
                 playerData.TotalIncomes.Active += deltaIncome;
             else if (Type == IncomeType.Passive)
@@ -105,7 +90,8 @@ public class UpgradableItem : Item
 
             playerData.TotalCurrencyCnt -= Price;
             Level++;
-            Price = Math.Round(Price * UpgradeCoefficient, 1);
+            
+            Price = Math.Round(Price * UpgradeActiveCoefficient, 1);
 
             InitializeTextes();
         }
@@ -116,5 +102,17 @@ public class UpgradableItem : Item
         levelText.text = $"Приобретено: {Level}";
         incomeText.text = $"Доход: {Income} D/s";
         priceText.text = Level == MaxLevel ? "Макс. ур." : $"{Price} D";
+    }
+
+    private void InitializeTextes<T>(List<T> lst)
+        where T : SerializableUpItem
+    {
+        var currentLevel = Level = lst[NumberInParent - 1].Level;
+        var currentIncome = Income = lst[NumberInParent - 1].Income;
+        var currentPrice = Price = lst[NumberInParent - 1].Price;
+
+        levelText.text = $"Приобретено: {currentLevel}";
+        incomeText.text = $"Доход: {currentIncome} D/s";
+        priceText.text = currentLevel == MaxLevel ? "Макс. ур." : $"{currentPrice} D";
     }
 }

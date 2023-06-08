@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Crypto_Mechanics.Serialization;
 using System.IO;
+using System;
 
 public class Task : MonoBehaviour
 {
@@ -55,6 +56,7 @@ public class Task : MonoBehaviour
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
+            data.CurrencyScript.TextTotalCurrencyCnt.text = $"{Math.Round(data.TotalCurrencyCnt, 1)}";
             data.Tasks.Add(this);
             Text.text = "Приобретено";
         }

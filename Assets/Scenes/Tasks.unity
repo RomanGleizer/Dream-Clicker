@@ -10644,7 +10644,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 150
-  Price: 50000
+  Price: 60000
   levelText: {fileID: 1350097794}
   incomeText: {fileID: 2071842160}
   priceText: {fileID: 1995418260}
@@ -15454,7 +15454,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 1
-  Price: 150
+  Price: 350
   levelText: {fileID: 1818140921}
   incomeText: {fileID: 1192019463}
   priceText: {fileID: 481409150}
@@ -16427,7 +16427,7 @@ MonoBehaviour:
   - {fileID: 585865373}
   oneTimeItems: []
   PlaceInParent: 1
-  Cost: 1000
+  Cost: 2000
   SingleBonus: 5
   Text: {fileID: 703683730}
 --- !u!1 &615264811
@@ -17537,7 +17537,7 @@ MonoBehaviour:
   - {fileID: 785846814}
   oneTimeItems: []
   PlaceInParent: 4
-  Cost: 3000000
+  Cost: 4500000
   SingleBonus: 1000
   Text: {fileID: 38450668}
 --- !u!1 &658755461
@@ -18268,7 +18268,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 190
-  Price: 300000
+  Price: 800000
   levelText: {fileID: 936112489}
   incomeText: {fileID: 1776266855}
   priceText: {fileID: 683983289}
@@ -20900,7 +20900,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 110
-  Price: 130000
+  Price: 200000
   levelText: {fileID: 1900492885}
   incomeText: {fileID: 1718293020}
   priceText: {fileID: 492156487}
@@ -25356,7 +25356,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 50
-  Price: 75000
+  Price: 100000
   levelText: {fileID: 457652575}
   incomeText: {fileID: 1978440460}
   priceText: {fileID: 1650950010}
@@ -28280,8 +28280,8 @@ MonoBehaviour:
   playerData: {fileID: 1276309521}
   Level: 0
   Type: 0
-  Income: 0
-  Price: 0
+  Income: 400
+  Price: 1300000
   levelText: {fileID: 896249760}
   incomeText: {fileID: 373601347}
   priceText: {fileID: 1511247756}
@@ -29987,8 +29987,8 @@ MonoBehaviour:
   playerData: {fileID: 1276309521}
   Level: 0
   Type: 0
-  Income: 0
-  Price: 0
+  Income: 350
+  Price: 700000
   levelText: {fileID: 1625350686}
   incomeText: {fileID: 709665871}
   priceText: {fileID: 250175002}
@@ -31201,7 +31201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c572fd7936e9d4d854f58dfa35d88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyScript: {fileID: 1276309522}
+  CurrencyScript: {fileID: 1276309522}
   PlayerName: 
   TotalCurrencyCnt: 0
   UpgradableActiveItemList:
@@ -31323,8 +31323,22 @@ MonoBehaviour:
   - {fileID: 1038065775}
   - {fileID: 303134087}
   - {fileID: 1323629094}
+  Tasks:
+  - {fileID: 614913275}
+  - {fileID: 1933519204}
+  - {fileID: 887894331}
+  - {fileID: 656119455}
+  - {fileID: 1526837117}
+  - {fileID: 1548691315}
+  - {fileID: 37526692}
+  - {fileID: 1124161996}
+  - {fileID: 1855970736}
+  - {fileID: 105010174}
+  - {fileID: 1782831682}
+  - {fileID: 1843170361}
+  - {fileID: 73384702}
   playerData: {fileID: 1276309521}
-  textTotalCurrencyCnt: {fileID: 786198394}
+  TextTotalCurrencyCnt: {fileID: 786198394}
   textPassive: {fileID: 1069668535}
   textCurrencyCntPerClick: {fileID: 318217312}
   IsInGame: 0
@@ -38149,7 +38163,7 @@ MonoBehaviour:
   - {fileID: 677159076}
   oneTimeItems: []
   PlaceInParent: 5
-  Cost: 8000000
+  Cost: 15000000
   SingleBonus: 3500
   Text: {fileID: 1027544102}
 --- !u!1 &1527184992
@@ -39476,7 +39490,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 9
-  Price: 4000
+  Price: 8000
   levelText: {fileID: 1476874176}
   incomeText: {fileID: 561996585}
   priceText: {fileID: 702094920}
@@ -40096,7 +40110,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 5
-  Price: 2500
+  Price: 4500
   levelText: {fileID: 2051846859}
   incomeText: {fileID: 1391454449}
   priceText: {fileID: 1782711866}
@@ -40394,7 +40408,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 150
-  Price: 200000
+  Price: 400000
   levelText: {fileID: 296617574}
   incomeText: {fileID: 2144374386}
   priceText: {fileID: 537522454}
@@ -43917,7 +43931,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 300
-  Price: 100000
+  Price: 150000
   levelText: {fileID: 956448929}
   incomeText: {fileID: 659926511}
   priceText: {fileID: 1173137578}
@@ -50121,7 +50135,7 @@ MonoBehaviour:
   - {fileID: 14053625}
   oneTimeItems: []
   PlaceInParent: 2
-  Cost: 10000
+  Cost: 25000
   SingleBonus: 100
   Text: {fileID: 87786840}
 --- !u!1 &1938027115
@@ -50188,8 +50202,8 @@ MonoBehaviour:
   playerData: {fileID: 1276309521}
   Level: 0
   Type: 0
-  Income: 0
-  Price: 0
+  Income: 370
+  Price: 950000
   levelText: {fileID: 1265662296}
   incomeText: {fileID: 512566536}
   priceText: {fileID: 1955014847}
@@ -52218,8 +52232,8 @@ MonoBehaviour:
   playerData: {fileID: 1276309521}
   Level: 0
   Type: 0
-  Income: 0
-  Price: 0
+  Income: 420
+  Price: 1700000
   levelText: {fileID: 1557737378}
   incomeText: {fileID: 1754757627}
   priceText: {fileID: 630258679}

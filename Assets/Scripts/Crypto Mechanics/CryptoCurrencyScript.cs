@@ -14,13 +14,15 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     [SerializeField] public UpgradableItem[] ActiveButtons;
     [SerializeField] public UpgradableItem[] PassiveButtons;
     [SerializeField] public OneTimeItem[] OneTimeButtons;
+    [SerializeField] public Task[] Tasks;
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private TextMeshProUGUI textTotalCurrencyCnt;
-    [SerializeField] private TextMeshProUGUI textPassive;
-    [SerializeField] private TextMeshProUGUI textCurrencyCntPerClick;
+    [SerializeField] public TextMeshProUGUI TextTotalCurrencyCnt;
+    [SerializeField] public TextMeshProUGUI textPassive;
+    [SerializeField] public TextMeshProUGUI textCurrencyCntPerClick;
 
     public bool IsInGame;
-    private const double PassiveIncomeCoefficient = 0.3;
+    private const double PassiveIncomeCoefficientOnline = 0.3;
+    private const double PassiveIncomeCoefficientOffline = 0.1;
 
     public void BuyOrUpgrade(Item item)
     {
@@ -35,9 +37,9 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void Start()
     {
-        InvokeRepeating("GetPassiveIncome", 10f, 10f);
+        InvokeRepeating("GetPassiveIncome", 15f, 15f);
 
-        textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
+        TextTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
         textPassive.text = $"{playerData.TotalIncomes.Passive} D/s";
         textCurrencyCntPerClick.text = $"{playerData.TotalIncomes.Active} D";
     }
@@ -46,19 +48,24 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     {
         SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
         SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
-        SaveUpgradableItemListData(playerData.OneTimeItems, OneTimeButtons);
+        SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
+
+        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
+        File.WriteAllText(SavedDataPath, json);
     }
 
     public void Tap()
     {
         playerData.TotalCurrencyCnt += playerData.TotalIncomes.Active;
-        textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
+        TextTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
     }
 
     public void AddPassiveIncome()
     {
         playerData.TotalCurrencyCnt +=
-            IsInGame ? playerData.TotalIncomes.Passive : playerData.TotalIncomes.Passive * PassiveIncomeCoefficient;
+            IsInGame 
+            ? playerData.TotalIncomes.Passive * PassiveIncomeCoefficientOffline
+            : playerData.TotalIncomes.Passive * PassiveIncomeCoefficientOnline;
     }
 
     public void BuyTask(Task task)
@@ -75,25 +82,34 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         if (newData != null && playerData != null) playerData.Init(newData);
     }
 
-    public void SaveUpgradableItemListData(List<UpgradableItem> lst, UpgradableItem[] buttons)
+    public void SaveUpgradableItemListData(
+        List<UpgradableItem> lst, 
+        UpgradableItem[] buttons)
     {
         for (int i = 0; i < lst.Count; i++)
             InitilizeUpgradableItemList(lst, i, buttons);
-
-        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
-        File.WriteAllText(SavedDataPath, json);
     }
 
-    public void SaveUpgradableItemListData(List<OneTimeItem> lst, OneTimeItem[] buttons)
+    public void SaveOneItemListData(
+        List<OneTimeItem> lst,
+        OneTimeItem[] buttons)
     {
         for (int i = 0; i < lst.Count; i++)
-            InitilizeUpgradableItemList(lst, i, buttons);
-
-        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
-        File.WriteAllText(SavedDataPath, json);
+            InitilizeOneItemList(lst, i, buttons);
     }
 
-    public void InitilizeUpgradableItemList(List<UpgradableItem> lst, int i, UpgradableItem[] buttons)
+    public void SaveTaskListData(
+        List<Task> lst,
+        Task[] buttons)
+    {
+        for (int i = 0; i < lst.Count; i++)
+            InitilizeTaskItemList(lst, i, buttons);
+    }
+
+    public void InitilizeUpgradableItemList(
+        List<UpgradableItem> lst, 
+        int i, 
+        UpgradableItem[] buttons)
     {
         if (buttons[i] != null)
         {
@@ -103,14 +119,25 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         }
     }
 
-    public void InitilizeUpgradableItemList(List<OneTimeItem> lst, int i, OneTimeItem[] buttons)
+    public void InitilizeOneItemList(
+        List<OneTimeItem> lst, 
+        int i, 
+        OneTimeItem[] buttons)
     {
         if (buttons[i] != null) lst[i].Price = buttons[i].Price;
+    }
+
+    public void InitilizeTaskItemList(
+        List<Task> lst,
+        int i,
+        Task[] buttons)
+    {
+        if (buttons[i] != null) lst[i].Cost = buttons[i].Cost;
     }
 
     private void GetPassiveIncome()
     {
         playerData.TotalCurrencyCnt += playerData.TotalIncomes.Passive;
-        textTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
+        TextTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
     }
 }
