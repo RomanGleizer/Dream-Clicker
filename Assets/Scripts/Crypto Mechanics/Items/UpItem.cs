@@ -7,15 +7,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[Serializable] 
-public class UpgradableItem : Item
+[Serializable]
+public class UpItem : Item
 {
     public const int MaxLevel = 25;
     private const double UpgradeCoefficient = 1.3;
 
     [SerializeField] public string Name;
     [SerializeField] private Task task;
-    [SerializeField] private UpgradableItem[] items;
+    [SerializeField] private UpItem[] items;
     [SerializeField] public int NumberInParent;
     [SerializeField] private PlayerData playerData;
     [SerializeField] public int Level;
@@ -41,8 +41,8 @@ public class UpgradableItem : Item
     {
         var json = File.ReadAllText("Assets/Resources/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
-
-        if (gameObject.GetComponent<ActiveButton>()  
+        if (newData is null) return;
+        if (gameObject.GetComponent<ActiveButton>()
             && newData.SerializableUpActiveItems.Count >= NumberInParent)
         {
             var currentLevel = Level = newData.SerializableUpActiveItems[NumberInParent - 1].Level;
@@ -56,15 +56,15 @@ public class UpgradableItem : Item
 
         if (gameObject.GetComponent<PassiveButton>()
             && newData.SerializableUpPassiveItems.Count >= NumberInParent)
-            {
-                var currentLevel = Level = newData.SerializableUpPassiveItems[NumberInParent - 1].Level;
-                var currentIncome = Income = newData.SerializableUpPassiveItems[NumberInParent - 1].Income;
-                var currentPrice = Price = newData.SerializableUpPassiveItems[NumberInParent - 1].Price;
+        {
+            var currentLevel = Level = newData.SerializableUpPassiveItems[NumberInParent - 1].Level;
+            var currentIncome = Income = newData.SerializableUpPassiveItems[NumberInParent - 1].Income;
+            var currentPrice = Price = newData.SerializableUpPassiveItems[NumberInParent - 1].Price;
 
-                levelText.text = $"Приобретено: {currentLevel}";
-                incomeText.text = $"Доход: {currentIncome} D/s";
-                priceText.text = currentLevel == MaxLevel ? "Макс. ур." : $"{currentPrice} D";
-            }
+            levelText.text = $"Приобретено: {currentLevel}";
+            incomeText.text = $"Доход: {currentIncome} D/s";
+            priceText.text = currentLevel == MaxLevel ? "Макс. ур." : $"{currentPrice} D";
+        }
 
         if (gameObject.GetComponent<Button>() && newData.SerializableUpActiveItems.Count < NumberInParent)
             InitializeTextes();
@@ -77,9 +77,9 @@ public class UpgradableItem : Item
     {
         if (playerData.TotalCurrencyCnt < Price || Level == MaxLevel) return;
 
-        for (int i = 0; i < items.Length; i++)
+        foreach (var upItem in items)
         {
-            if (items[i].Level > 0) isPossibleToBuy = true;
+            if (upItem.Level > 0) isPossibleToBuy = true;
             else
             {
                 isPossibleToBuy = false;
@@ -87,28 +87,25 @@ public class UpgradableItem : Item
             }
         }
 
-        if ((task.Text.text == "Приобретено" && isPossibleToBuy) 
-            || (task.Text.text == "Приобретено" && items.Length == 0)
-            || task.Text.text == "0 D")
-        {
-            var deltaIncome = Income;
+        if ((task.Text.text != "Приобретено" || !isPossibleToBuy)
+            && (task.Text.text != "Приобретено" || items.Length != 0)
+            && task.Text.text != "0 D") return;
 
-            var previousIncome = Income;
-            Income = Math.Round(Income * UpgradeCoefficient, 1);
-            deltaIncome = Income - previousIncome;
-            if (Level == 0) deltaIncome = Income;
+        var previousIncome = Income;
+        Income = Math.Round(Income * UpgradeCoefficient, 1);
+        var deltaIncome = Income - previousIncome;
+        if (Level == 0) deltaIncome = Income;
 
-            if (Type == IncomeType.Active)
-                playerData.TotalIncomes.Active += deltaIncome;
-            else if (Type == IncomeType.Passive)
-                playerData.TotalIncomes.Passive += deltaIncome;
+        if (Type == IncomeType.Active)
+            playerData.TotalIncomes.Active += deltaIncome;
+        else if (Type == IncomeType.Passive)
+            playerData.TotalIncomes.Passive += deltaIncome;
 
-            playerData.TotalCurrencyCnt -= Price;
-            Level++;
-            Price = Math.Round(Price * UpgradeCoefficient, 1);
+        playerData.TotalCurrencyCnt -= Price;
+        Level++;
+        Price = Math.Round(Price * UpgradeCoefficient, 1);
 
-            InitializeTextes();
-        }
+        InitializeTextes();
     }
 
     private void InitializeTextes()

@@ -8,6 +8,7 @@ namespace Crypto_Mechanics.Serialization
     [Serializable]
     public class SerializablePlayerData
     {
+        public string lastOnlineTime;
         public string Name;
         public double TotalCurrencyCnt;
         public List<SerializableUpActiveItem> SerializableUpActiveItems;
@@ -18,6 +19,7 @@ namespace Crypto_Mechanics.Serialization
 
         public SerializablePlayerData(PlayerData data)
         {
+            lastOnlineTime = data.lastOnlineTime;
             Name = data.PlayerName;
             TotalCurrencyCnt = data.TotalCurrencyCnt;
             SerializableUpActiveItems = data.UpgradableActiveItemList.Select(item => new SerializableUpActiveItem(item)).ToList();

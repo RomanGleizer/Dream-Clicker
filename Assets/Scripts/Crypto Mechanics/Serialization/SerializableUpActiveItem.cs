@@ -11,7 +11,7 @@ namespace Crypto_Mechanics.Items
         public double Price;
         public IncomeType Type;
 
-        public SerializableUpActiveItem(UpgradableItem upItem)
+        public SerializableUpActiveItem(UpItem upItem)
         {
             if (upItem != null)
             {

@@ -20,18 +20,22 @@ public class OneTimeItem : Item
     {
         var json = File.ReadAllText("Assets/Resources/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
-        if (newData == null) Text.text = Price.ToString() + " D";
+        if (newData is null)
+        {
+            Text.text = $"{Price} D";
+            return;
+        }
 
-        if (newData.SerializableOneTimeItems[NumberInParent - 1].Text == "Приобретено")
-            Text.text = "Приобретено";
-        else Text.text = Price.ToString() + " D";
+        if (newData.SerializableOneTimeItems[NumberInParent - 1].Text == "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
+            Text.text = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
+        else Text.text = $"{Price} D";
     }
 
     public override void BuyOrUpgrade(PlayerData playerData)
     {
-        for (int i = 0; i < items.Length; i++)
+        foreach (var item in items)
         {
-            if (items[i].Text.text == "Приобретено") isPossibleToBuy = true;
+            if (item.Text.text == "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ") isPossibleToBuy = true;
             else
             {
                 isPossibleToBuy = false;
@@ -39,10 +43,10 @@ public class OneTimeItem : Item
             }
         }
 
-        if (playerData.TotalCurrencyCnt < Price && Text.text == "Приобретено" && !isPossibleToBuy) 
+        if (playerData.TotalCurrencyCnt < Price && Text.text == "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" && !isPossibleToBuy) 
             return;
 
         playerData.TotalCurrencyCnt -= Price;
-        Text.text = "Приобретено";
+        Text.text = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
     }
 }

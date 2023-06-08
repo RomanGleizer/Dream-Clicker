@@ -8,21 +8,21 @@ using System.IO;
 public class Task : MonoBehaviour
 {
     [SerializeField] private PlayerData data;
-    [SerializeField] public List<UpgradableItem> items;
+    [SerializeField] public List<UpItem> items;
     [SerializeField] public List<OneTimeItem> oneTimeItems;
     [SerializeField] public int PlaceInParent;
     [SerializeField] public double Cost;
     [SerializeField] public double SingleBonus;
     [SerializeField] public TextMeshProUGUI Text;
 
-    private bool isPossibleToBuy = false;
+    private bool isPossibleToBuy;
 
     private void Start()
     {
         var json = File.ReadAllText("Assets/Resources/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
-
-        if (PlaceInParent <= newData.Tasks.Count && PlaceInParent > 0) Text.text = $"Приобретено";
+        if (newData is null) return;
+        if (PlaceInParent <= newData.Tasks.Count && PlaceInParent > 0) Text.text = "Приобретено";
         else Text.text = $"{Cost} D";
     }
 
