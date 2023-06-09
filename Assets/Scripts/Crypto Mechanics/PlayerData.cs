@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Crypto_Mechanics.Serialization;
 using UnityEngine;
@@ -7,6 +9,7 @@ namespace Crypto_Mechanics
 {
     public class PlayerData : MonoBehaviour
     {
+        [SerializeField] public string lastOnlineTime = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         [SerializeField] public CryptoCurrencyScript CurrencyScript;
         [SerializeField] public string PlayerName;
         [SerializeField] public double TotalCurrencyCnt;

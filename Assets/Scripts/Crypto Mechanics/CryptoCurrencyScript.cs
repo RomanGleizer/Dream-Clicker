@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using Crypto_Mechanics;
 using Crypto_Mechanics.Serialization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
@@ -21,8 +21,9 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     [SerializeField] public TextMeshProUGUI textCurrencyCntPerClick;
 
     public bool IsInGame;
-    private const double PassiveIncomeCoefficientOnline = 0.3;
-    private const double PassiveIncomeCoefficientOffline = 0.1;
+    private const double OfflinePassiveIncomeCf = 0.1;
+    private const double OnlineassiveIncomeCf = 0.3;
+    private const float PassiveIncomeRepeatRate = 10;
 
     public void BuyOrUpgrade(Item item)
     {
@@ -33,11 +34,12 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     private void Awake()
     {
         LoadData();
+        AddOfflinePassiveIncome();
     }
 
     private void Start()
     {
-        InvokeRepeating("GetPassiveIncome", 15f, 15f);
+        InvokeRepeating(nameof(AddOnlinePassiveIncome), 0f, PassiveIncomeRepeatRate);
 
         TextTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
         textPassive.text = $"{playerData.TotalIncomes.Passive} D/s";
@@ -46,6 +48,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void Update()
     {
+        playerData.lastOnlineTime = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
         SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
         SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
@@ -64,8 +67,8 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     {
         playerData.TotalCurrencyCnt +=
             IsInGame 
-            ? playerData.TotalIncomes.Passive * PassiveIncomeCoefficientOffline
-            : playerData.TotalIncomes.Passive * PassiveIncomeCoefficientOnline;
+            ? playerData.TotalIncomes.Passive * OfflinePassiveIncomeCf
+            : playerData.TotalIncomes.Passive * OnlineassiveIncomeCf;
     }
 
     public void BuyTask(Task task)
@@ -135,9 +138,16 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         if (buttons[i] != null) lst[i].Cost = buttons[i].Cost;
     }
 
-    private void GetPassiveIncome()
+    public void AddOnlinePassiveIncome()
     {
         playerData.TotalCurrencyCnt += playerData.TotalIncomes.Passive;
         TextTotalCurrencyCnt.text = $"{Math.Round(playerData.TotalCurrencyCnt, 1)} D";
+    }
+
+    private void AddOfflinePassiveIncome()
+    {
+        var delta = DateTime.Now - DateTime.Parse(playerData.lastOnlineTime);
+        var income = playerData.TotalIncomes.Passive * delta.TotalSeconds / PassiveIncomeRepeatRate * OfflinePassiveIncomeCf;
+        playerData.TotalCurrencyCnt += income;
     }
 }
