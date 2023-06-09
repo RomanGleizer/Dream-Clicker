@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class OneTimeItem : Item
 {
+    [SerializeField] private CryptoCurrencyScript currencyScript;
     [SerializeField] public double Price;
     [SerializeField] public int NumberInParent;
     [SerializeField] private Task task;
@@ -18,16 +19,15 @@ public class OneTimeItem : Item
     {
         var json = File.ReadAllText("Assets/Resources/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
-        if (newData == null) Text.text = Price.ToString() + " D";
+        // if (newData == null) Text.text = Price.ToString() + " D";
 
-        if (newData.SerializableOneTimeItems.Count == 0)
+        if (newData.SerializableOneTimeItems.Count > 0)
         {
-            Text.text = Price.ToString() + " D";
-            return;
+            if (newData.SerializableOneTimeItems[NumberInParent - 1].Text != "Приобретено")
+                Text.text = Price.ToString() + " D";
+            else Text.text = "Приобретено";
         }
-
-        if (newData.SerializableOneTimeItems[NumberInParent - 1].Text == "Приобретено")
-            Text.text = "Приобретено";
+        else Text.text = Price.ToString() + " D";
     }
 
     public override void BuyOrUpgrade(PlayerData playerData)
@@ -42,10 +42,15 @@ public class OneTimeItem : Item
             }
         }
 
-        if (playerData.TotalCurrencyCnt < Price && Text.text == "Приобретено" && !isPossibleToBuy) 
+        if (playerData.TotalCurrencyCnt < Price && Text.text == "Приобретено") 
             return;
-
-        playerData.TotalCurrencyCnt -= Price;
-        Text.text = "Приобретено";
+        else if (playerData.TotalCurrencyCnt >= Price 
+            && task.Text.text == "Приобретено" 
+            && (isPossibleToBuy || items.Length == 0))
+        {
+            playerData.TotalCurrencyCnt -= Price;
+            Text.text = "Приобретено";
+            currencyScript.TextTotalCurrencyCnt.text = playerData.TotalCurrencyCnt.ToString();
+        }
     }
 }

@@ -260,7 +260,7 @@ MonoBehaviour:
   - {fileID: 1016550778}
   oneTimeItems: []
   PlaceInParent: 11
-  Cost: 500000000
+  Cost: 4000000000
   SingleBonus: 150000
   Text: {fileID: 1203684014}
 --- !u!114 &3354648
@@ -396,9 +396,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6981.2793}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15554902
@@ -2354,7 +2354,7 @@ MonoBehaviour:
   - {fileID: 1255631044}
   oneTimeItems: []
   PlaceInParent: 9
-  Cost: 30000000
+  Cost: 2100000000
   SingleBonus: 100000
   Text: {fileID: 1548524284}
 --- !u!114 &119250611
@@ -2515,7 +2515,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 475
-  Price: 2000000
+  Price: 80000000
   levelText: {fileID: 2030826190}
   incomeText: {fileID: 420334563}
   priceText: {fileID: 934362848}
@@ -2875,9 +2875,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1889.4401}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139478965
@@ -3095,7 +3095,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 1500
-  Price: 25000000
+  Price: 1800000000
   levelText: {fileID: 1620080016}
   incomeText: {fileID: 911980760}
   priceText: {fileID: 39077473}
@@ -4060,7 +4060,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 550
-  Price: 700000
+  Price: 20000000
   levelText: {fileID: 1859475758}
   incomeText: {fileID: 1349380626}
   priceText: {fileID: 1700961426}
@@ -4839,9 +4839,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -2313.76}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186872795
@@ -5342,9 +5342,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -8678.559}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225048632
@@ -8611,7 +8611,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 245
-  Price: 500000
+  Price: 10000000
   levelText: {fileID: 1006279822}
   incomeText: {fileID: 346792278}
   priceText: {fileID: 1681177945}
@@ -9568,7 +9568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 2104786124}
   Image: {fileID: 783494849}
-  Price: 35500000
+  currencyScript: {fileID: 631964783}
+  Price: 4500000000
   NumberInParent: 4
   task: {fileID: 3354647}
   items: []
@@ -10662,9 +10663,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -7829.919}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481346811
@@ -12026,7 +12027,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 2500
-  Price: 1600000
+  Price: 1500000000
   levelText: {fileID: 612764874}
   incomeText: {fileID: 1255418111}
   priceText: {fileID: 1586704014}
@@ -12702,9 +12703,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -616.48}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566720706
@@ -12855,7 +12856,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 190
-  Price: 800000
+  Price: 2500000
   levelText: {fileID: 266556774}
   incomeText: {fileID: 268089796}
   priceText: {fileID: 63635703}
@@ -14620,7 +14621,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 15000
-  Price: 25000000
+  Price: 3500000000
   levelText: {fileID: 1607830116}
   incomeText: {fileID: 601024014}
   priceText: {fileID: 1904764631}
@@ -15170,7 +15171,7 @@ MonoBehaviour:
   - {fileID: 577884393}
   oneTimeItems: []
   PlaceInParent: 5
-  Cost: 15000000
+  Cost: 23500000
   SingleBonus: 3500
   Text: {fileID: 1067852135}
 --- !u!114 &639332247
@@ -15697,9 +15698,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4859.68}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650863068
@@ -16207,7 +16208,7 @@ MonoBehaviour:
   - {fileID: 1022874819}
   oneTimeItems: []
   PlaceInParent: 10
-  Cost: 100000000
+  Cost: 3200000000
   SingleBonus: 80000
   Text: {fileID: 2099694871}
 --- !u!114 &660175400
@@ -16343,9 +16344,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -9102.879}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662550723
@@ -16970,9 +16971,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -3586.7202}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697110490
@@ -17383,7 +17384,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 370
-  Price: 950000
+  Price: 3000000
   levelText: {fileID: 1167785812}
   incomeText: {fileID: 1258261461}
   priceText: {fileID: 1644749509}
@@ -18042,7 +18043,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 1200
-  Price: 2100000
+  Price: 200000000
   levelText: {fileID: 324275429}
   incomeText: {fileID: 2031734127}
   priceText: {fileID: 219047778}
@@ -18616,9 +18617,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -3162.4001}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764698571
@@ -19476,9 +19477,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1465.12}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &785768862
@@ -20909,7 +20910,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 400
-  Price: 1300000
+  Price: 4000000
   levelText: {fileID: 22658606}
   incomeText: {fileID: 1089182248}
   priceText: {fileID: 617626682}
@@ -21843,7 +21844,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 4000
-  Price: 3500000
+  Price: 2200000000
   levelText: {fileID: 1579901391}
   incomeText: {fileID: 474059325}
   priceText: {fileID: 15774868}
@@ -22093,7 +22094,7 @@ MonoBehaviour:
   - {fileID: 121804641}
   oneTimeItems: []
   PlaceInParent: 7
-  Cost: 5000000
+  Cost: 500000000
   SingleBonus: 25000
   Text: {fileID: 1049178451}
 --- !u!114 &880965124
@@ -22651,9 +22652,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6556.9595}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &912166472
@@ -24062,7 +24063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 438997883}
   Image: {fileID: 769158448}
-  Price: 35555500
+  currencyScript: {fileID: 631964783}
+  Price: 4800000000
   NumberInParent: 7
   task: {fileID: 3354647}
   items:
@@ -24993,13 +24995,13 @@ MonoBehaviour:
   Name: 
   task: {fileID: 1594822006}
   items:
-  - {fileID: 998208023}
+  - {fileID: 2052582888}
   NumberInParent: 15
   playerData: {fileID: 631964784}
   Level: 0
   Type: 0
   Income: 1800
-  Price: 10000000
+  Price: 1200000000
   levelText: {fileID: 915214353}
   incomeText: {fileID: 1821585540}
   priceText: {fileID: 805691880}
@@ -25052,9 +25054,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -5708.32}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998562948
@@ -25389,7 +25391,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 4500
-  Price: 6000000
+  Price: 2700000000
   levelText: {fileID: 1414637529}
   incomeText: {fileID: 513847156}
   priceText: {fileID: 323193087}
@@ -25607,7 +25609,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 2000
-  Price: 35000000
+  Price: 2000000000
   levelText: {fileID: 641524571}
   incomeText: {fileID: 722985582}
   priceText: {fileID: 1960384230}
@@ -25760,7 +25762,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 800
-  Price: 14000000
+  Price: 1500000000
   levelText: {fileID: 1735855714}
   incomeText: {fileID: 1981461384}
   priceText: {fileID: 495472005}
@@ -28070,9 +28072,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -7405.599}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107724629
@@ -31026,9 +31028,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1040.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255131868
@@ -31269,7 +31271,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 720
-  Price: 8000000
+  Price: 1000000000
   levelText: {fileID: 633291779}
   incomeText: {fileID: 1677237231}
   priceText: {fileID: 1988152742}
@@ -31861,7 +31863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 713211672}
   Image: {fileID: 2063100193}
-  Price: 2150000
+  currencyScript: {fileID: 631964783}
+  Price: 550000000
   NumberInParent: 1
   task: {fileID: 880965123}
   items: []
@@ -32163,7 +32166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 919229331}
   Image: {fileID: 1956958207}
-  Price: 2155000
+  currencyScript: {fileID: 631964783}
+  Price: 700000000
   NumberInParent: 2
   task: {fileID: 880965123}
   items:
@@ -32314,9 +32318,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4011.0403}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283113759
@@ -32666,9 +32670,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4435.3604}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291734800
@@ -33574,9 +33578,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -2738.08}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355802789
@@ -33681,7 +33685,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 150
-  Price: 400000
+  Price: 1000000
   levelText: {fileID: 167752272}
   incomeText: {fileID: 1044811379}
   priceText: {fileID: 150014062}
@@ -33967,9 +33971,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -5284}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375258767
@@ -35171,9 +35175,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -8254.238}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438085488
@@ -36037,7 +36041,7 @@ MonoBehaviour:
   - {fileID: 1696809645}
   - {fileID: 950039575}
   PlaceInParent: 12
-  Cost: 1000000000
+  Cost: 5000000000
   SingleBonus: 250000
   Text: {fileID: 803972012}
 --- !u!114 &1459291370
@@ -36645,7 +36649,7 @@ MonoBehaviour:
   items: []
   oneTimeItems: []
   PlaceInParent: 4
-  Cost: 4500000
+  Cost: 7000000
   SingleBonus: 1000
   Text: {fileID: 68832893}
 --- !u!114 &1506718011
@@ -38833,7 +38837,7 @@ MonoBehaviour:
   - {fileID: 1281611355}
   - {fileID: 1780303948}
   PlaceInParent: 8
-  Cost: 10000000
+  Cost: 1000000000
   SingleBonus: 70000
   Text: {fileID: 2121909336}
 --- !u!114 &1594822007
@@ -39882,9 +39886,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -9527.199}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626586222
@@ -40790,7 +40794,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 350
-  Price: 700000
+  Price: 1500000
   levelText: {fileID: 1278221035}
   incomeText: {fileID: 1986366817}
   priceText: {fileID: 1917007512}
@@ -41175,7 +41179,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 10000
-  Price: 15000000
+  Price: 3300000000
   levelText: {fileID: 951810352}
   incomeText: {fileID: 1171701030}
   priceText: {fileID: 1115954202}
@@ -41392,7 +41396,7 @@ MonoBehaviour:
   - {fileID: 1823172166}
   oneTimeItems: []
   PlaceInParent: 6
-  Cost: 14000000
+  Cost: 50000000
   SingleBonus: 10000
   Text: {fileID: 453065721}
 --- !u!114 &1671936562
@@ -42274,7 +42278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1578665383}
   Image: {fileID: 168777009}
-  Price: 35555000
+  currencyScript: {fileID: 631964783}
+  Price: 4700000000
   NumberInParent: 6
   task: {fileID: 3354647}
   items:
@@ -44546,7 +44551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 772874000}
   Image: {fileID: 1765188363}
-  Price: 2155500
+  currencyScript: {fileID: 631964783}
+  Price: 800000000
   NumberInParent: 3
   task: {fileID: 880965123}
   items:
@@ -45068,7 +45074,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 360
-  Price: 1200000
+  Price: 22000000
   levelText: {fileID: 1288619274}
   incomeText: {fileID: 102554418}
   priceText: {fileID: 796239828}
@@ -45215,9 +45221,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6132.6396}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824943959
@@ -45781,7 +45787,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 302523279}
   Image: {fileID: 136819354}
-  Price: 35550000
+  currencyScript: {fileID: 631964783}
+  Price: 4600000000
   NumberInParent: 5
   task: {fileID: 3354647}
   items:
@@ -49268,7 +49275,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 420
-  Price: 1700000
+  Price: 6000000
   levelText: {fileID: 1928947773}
   incomeText: {fileID: 1753299999}
   priceText: {fileID: 1159894520}
@@ -49349,7 +49356,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 300
-  Price: 800000
+  Price: 17000000
   levelText: {fileID: 387751585}
   incomeText: {fileID: 322309761}
   priceText: {fileID: 528041461}
@@ -50616,7 +50623,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 700
-  Price: 1000000
+  Price: 30000000
   levelText: {fileID: 1438353910}
   incomeText: {fileID: 679733393}
   priceText: {fileID: 433500526}
@@ -51004,7 +51011,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 1500
-  Price: 6000000
+  Price: 900000000
   levelText: {fileID: 1073123701}
   incomeText: {fileID: 1238156554}
   priceText: {fileID: 756970369}
@@ -51254,7 +51261,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 1000
-  Price: 1500000
+  Price: 100000000
   levelText: {fileID: 1208524303}
   incomeText: {fileID: 1596168646}
   priceText: {fileID: 1184105730}
@@ -51448,7 +51455,7 @@ MonoBehaviour:
   items: []
   oneTimeItems: []
   PlaceInParent: 13
-  Cost: 999999999999
+  Cost: 10000000000
   SingleBonus: 1000000
   Text: {fileID: 658365416}
 --- !u!114 &2073502275
@@ -52918,7 +52925,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 600
-  Price: 5000000
+  Price: 800000000
   levelText: {fileID: 2090310724}
   incomeText: {fileID: 232374812}
   priceText: {fileID: 564848510}
@@ -54399,9 +54406,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -192.16}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5030370814811442916

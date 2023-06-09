@@ -513,7 +513,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 4000
-  Price: 3500000
+  Price: 2200000000
   levelText: {fileID: 1067668976}
   incomeText: {fileID: 1503219164}
   priceText: {fileID: 1157469042}
@@ -709,7 +709,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 300
-  Price: 800000
+  Price: 17000000
   levelText: {fileID: 1190083540}
   incomeText: {fileID: 674583723}
   priceText: {fileID: 1528756745}
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 150
-  Price: 400000
+  Price: 1000000
   levelText: {fileID: 1381135513}
   incomeText: {fileID: 610552027}
   priceText: {fileID: 380571578}
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 550
-  Price: 700000
+  Price: 20000000
   levelText: {fileID: 1914073045}
   incomeText: {fileID: 1007605540}
   priceText: {fileID: 149798971}
@@ -3049,7 +3049,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 190
-  Price: 800000
+  Price: 2500000
   levelText: {fileID: 164385806}
   incomeText: {fileID: 112772291}
   priceText: {fileID: 1112903242}
@@ -4867,7 +4867,7 @@ MonoBehaviour:
   - {fileID: 127073133}
   oneTimeItems: []
   PlaceInParent: 5
-  Cost: 15000000
+  Cost: 23500000
   SingleBonus: 3500
   Text: {fileID: 1949472769}
 --- !u!114 &195137675
@@ -5924,7 +5924,7 @@ MonoBehaviour:
   items: []
   oneTimeItems: []
   PlaceInParent: 4
-  Cost: 4500000
+  Cost: 7000000
   SingleBonus: 1000
   Text: {fileID: 1374803240}
 --- !u!114 &249538428
@@ -6691,7 +6691,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 600
-  Price: 5000000
+  Price: 1000000000
   levelText: {fileID: 1206912282}
   incomeText: {fileID: 1185025369}
   priceText: {fileID: 122892662}
@@ -8574,7 +8574,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 245
-  Price: 500000
+  Price: 10000000
   levelText: {fileID: 1602436489}
   incomeText: {fileID: 1372657530}
   priceText: {fileID: 1191827606}
@@ -9670,7 +9670,7 @@ MonoBehaviour:
   items: []
   oneTimeItems: []
   PlaceInParent: 13
-  Cost: 999999999999
+  Cost: 10000000000
   SingleBonus: 1000000
   Text: {fileID: 615815377}
 --- !u!114 &374772093
@@ -9832,7 +9832,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 4500
-  Price: 6000000
+  Price: 2700000000
   levelText: {fileID: 584373786}
   incomeText: {fileID: 1923256265}
   priceText: {fileID: 364805678}
@@ -10954,7 +10954,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 475
-  Price: 2000000
+  Price: 800000000
   levelText: {fileID: 931674697}
   incomeText: {fileID: 1390085258}
   priceText: {fileID: 995049225}
@@ -11828,7 +11828,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 400
-  Price: 1300000
+  Price: 4000000
   levelText: {fileID: 1802247491}
   incomeText: {fileID: 1430180877}
   priceText: {fileID: 1150509848}
@@ -12870,7 +12870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1947764021}
   Image: {fileID: 1998645463}
-  Price: 2155500
+  currencyScript: {fileID: 631964783}
+  Price: 800000000
   NumberInParent: 3
   task: {fileID: 872210126}
   items:
@@ -13588,7 +13589,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 10000
-  Price: 15000000
+  Price: 3300000000
   levelText: {fileID: 2004728464}
   incomeText: {fileID: 554864033}
   priceText: {fileID: 1972248681}
@@ -14343,7 +14344,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 1500
-  Price: 6000000
+  Price: 900000000
   levelText: {fileID: 427814391}
   incomeText: {fileID: 800927788}
   priceText: {fileID: 290174255}
@@ -14803,7 +14804,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 887834773}
   Image: {fileID: 681778464}
-  Price: 2155000
+  currencyScript: {fileID: 631964783}
+  Price: 700000000
   NumberInParent: 2
   task: {fileID: 872210126}
   items:
@@ -16409,7 +16411,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 360
-  Price: 1200000
+  Price: 22000000
   levelText: {fileID: 884847337}
   incomeText: {fileID: 80395771}
   priceText: {fileID: 591399784}
@@ -17360,7 +17362,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 2000
-  Price: 35000000
+  Price: 2000000000
   levelText: {fileID: 382705751}
   incomeText: {fileID: 1093791802}
   priceText: {fileID: 529575742}
@@ -18660,7 +18662,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 347997845}
   Image: {fileID: 656623366}
-  Price: 35550000
+  currencyScript: {fileID: 631964783}
+  Price: 4600000000
   NumberInParent: 5
   task: {fileID: 1226073298}
   items:
@@ -21307,7 +21310,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 1200
-  Price: 2100000
+  Price: 200000000
   levelText: {fileID: 1983066864}
   incomeText: {fileID: 652659968}
   priceText: {fileID: 1804702522}
@@ -23596,7 +23599,7 @@ MonoBehaviour:
   - {fileID: 426067564}
   oneTimeItems: []
   PlaceInParent: 7
-  Cost: 5000000
+  Cost: 500000000
   SingleBonus: 25000
   Text: {fileID: 227858868}
 --- !u!114 &872210127
@@ -27710,7 +27713,7 @@ MonoBehaviour:
   - {fileID: 35757154}
   oneTimeItems: []
   PlaceInParent: 9
-  Cost: 30000000
+  Cost: 2100000000
   SingleBonus: 100000
   Text: {fileID: 1719981319}
 --- !u!114 &1046587027
@@ -27944,7 +27947,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 754371067}
   Image: {fileID: 1218075969}
-  Price: 35555000
+  currencyScript: {fileID: 631964783}
+  Price: 4700000000
   NumberInParent: 6
   task: {fileID: 1226073298}
   items:
@@ -29292,7 +29296,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 350
-  Price: 700000
+  Price: 1500000
   levelText: {fileID: 988052675}
   incomeText: {fileID: 257823471}
   priceText: {fileID: 1422728902}
@@ -32530,7 +32534,7 @@ MonoBehaviour:
   - {fileID: 617549243}
   oneTimeItems: []
   PlaceInParent: 11
-  Cost: 500000000
+  Cost: 4000000000
   SingleBonus: 150000
   Text: {fileID: 106841476}
 --- !u!114 &1226073299
@@ -32840,7 +32844,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1518582063}
   Image: {fileID: 1284437134}
-  Price: 35500000
+  currencyScript: {fileID: 631964783}
+  Price: 4500000000
   NumberInParent: 4
   task: {fileID: 1226073298}
   items: []
@@ -37007,7 +37012,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 15000
-  Price: 25000000
+  Price: 3500000000
   levelText: {fileID: 58413933}
   incomeText: {fileID: 455713304}
   priceText: {fileID: 1799596061}
@@ -37248,7 +37253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 682385915}
   Image: {fileID: 1606991490}
-  Price: 35555500
+  currencyScript: {fileID: 631964783}
+  Price: 4800000000
   NumberInParent: 7
   task: {fileID: 1226073298}
   items:
@@ -38751,7 +38757,7 @@ MonoBehaviour:
   Level: 0
   Type: 1
   Income: 1500
-  Price: 25000000
+  Price: 1800000000
   levelText: {fileID: 133390124}
   incomeText: {fileID: 599389062}
   priceText: {fileID: 426630950}
@@ -39569,7 +39575,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 370
-  Price: 950000
+  Price: 3000000
   levelText: {fileID: 270040516}
   incomeText: {fileID: 1877312828}
   priceText: {fileID: 1181126768}
@@ -40809,7 +40815,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 700
-  Price: 1000000
+  Price: 30000000
   levelText: {fileID: 94577665}
   incomeText: {fileID: 1071522060}
   priceText: {fileID: 2050949051}
@@ -42138,7 +42144,7 @@ MonoBehaviour:
   - {fileID: 348559211}
   oneTimeItems: []
   PlaceInParent: 10
-  Cost: 100000000
+  Cost: 3200000000
   SingleBonus: 80000
   Text: {fileID: 1713456217}
 --- !u!114 &1668992869
@@ -42837,7 +42843,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 2500
-  Price: 1600000
+  Price: 1500000000
   levelText: {fileID: 138460366}
   incomeText: {fileID: 803749731}
   priceText: {fileID: 575741733}
@@ -44955,7 +44961,7 @@ MonoBehaviour:
   - {fileID: 1055911430}
   - {fileID: 1487334105}
   PlaceInParent: 12
-  Cost: 1000000000
+  Cost: 5000000000
   SingleBonus: 250000
   Text: {fileID: 884300931}
 --- !u!114 &1796013219
@@ -46395,7 +46401,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 1000
-  Price: 1500000
+  Price: 100000000
   levelText: {fileID: 1847555279}
   incomeText: {fileID: 2123288281}
   priceText: {fileID: 299657027}
@@ -47986,7 +47992,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 652775673}
   Image: {fileID: 1613202183}
-  Price: 2150000
+  currencyScript: {fileID: 631964783}
+  Price: 550000000
   NumberInParent: 1
   task: {fileID: 872210126}
   items: []
@@ -49170,7 +49177,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 420
-  Price: 1700000
+  Price: 6000000
   levelText: {fileID: 1425055963}
   incomeText: {fileID: 1368338137}
   priceText: {fileID: 358387087}
@@ -50383,7 +50390,7 @@ MonoBehaviour:
   items: []
   oneTimeItems: []
   PlaceInParent: 6
-  Cost: 14000000
+  Cost: 50000000
   SingleBonus: 10000
   Text: {fileID: 703902053}
 --- !u!114 &2013454299
@@ -51181,7 +51188,7 @@ MonoBehaviour:
   Level: 0
   Type: 0
   Income: 1800
-  Price: 10000000
+  Price: 1200000000
   levelText: {fileID: 693641298}
   incomeText: {fileID: 1193612537}
   priceText: {fileID: 574751458}
@@ -52660,7 +52667,7 @@ MonoBehaviour:
   - {fileID: 551478284}
   - {fileID: 505190527}
   PlaceInParent: 8
-  Cost: 10000000
+  Cost: 1000000000
   SingleBonus: 70000
   Text: {fileID: 990442116}
 --- !u!114 &2091047635
