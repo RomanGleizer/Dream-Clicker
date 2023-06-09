@@ -4,5 +4,5 @@ public interface ICryptoCurrency
 {
     public void BuyOrUpgrade(Item item);
     public void Tap();
-    public void AddPassiveIncome();
+    public void AddOnlinePassiveIncome();
 }
