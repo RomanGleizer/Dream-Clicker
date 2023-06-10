@@ -100,7 +100,9 @@ public class UpgradableItem : Item
     private void InitializeTextes()
     {
         levelText.text = $"Приобретено: {Level}";
-        incomeText.text = $"Доход: {Income} D/s";
+        if (Type == IncomeType.Active)
+            incomeText.text = $"Доход: {Income} D";
+        else incomeText.text = $"Доход: {Income} D/s";
         priceText.text = Level == MaxLevel ? "Макс. ур." : $"{Price} D";
     }
 
@@ -110,9 +112,21 @@ public class UpgradableItem : Item
         var currentLevel = Level = lst[NumberInParent - 1].Level;
         var currentIncome = Income = lst[NumberInParent - 1].Income;
         var currentPrice = Price = lst[NumberInParent - 1].Price;
+        SetTextes(currentLevel, currentIncome, currentPrice);
 
         levelText.text = $"Приобретено: {currentLevel}";
-        incomeText.text = $"Доход: {currentIncome} D/s";
+        if (Type == IncomeType.Active)
+            incomeText.text = $"Доход: {currentIncome} D";
+        else incomeText.text = $"Доход: {currentIncome} D/s";
         priceText.text = currentLevel == MaxLevel ? "Макс. ур." : $"{currentPrice} D";
+    }
+
+    private void SetTextes(int level, double income, double price)
+    {
+        levelText.text = $"Приобретено: {level}";
+        if (Type == IncomeType.Active)
+            incomeText.text = $"Доход: {income} D";
+        else incomeText.text = $"Доход: {income} D/s";
+        priceText.text = level == MaxLevel ? "Макс. ур." : $"{price} D";
     }
 }
