@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using Crypto_Mechanics;
+using Crypto_Mechanics.Items;
 using Crypto_Mechanics.Serialization;
 using TMPro;
 using UnityEngine;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
-    private const string SavedDataPath = "Assets/Resources/savedData.json";
+    //private const string SavedDataPath = "Assets/Resources/savedData.json";
 
     [SerializeField] public UpgradableItem[] ActiveButtons;
     [SerializeField] public UpgradableItem[] PassiveButtons;
@@ -33,6 +34,9 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void Awake()
     {
+        if (!File.Exists(Application.dataPath + "/Game Data.json"))
+            SaveListsData();
+
         LoadData();
         AddOfflinePassiveIncome();
     }
@@ -49,12 +53,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     public void Update()
     {
         playerData.lastOnlineTime = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
-        SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
-        SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
-
-        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
-        File.WriteAllText(SavedDataPath, json);
+        SaveListsData();
     }
 
     public void Tap()
@@ -79,12 +78,13 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void LoadData()
     {
-        var json = File.ReadAllText(SavedDataPath);
+        if (!File.Exists(Application.dataPath + "/Game Data.json")) return;
+
+        var json = File.ReadAllText(Application.dataPath + "/Game Data.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
         if (newData != null && playerData != null) playerData.Init(newData);
     }
-
     public void SaveUpgradableItemListData(
         List<UpgradableItem> lst, 
         UpgradableItem[] buttons)
@@ -149,5 +149,15 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         var delta = DateTime.Now - DateTime.Parse(playerData.lastOnlineTime);
         var income = playerData.TotalIncomes.Passive * delta.TotalSeconds / PassiveIncomeRepeatRate * OfflinePassiveIncomeCf;
         playerData.TotalCurrencyCnt += income;
+    }
+
+    private void SaveListsData()
+    {
+        SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
+        SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
+        SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
+
+        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
+        File.WriteAllText(Application.dataPath + "/Game Data.json", json);
     }
 }

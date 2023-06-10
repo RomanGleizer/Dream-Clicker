@@ -40,10 +40,12 @@ public class UpgradableItem : Item
 
     private void Start()
     {
-        var json = File.ReadAllText("Assets/Resources/savedData.json");
+        if (!File.Exists(Application.dataPath + "/Game Data.json")) return;
+
+        var json = File.ReadAllText(Application.dataPath + "/Game Data.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
-        if (gameObject.GetComponent<ActiveButton>()  
+        if (gameObject.GetComponent<ActiveButton>()
             && newData.SerializableUpActiveItems.Count >= NumberInParent)
             InitializeTextes(newData.SerializableUpActiveItems);
 
@@ -51,9 +53,9 @@ public class UpgradableItem : Item
             && newData.SerializableUpPassiveItems.Count >= NumberInParent)
             InitializeTextes(newData.SerializableUpPassiveItems);
 
-        if ((gameObject.GetComponent<Button>() 
+        if ((gameObject.GetComponent<Button>()
             && newData.SerializableUpActiveItems.Count < NumberInParent)
-            || (gameObject.GetComponent<Button>() 
+            || (gameObject.GetComponent<Button>()
             && newData.SerializableUpPassiveItems.Count < NumberInParent))
             InitializeTextes();
     }

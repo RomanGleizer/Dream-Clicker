@@ -20,7 +20,9 @@ public class Task : MonoBehaviour
 
     private void Start()
     {
-        var json = File.ReadAllText("Assets/Resources/savedData.json");
+        if (!File.Exists(Application.dataPath + "/Game Data.json")) return;
+
+        var json = File.ReadAllText(Application.dataPath + "/Game Data.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
         if (PlaceInParent <= newData.Tasks.Count && PlaceInParent > 0) Text.text = $"Приобретено";

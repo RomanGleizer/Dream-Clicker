@@ -17,9 +17,10 @@ public class OneTimeItem : Item
 
     private void Start()
     {
-        var json = File.ReadAllText("Assets/Resources/savedData.json");
+        if (!File.Exists(Application.dataPath + "/Game Data.json")) return;
+        
+        var json = File.ReadAllText(Application.dataPath + "/Game Data.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
-        // if (newData == null) Text.text = Price.ToString() + " D";
 
         if (newData.SerializableOneTimeItems.Count > 0)
         {
