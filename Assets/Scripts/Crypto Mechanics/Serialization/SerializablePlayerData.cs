@@ -13,7 +13,7 @@ namespace Crypto_Mechanics.Serialization
         public List<SerializableUpActiveItem> SerializableUpActiveItems;
         public List<SerializableUpPassiveItem> SerializableUpPassiveItems;
         public List<SerializableOneTimeUpgradableItem> SerializableOneTimeItems;
-        public List<Task> Tasks;
+        public List<SerializableTask> Tasks;
         public TotalIncomes totalIncomes;
 
         public SerializablePlayerData(PlayerData data)
@@ -23,7 +23,7 @@ namespace Crypto_Mechanics.Serialization
             SerializableUpActiveItems = data.UpgradableActiveItemList.Select(item => new SerializableUpActiveItem(item)).ToList();
             SerializableUpPassiveItems = data.UpgradablePassiveItemList.Select(item => new SerializableUpPassiveItem(item)).ToList();
             SerializableOneTimeItems = data.OneTimeItems.Select(item => new SerializableOneTimeUpgradableItem(item)).ToList();
-            Tasks = data.Tasks;
+            Tasks = data.Tasks.Select(item => new SerializableTask(item)).ToList();
             totalIncomes = data.TotalIncomes;
         }
     }

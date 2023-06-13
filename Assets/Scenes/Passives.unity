@@ -4870,6 +4870,7 @@ MonoBehaviour:
   Cost: 23500000
   SingleBonus: 3500
   Text: {fileID: 1949472769}
+  IsTaskBuy: 0
 --- !u!114 &195137675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5927,6 +5928,7 @@ MonoBehaviour:
   Cost: 7000000
   SingleBonus: 1000
   Text: {fileID: 1374803240}
+  IsTaskBuy: 0
 --- !u!114 &249538428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9673,6 +9675,7 @@ MonoBehaviour:
   Cost: 10000000000
   SingleBonus: 1000000
   Text: {fileID: 615815377}
+  IsTaskBuy: 0
 --- !u!114 &374772093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23605,6 +23608,7 @@ MonoBehaviour:
   Cost: 500000000
   SingleBonus: 25000
   Text: {fileID: 227858868}
+  IsTaskBuy: 0
 --- !u!114 &872210127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27719,6 +27723,7 @@ MonoBehaviour:
   Cost: 2100000000
   SingleBonus: 100000
   Text: {fileID: 1719981319}
+  IsTaskBuy: 0
 --- !u!114 &1046587027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28621,6 +28626,7 @@ MonoBehaviour:
   Cost: 25000
   SingleBonus: 100
   Text: {fileID: 1375835853}
+  IsTaskBuy: 0
 --- !u!114 &1068768303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32382,6 +32388,7 @@ MonoBehaviour:
   Cost: 1000000
   SingleBonus: 1000
   Text: {fileID: 1598213077}
+  IsTaskBuy: 0
 --- !u!114 &1225538489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32540,6 +32547,7 @@ MonoBehaviour:
   Cost: 4000000000
   SingleBonus: 150000
   Text: {fileID: 106841476}
+  IsTaskBuy: 0
 --- !u!114 &1226073299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39202,6 +39210,7 @@ MonoBehaviour:
   Cost: 2000
   SingleBonus: 5
   Text: {fileID: 2053139741}
+  IsTaskBuy: 0
 --- !u!114 &1532723537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40251,6 +40260,7 @@ MonoBehaviour:
   Cost: 0
   SingleBonus: 0
   Text: {fileID: 1651437594}
+  IsTaskBuy: 0
 --- !u!114 &1585832790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41934,7 +41944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0443\u0441\u0442\u043E\n"
+  m_text: "\u041F\u0443\u0441\u0442\u043E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -42150,6 +42160,7 @@ MonoBehaviour:
   Cost: 3200000000
   SingleBonus: 80000
   Text: {fileID: 1713456217}
+  IsTaskBuy: 0
 --- !u!114 &1668992869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44967,6 +44978,7 @@ MonoBehaviour:
   Cost: 5000000000
   SingleBonus: 250000
   Text: {fileID: 884300931}
+  IsTaskBuy: 0
 --- !u!114 &1796013219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50396,6 +50408,7 @@ MonoBehaviour:
   Cost: 50000000
   SingleBonus: 10000
   Text: {fileID: 703902053}
+  IsTaskBuy: 0
 --- !u!114 &2013454299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52673,6 +52686,7 @@ MonoBehaviour:
   Cost: 1000000000
   SingleBonus: 70000
   Text: {fileID: 990442116}
+  IsTaskBuy: 0
 --- !u!114 &2091047635
 MonoBehaviour:
   m_ObjectHideFlags: 0

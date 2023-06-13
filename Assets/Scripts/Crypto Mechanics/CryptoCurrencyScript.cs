@@ -9,8 +9,6 @@ using UnityEngine;
 
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
-    private const string SavedDataPath = "Assets/Resources/savedData.json";
-
     [SerializeField] public UpgradableItem[] ActiveButtons;
     [SerializeField] public UpgradableItem[] PassiveButtons;
     [SerializeField] public OneTimeItem[] OneTimeButtons;
@@ -33,14 +31,19 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void Awake()
     {
-        LoadData();
-        AddOfflinePassiveIncome();
+        if (File.Exists(Application.dataPath + "/savedData.json")) LoadData();
+        else
+        {
+            SaveData();
+            LoadData();
+        }
+
+        InvokeRepeating(nameof(AddOfflinePassiveIncome), 0f, PassiveIncomeRepeatRate);
+        InvokeRepeating(nameof(AddOnlinePassiveIncome), 0f, PassiveIncomeRepeatRate);
     }
 
     private void Start()
     {
-        InvokeRepeating(nameof(AddOnlinePassiveIncome), 0f, PassiveIncomeRepeatRate);
-
         TextTotalCurrencyCnt.text = $"{(playerData.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(playerData.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Е{Math.Round(playerData.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(playerData.TotalCurrencyCnt, 1))} D";
         textPassive.text = $"{(playerData.TotalIncomes.Passive > 10000 ? $"{Math.Round(double.Parse(playerData.TotalIncomes.Passive.ToString().Substring(0, 3)) / 100, 2)}Е{Math.Round(playerData.TotalIncomes.Passive).ToString().Length - 1}" : playerData.TotalIncomes.Passive)} D/s";
         textCurrencyCntPerClick.text = $"{(playerData.TotalIncomes.Active > 10000 ? $"{Math.Round(double.Parse(playerData.TotalIncomes.Active.ToString().Substring(0, 3)) / 100, 2)}Е{Math.Round(playerData.TotalIncomes.Active).ToString().Length - 1}" : playerData.TotalIncomes.Active)} D";
@@ -48,27 +51,13 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void Update()
     {
-        playerData.lastOnlineTime = DateTime.Now.ToString(CultureInfo.CurrentCulture);
-        SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
-        SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
-        SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
-
-        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
-        File.WriteAllText(SavedDataPath, json);
+        SaveData();
     }
 
     public void Tap()
     {
         playerData.TotalCurrencyCnt += playerData.TotalIncomes.Active;
         TextTotalCurrencyCnt.text = $"{(playerData.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(playerData.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Е{Math.Round(playerData.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(playerData.TotalCurrencyCnt, 1))} D";
-    }
-
-    public void AddPassiveIncome()
-    {
-        playerData.TotalCurrencyCnt +=
-            IsInGame 
-            ? playerData.TotalIncomes.Passive * OfflinePassiveIncomeCf
-            : playerData.TotalIncomes.Passive * OnlineassiveIncomeCf;
     }
 
     public void BuyTask(Task task)
@@ -79,7 +68,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void LoadData()
     {
-        var json = File.ReadAllText(SavedDataPath);
+        var json = File.ReadAllText(Application.dataPath + "/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
         if (newData != null && playerData != null) playerData.Init(newData);
@@ -146,8 +135,20 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void AddOfflinePassiveIncome()
     {
-        var delta = DateTime.Now - DateTime.Parse(playerData.lastOnlineTime);
-        var income = playerData.TotalIncomes.Passive * delta.TotalSeconds / PassiveIncomeRepeatRate * OfflinePassiveIncomeCf;
+        if (!File.Exists(Application.dataPath + "/Last Visit Data.json")) return;
+
+        var delta = DateTime.Now - DateTime.Parse(File.ReadAllText(Application.dataPath + "/Last Visit Data.json"));
+        var income = playerData.TotalIncomes.Passive * (delta.TotalSeconds / PassiveIncomeRepeatRate) * OfflinePassiveIncomeCf;
         playerData.TotalCurrencyCnt += income;
+    }
+
+    public void SaveData()
+    {
+        SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
+        SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
+        SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
+
+        var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
+        File.WriteAllText(Application.dataPath + "/savedData.json", json);
     }
 }

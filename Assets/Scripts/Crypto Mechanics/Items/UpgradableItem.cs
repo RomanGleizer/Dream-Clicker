@@ -40,7 +40,9 @@ public class UpgradableItem : Item
 
     private void Start()
     {
-        var json = File.ReadAllText("Assets/Resources/savedData.json");
+        if (!File.Exists(Application.dataPath + "/savedData.json")) return;
+
+        var json = File.ReadAllText(Application.dataPath + "/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
         if (gameObject.GetComponent<ActiveButton>()  
@@ -55,7 +57,7 @@ public class UpgradableItem : Item
             && newData.SerializableUpActiveItems.Count < NumberInParent)
             || (gameObject.GetComponent<Button>() 
             && newData.SerializableUpPassiveItems.Count < NumberInParent))
-            InitializeTextes();
+            SetTextes(Level, Income, Price);
     }
 
     public override void BuyOrUpgrade(PlayerData playerData)
@@ -71,10 +73,9 @@ public class UpgradableItem : Item
                 break;
             }
         }
-
+        // task.Text.text == "0 D"
         if ((task.Text.text == "Приобретено" && isPossibleToBuy) 
-            || (task.Text.text == "Приобретено" && items.Length == 0)
-            || task.Text.text == "0 D")
+            || ((task.Text.text == "Приобретено" || task.Text.text == "Пусто") && items.Length == 0))
         {
             var deltaIncome = Income;
             var previousIncome = Income;
@@ -93,17 +94,8 @@ public class UpgradableItem : Item
             
             Price = Math.Round(Price * UpgradeActiveCoefficient, 1);
 
-            InitializeTextes();
+            SetTextes(Level, Income, Price);
         }
-    }
-
-    private void InitializeTextes()
-    {
-        levelText.text = $"Приобретено: {Level}";
-        if (Type == IncomeType.Active)
-            incomeText.text = $"Доход: {Income} D";
-        else incomeText.text = $"Доход: {Income} D/s";
-        priceText.text = Level == MaxLevel ? "Макс. ур." : $"{Price} D";
     }
 
     private void InitializeTextes<T>(List<T> lst)
@@ -113,12 +105,6 @@ public class UpgradableItem : Item
         var currentIncome = Income = lst[NumberInParent - 1].Income;
         var currentPrice = Price = lst[NumberInParent - 1].Price;
         SetTextes(currentLevel, currentIncome, currentPrice);
-
-        levelText.text = $"Приобретено: {currentLevel}";
-        if (Type == IncomeType.Active)
-            incomeText.text = $"Доход: {currentIncome} D";
-        else incomeText.text = $"Доход: {currentIncome} D/s";
-        priceText.text = currentLevel == MaxLevel ? "Макс. ур." : $"{currentPrice} D";
     }
 
     private void SetTextes(int level, double income, double price)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using Crypto_Mechanics.Serialization;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace Crypto_Mechanics
 {
     public class PlayerData : MonoBehaviour
     {
-        [SerializeField] public string lastOnlineTime = DateTime.Now.ToString(CultureInfo.CurrentCulture);
+        [SerializeField] public string lastOnlineTime;
         [SerializeField] public CryptoCurrencyScript CurrencyScript;
         [SerializeField] public string PlayerName;
         [SerializeField] public double TotalCurrencyCnt;
@@ -23,8 +24,25 @@ namespace Crypto_Mechanics
         {
             UpgradableActiveItemList = new List<UpgradableItem>();
             UpgradablePassiveItemList = new List<UpgradableItem>();
+            OneTimeItems = new List<OneTimeItem>();
             Tasks = new List<Task>();
             TotalIncomes = new TotalIncomes();
+        }
+
+        private void Start()
+        {
+            if (!File.Exists(Application.dataPath + "/Last Visit Data.json")) return;
+
+            lastOnlineTime = DateTime
+                .Parse(File.ReadAllText(Application.dataPath + "/Last Visit Data.json"))
+                .ToString(CultureInfo.CurrentCulture);
+        }
+
+        private void Update()
+        {
+            File.WriteAllText(
+                Application.dataPath + "/Last Visit Data.json",
+                DateTime.Now.ToString(CultureInfo.CurrentCulture));
         }
 
         public void Init(SerializablePlayerData playerData)
@@ -33,7 +51,6 @@ namespace Crypto_Mechanics
 
             PlayerName = playerData.Name;
             TotalCurrencyCnt = playerData.TotalCurrencyCnt;
-            Tasks = playerData.Tasks;
             TotalIncomes = playerData.totalIncomes;
 
             for (int i = 0; i < UpgradableActiveItemList.Count; i++)
