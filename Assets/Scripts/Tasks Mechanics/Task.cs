@@ -52,14 +52,14 @@ public class Task : MonoBehaviour
         }
 
         if ((data.TotalCurrencyCnt >= Cost && isPossibleToBuy && Text.text != "Приобретено")
-            || (PlaceInParent == 4 && data.Tasks.Count > 0 && data.Tasks[2].Text.text == "Приобретено")
-            || (PlaceInParent == 13 && data.Tasks.Count > 0 && data.Tasks[11].Text.text == "Приобретено")
+            || (PlaceInParent == 4 && data.TaskItems.Count > 0 && data.TaskItems[2].Text.text == "Приобретено")
+            || (PlaceInParent == 13 && data.TaskItems.Count > 0 && data.TaskItems[11].Text.text == "Приобретено")
             )
         {
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
             data.CurrencyScript.TextTotalCurrencyCnt.text = $"{Math.Round(data.TotalCurrencyCnt, 1)}";
-            data.Tasks.Add(this);
+            data.TaskItems.Add(this);
             Text.text = "Приобретено";
         }
     }

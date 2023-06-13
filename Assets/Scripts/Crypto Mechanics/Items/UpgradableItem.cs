@@ -16,9 +16,8 @@ public class UpgradableItem : Item
 
     [SerializeField] public string Name;
     [SerializeField] private Task task;
-    [SerializeField] private UpgradableItem[] items;
+    [SerializeField] private int[] itemsToAllowBuy;
     [SerializeField] public int NumberInParent;
-    [SerializeField] private PlayerData playerData;
     [SerializeField] public int Level;
     [SerializeField] public IncomeType Type;
     [SerializeField] public double Income;
@@ -64,18 +63,24 @@ public class UpgradableItem : Item
     {
         if (playerData.TotalCurrencyCnt < Price || Level == MaxLevel) return;
 
-        for (int i = 0; i < items.Length; i++)
+        /*foreach (var item in itemsToAllowBuy)
         {
-            if (items[i].Level > 0) isPossibleToBuy = true;
+            if(item)
+        }
+        
+        for (int i = 0; i < itemsToAllowBuy.Length; i++)
+        {
+            if (itemsToAllowBuy[i].Level > 0) isPossibleToBuy = true;
             else
             {
                 isPossibleToBuy = false;
                 break;
             }
         }
+        */
 
         if ((task.Text.text == "Приобретено" && isPossibleToBuy) 
-            || (task.Text.text == "Приобретено" && items.Length == 0)
+            || (task.Text.text == "Приобретено" && itemsToAllowBuy.Length == 0)
             || task.Text.text == "0 D")
         {
             var deltaIncome = Income;

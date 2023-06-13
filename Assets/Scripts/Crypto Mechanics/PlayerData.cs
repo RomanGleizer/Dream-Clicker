@@ -17,7 +17,7 @@ namespace Crypto_Mechanics
         [SerializeField] public List<UpgradableItem> UpgradableActiveItemList;
         [SerializeField] public List<UpgradableItem> UpgradablePassiveItemList;
         [SerializeField] public List<OneTimeItem> OneTimeItems;
-        [SerializeField] public List<Task> Tasks;
+        [SerializeField] public List<Task> TaskItems;
         [SerializeField] public TotalIncomes TotalIncomes;
 
         public PlayerData()
@@ -25,7 +25,7 @@ namespace Crypto_Mechanics
             UpgradableActiveItemList = new List<UpgradableItem>();
             UpgradablePassiveItemList = new List<UpgradableItem>();
             OneTimeItems = new List<OneTimeItem>();
-            Tasks = new List<Task>();
+            TaskItems = new List<Task>();
             TotalIncomes = new TotalIncomes();
         }
 
@@ -44,69 +44,50 @@ namespace Crypto_Mechanics
                 Application.dataPath + "/Last Visit Data.json",
                 DateTime.Now.ToString(CultureInfo.CurrentCulture));
         }
-
-        public void Init(SerializablePlayerData playerData)
+        
+        public void Init(SerializablePlayerData playerData, UpgradableItem[] ActiveButtons, UpgradableItem[] PassiveButtons, OneTimeItem[] OneTimeButtons, Task[] Tasks)
         {
             if (playerData is null) return;
 
             PlayerName = playerData.Name;
             TotalCurrencyCnt = playerData.TotalCurrencyCnt;
             TotalIncomes = playerData.totalIncomes;
-
-            for (int i = 0; i < UpgradableActiveItemList.Count; i++)
-                InitilizeUpgradableItemList(
-                    i, 
-                    CurrencyScript.ActiveButtons, 
-                    UpgradableActiveItemList);
-
-            for (int i = 0; i < UpgradablePassiveItemList.Count; i++)
-                InitilizeUpgradableItemList(
-                    i, 
-                    CurrencyScript.PassiveButtons, 
-                    UpgradablePassiveItemList);
-
-            for (int i = 0; i < OneTimeItems.Count; i++)
-                InitilizeOneTimeItemList(
-                    i, 
-                    CurrencyScript.OneTimeButtons, 
-                    OneTimeItems);
-
-            for (int i = 0; i < Tasks.Count; i++)
-                InitilizeTaskList(
-                    i, 
-                    CurrencyScript.Tasks, 
-                    Tasks);
+            
+            InitilizeUpgradableItemList(ActiveButtons, UpgradableActiveItemList);
+            InitilizeUpgradableItemList(PassiveButtons, UpgradablePassiveItemList);
+            InitilizeOneTimeItemList(OneTimeButtons, OneTimeItems);
+            InitilizeTaskList(Tasks, TaskItems);
         }
 
-        private void InitilizeUpgradableItemList(
-            int i, 
-            UpgradableItem[] buttons, 
-            List<UpgradableItem> lst)
+        private void InitilizeUpgradableItemList(UpgradableItem[] buttons, List<UpgradableItem> lst)
         {
-            if (buttons[i] != null)
+            for (int i = 0; i < buttons.Length; i++)
             {
-                buttons[i].Level = lst[i].Level;
-                buttons[i].Income = lst[i].Income;
-                buttons[i].Price = lst[i].Price;
+                if (buttons[i] != null)
+                {
+                    buttons[i].Level = lst[i].Level;
+                    buttons[i].Income = lst[i].Income;
+                    buttons[i].Price = lst[i].Price;
+                }
             }
         }
 
-        private void InitilizeOneTimeItemList(
-            int i, 
-            OneTimeItem[] buttons, 
-            List<OneTimeItem> lst)
+        private void InitilizeOneTimeItemList(OneTimeItem[] buttons, List<OneTimeItem> lst)
         {
-            if (buttons[i] != null)
-                buttons[i].Price = lst[i].Price;
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (buttons[i] != null)
+                    buttons[i].Price = lst[i].Price;
+            }
         }
 
-        private void InitilizeTaskList(
-            int i, 
-            Task[] buttons, 
-            List<Task> lst)
+        private void InitilizeTaskList(Task[] buttons, List<Task> lst)
         {
-            if (buttons[i] != null)
-                buttons[i].Cost = lst[i].Cost;
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (buttons[i] != null)
+                    buttons[i].Cost = lst[i].Cost;
+            }
         }
     }
 }
