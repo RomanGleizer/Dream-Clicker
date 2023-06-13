@@ -263,6 +263,7 @@ MonoBehaviour:
   Cost: 4000000000
   SingleBonus: 150000
   Text: {fileID: 1203684014}
+  IsTaskBuy: 0
 --- !u!114 &3354648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2357,6 +2358,7 @@ MonoBehaviour:
   Cost: 2100000000
   SingleBonus: 100000
   Text: {fileID: 1548524284}
+  IsTaskBuy: 0
 --- !u!114 &119250611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6124,6 +6126,7 @@ MonoBehaviour:
   Cost: 1000000
   SingleBonus: 1000
   Text: {fileID: 1514922132}
+  IsTaskBuy: 0
 --- !u!114 &237040890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14832,7 +14835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c572fd7936e9d4d854f58dfa35d88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastOnlineTime: 09.06.2023 11:31:44
+  lastOnlineTime: 
   CurrencyScript: {fileID: 631964783}
   PlayerName: 
   TotalCurrencyCnt: 0
@@ -15175,6 +15178,7 @@ MonoBehaviour:
   Cost: 23500000
   SingleBonus: 3500
   Text: {fileID: 1067852135}
+  IsTaskBuy: 0
 --- !u!114 &639332247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16212,6 +16216,7 @@ MonoBehaviour:
   Cost: 3200000000
   SingleBonus: 80000
   Text: {fileID: 2099694871}
+  IsTaskBuy: 0
 --- !u!114 &660175400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21963,6 +21968,7 @@ MonoBehaviour:
   Cost: 500000000
   SingleBonus: 25000
   Text: {fileID: 1049178451}
+  IsTaskBuy: 0
 --- !u!114 &880965124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23782,6 +23788,7 @@ MonoBehaviour:
   Cost: 25000
   SingleBonus: 100
   Text: {fileID: 1422312223}
+  IsTaskBuy: 0
 --- !u!114 &946731028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35915,6 +35922,7 @@ MonoBehaviour:
   Cost: 5000000000
   SingleBonus: 250000
   Text: {fileID: 803972012}
+  IsTaskBuy: 0
 --- !u!114 &1459291370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36375,6 +36383,7 @@ MonoBehaviour:
   Cost: 7000000
   SingleBonus: 1000
   Text: {fileID: 68832893}
+  IsTaskBuy: 0
 --- !u!114 &1506718011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38000,6 +38009,7 @@ MonoBehaviour:
   Cost: 2000
   SingleBonus: 5
   Text: {fileID: 1074255699}
+  IsTaskBuy: 0
 --- !u!114 &1574792743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38563,6 +38573,7 @@ MonoBehaviour:
   Cost: 1000000000
   SingleBonus: 70000
   Text: {fileID: 2121909336}
+  IsTaskBuy: 0
 --- !u!114 &1594822007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41110,6 +41121,7 @@ MonoBehaviour:
   Cost: 50000000
   SingleBonus: 10000
   Text: {fileID: 453065721}
+  IsTaskBuy: 0
 --- !u!114 &1671936562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41878,7 +41890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0443\u0441\u0442\u043E\n"
+  m_text: "\u041F\u0443\u0441\u0442\u043E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -46708,6 +46720,7 @@ MonoBehaviour:
   Cost: 0
   SingleBonus: 0
   Text: {fileID: 1694968210}
+  IsTaskBuy: 0
 --- !u!114 &1888693350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51165,6 +51178,7 @@ MonoBehaviour:
   Cost: 10000000000
   SingleBonus: 1000000
   Text: {fileID: 658365416}
+  IsTaskBuy: 0
 --- !u!114 &2073502275
 MonoBehaviour:
   m_ObjectHideFlags: 0
