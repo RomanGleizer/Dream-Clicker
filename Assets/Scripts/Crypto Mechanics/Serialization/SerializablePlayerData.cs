@@ -20,11 +20,20 @@ namespace Crypto_Mechanics.Serialization
         {
             Name = data.PlayerName;
             TotalCurrencyCnt = data.TotalCurrencyCnt;
-            SerializableUpActiveItems = data.UpgradableActiveItemList.Select(item => new SerializableUpActiveItem(item)).ToList();
-            SerializableUpPassiveItems = data.UpgradablePassiveItemList.Select(item => new SerializableUpPassiveItem(item)).ToList();
-            SerializableOneTimeItems = data.OneTimeItems.Select(item => new SerializableOneTimeUpgradableItem(item)).ToList();
             Tasks = data.Tasks;
             totalIncomes = data.TotalIncomes;
+
+            SerializableUpActiveItems = data.UpgradableActiveItemList
+                .Select(item => new SerializableUpActiveItem(item))
+                .ToList();
+
+            SerializableUpPassiveItems = data.UpgradablePassiveItemList
+                .Select(item => new SerializableUpPassiveItem(item))
+                .ToList();
+
+            SerializableOneTimeItems = data.OneTimeItems
+                .Select(item => new SerializableOneTimeUpgradableItem(item))
+                .ToList();
         }
     }
 }

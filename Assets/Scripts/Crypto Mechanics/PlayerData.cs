@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using Crypto_Mechanics.Serialization;
 using UnityEngine;
 
@@ -23,6 +22,7 @@ namespace Crypto_Mechanics
         {
             UpgradableActiveItemList = new List<UpgradableItem>();
             UpgradablePassiveItemList = new List<UpgradableItem>();
+            OneTimeItems = new List<OneTimeItem>();
             Tasks = new List<Task>();
             TotalIncomes = new TotalIncomes();
         }
@@ -36,60 +36,36 @@ namespace Crypto_Mechanics
             Tasks = playerData.Tasks;
             TotalIncomes = playerData.totalIncomes;
 
-            for (int i = 0; i < UpgradableActiveItemList.Count; i++)
-                InitilizeUpgradableItemList(
-                    i, 
-                    CurrencyScript.ActiveButtons, 
-                    UpgradableActiveItemList);
+            InitilizeUpgradableItemList(CurrencyScript.ActiveButtons, UpgradableActiveItemList);
+            InitilizeUpgradableItemList(CurrencyScript.PassiveButtons, UpgradablePassiveItemList);
+            InitilizeOneTimeItemList(CurrencyScript.OneTimeButtons, OneTimeItems);
+            InitilizeTaskList(CurrencyScript.Tasks, Tasks);
+        }
 
-            for (int i = 0; i < UpgradablePassiveItemList.Count; i++)
-                InitilizeUpgradableItemList(
-                    i, 
-                    CurrencyScript.PassiveButtons, 
-                    UpgradablePassiveItemList);
+        private void InitilizeUpgradableItemList(UpgradableItem[] buttons, List<UpgradableItem> lst)
+        {
+            for (int i = 0; i < lst.Count; i++)
+                if (buttons[i] != null)
+                    buttons[i] = new UpgradableItem
+                    {
+                        Level = lst[i].Level,
+                        Income = lst[i].Income,
+                        Price = lst[i].Price
+                    };
+        }
 
+        private void InitilizeOneTimeItemList(OneTimeItem[] buttons, List<OneTimeItem> lst)
+        {
             for (int i = 0; i < OneTimeItems.Count; i++)
-                InitilizeOneTimeItemList(
-                    i, 
-                    CurrencyScript.OneTimeButtons, 
-                    OneTimeItems);
+                if (buttons[i] != null)
+                    buttons[i] = new OneTimeItem { Price = lst[i].Price };
+        }
 
+        private void InitilizeTaskList(Task[] buttons, List<Task> lst)
+        {
             for (int i = 0; i < Tasks.Count; i++)
-                InitilizeTaskList(
-                    i, 
-                    CurrencyScript.Tasks, 
-                    Tasks);
-        }
-
-        private void InitilizeUpgradableItemList(
-            int i, 
-            UpgradableItem[] buttons, 
-            List<UpgradableItem> lst)
-        {
-            if (buttons[i] != null)
-            {
-                buttons[i].Level = lst[i].Level;
-                buttons[i].Income = lst[i].Income;
-                buttons[i].Price = lst[i].Price;
-            }
-        }
-
-        private void InitilizeOneTimeItemList(
-            int i, 
-            OneTimeItem[] buttons, 
-            List<OneTimeItem> lst)
-        {
-            if (buttons[i] != null)
-                buttons[i].Price = lst[i].Price;
-        }
-
-        private void InitilizeTaskList(
-            int i, 
-            Task[] buttons, 
-            List<Task> lst)
-        {
-            if (buttons[i] != null)
-                buttons[i].Cost = lst[i].Cost;
+                if (buttons[i] != null)
+                    buttons[i] = new Task { Cost = lst[i].Cost };
         }
     }
 }
