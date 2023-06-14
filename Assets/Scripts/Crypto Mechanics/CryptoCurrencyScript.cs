@@ -52,6 +52,10 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Touch detected");
+        }
         playerData.lastOnlineTime = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         SaveListsData();
     }

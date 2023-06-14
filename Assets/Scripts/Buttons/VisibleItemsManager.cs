@@ -11,6 +11,7 @@ public class VisibleItemsManager : MonoBehaviour
 
     public void ShowActive()
     {
+        Debug.Log("PRESSED ACTIVE ITEMS");
         ActiveItems.SetActive(true);
         PassiveItems.SetActive(false);
         Tasks.SetActive(false);

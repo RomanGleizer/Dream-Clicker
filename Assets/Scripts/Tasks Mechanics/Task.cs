@@ -16,16 +16,20 @@ public class Task : MonoBehaviour
     [SerializeField] public double SingleBonus;
     [SerializeField] public TextMeshProUGUI Text;
 
+    public bool IsTaskBuy = false;
     private bool isPossibleToBuy = false;
 
     private void Start()
     {
-        if (!File.Exists(Application.dataPath + "/Game Data.json")) return;
+        if (!File.Exists(Application.dataPath + "/savedData.json")) return;
 
-        var json = File.ReadAllText(Application.dataPath + "/Game Data.json");
+        var json = File.ReadAllText(Application.dataPath + "/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
-        if (PlaceInParent <= newData.Tasks.Count && PlaceInParent > 0) Text.text = $"Приобретено";
+        if (PlaceInParent == 0) return;
+        IsTaskBuy = newData.Tasks[PlaceInParent - 1].IsTaskWasBuy;
+
+        if (newData.Tasks[PlaceInParent - 1].IsTaskWasBuy) Text.text = $"Приобретено";
         else Text.text = $"{Cost} D";
     }
 
@@ -59,7 +63,8 @@ public class Task : MonoBehaviour
             data.TotalCurrencyCnt -= Cost;
             data.TotalCurrencyCnt += SingleBonus;
             data.CurrencyScript.TextTotalCurrencyCnt.text = $"{Math.Round(data.TotalCurrencyCnt, 1)}";
-            data.TaskItems.Add(this);
+            IsTaskBuy = true;
+            //data.Tasks.Add(this);
             Text.text = "Приобретено";
         }
     }
