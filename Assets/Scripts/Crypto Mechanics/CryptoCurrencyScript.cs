@@ -12,6 +12,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
     //private const string SavedDataPath = "Assets/Resources/savedData.json";
 
+    public Action<bool> AllowItemBuy;
     [SerializeField] public UpgradableItem[] ActiveButtons;
     [SerializeField] public UpgradableItem[] PassiveButtons;
     [SerializeField] public OneTimeItem[] OneTimeButtons;

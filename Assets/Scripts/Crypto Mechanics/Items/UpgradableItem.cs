@@ -13,10 +13,11 @@ public class UpgradableItem : Item
 {
     public const int MaxLevel = 25;
     private const double UpgradeActiveCoefficient = 1.3;
+    //public Action<int[]>
 
     [SerializeField] public string Name;
     [SerializeField] private Task task;
-    [SerializeField] private int[] itemsToAllowBuy;
+    [SerializeField] private int[] itemsToAllowBuyIndexex;
     [SerializeField] public int NumberInParent;
     [SerializeField] public int Level;
     [SerializeField] public IncomeType Type;
@@ -80,7 +81,7 @@ public class UpgradableItem : Item
         */
 
         if ((task.Text.text == "Приобретено" && isPossibleToBuy) 
-            || (task.Text.text == "Приобретено" && itemsToAllowBuy.Length == 0)
+            || (task.Text.text == "Приобретено" && itemsToAllowBuyIndexex.Length == 0)
             || task.Text.text == "0 D")
         {
             var deltaIncome = Income;

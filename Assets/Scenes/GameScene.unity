@@ -464,7 +464,7 @@ MonoBehaviour:
   Image: {fileID: 165941515}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 9
   Level: 0
   Type: 0
@@ -907,7 +907,7 @@ MonoBehaviour:
   Image: {fileID: 484568959}
   Name: actCPU
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 3
   Level: 0
   Type: 0
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   Image: {fileID: 223374510}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 10
   Level: 0
   Type: 1
@@ -2587,9 +2587,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -2738.082}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123917864
@@ -4459,9 +4459,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -8254.246}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &179547217
@@ -4949,9 +4949,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6132.6445}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201407292
@@ -5164,7 +5164,7 @@ MonoBehaviour:
   Image: {fileID: 119893665}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 6
   Level: 0
   Type: 0
@@ -6967,9 +6967,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4435.3633}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277748642
@@ -8286,7 +8286,7 @@ MonoBehaviour:
   Image: {fileID: 1949648144}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 5
   Level: 0
   Type: 1
@@ -8607,7 +8607,7 @@ MonoBehaviour:
   Image: {fileID: 1643578301}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 14
   Level: 0
   Type: 1
@@ -8858,7 +8858,7 @@ MonoBehaviour:
   Image: {fileID: 1192171938}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 9
   Level: 0
   Type: 1
@@ -12615,7 +12615,7 @@ MonoBehaviour:
   Image: {fileID: 1427837364}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 8
   Level: 0
   Type: 1
@@ -12925,9 +12925,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -9527.207}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476618776
@@ -14006,7 +14006,7 @@ MonoBehaviour:
   Image: {fileID: 869259989}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 10
   Level: 0
   Type: 0
@@ -14181,9 +14181,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -7405.6055}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511313201
@@ -15251,7 +15251,7 @@ MonoBehaviour:
   Image: {fileID: 2077117562}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 6
   Level: 0
   Type: 1
@@ -18051,7 +18051,7 @@ MonoBehaviour:
   Image: {fileID: 347197220}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 7
   Level: 0
   Type: 0
@@ -18302,7 +18302,7 @@ MonoBehaviour:
   Image: {fileID: 59066031}
   Name: passHiredWork
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 1
   Level: 0
   Type: 1
@@ -20369,9 +20369,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6556.965}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767956457
@@ -20584,7 +20584,7 @@ MonoBehaviour:
   Image: {fileID: 1776301149}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 8
   Level: 0
   Type: 0
@@ -21013,9 +21013,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -192.16016}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794935208
@@ -21311,9 +21311,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1465.1211}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &811597186
@@ -21854,7 +21854,7 @@ MonoBehaviour:
   Image: {fileID: 117628374}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 13
   Level: 0
   Type: 1
@@ -22330,7 +22330,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2034160681}
+  - {fileID: 1283924281}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22582,7 +22584,7 @@ MonoBehaviour:
   Image: {fileID: 831324202}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 12
   Level: 0
   Type: 0
@@ -22923,7 +22925,7 @@ MonoBehaviour:
   Image: {fileID: 1056831362}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 16
   Level: 0
   Type: 0
@@ -23141,9 +23143,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -3586.7227}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &901336297
@@ -24984,9 +24986,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1889.4414}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999439637
@@ -25339,7 +25341,7 @@ MonoBehaviour:
   Image: {fileID: 1918158103}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 14
   Level: 0
   Type: 0
@@ -26955,9 +26957,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -2313.7617}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1069911188
@@ -28901,7 +28903,7 @@ MonoBehaviour:
   Image: {fileID: 1211460933}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 13
   Level: 0
   Type: 0
@@ -29074,7 +29076,7 @@ MonoBehaviour:
   Image: {fileID: 2043885722}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 12
   Level: 0
   Type: 1
@@ -33477,9 +33479,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -5708.324}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270463374
@@ -33632,13 +33634,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283924279}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 858448064}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -33863,7 +33865,7 @@ MonoBehaviour:
   Image: {fileID: 424875871}
   Name: actOpticalFiber
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 5
   Level: 0
   Type: 0
@@ -35165,9 +35167,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -8678.566}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394701684
@@ -36409,7 +36411,7 @@ MonoBehaviour:
   Image: {fileID: 583308948}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 15
   Level: 0
   Type: 1
@@ -37118,9 +37120,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1040.8008}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488706269
@@ -37198,7 +37200,7 @@ MonoBehaviour:
   Image: {fileID: 223746954}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 7
   Level: 0
   Type: 1
@@ -39203,7 +39205,7 @@ MonoBehaviour:
   Image: {fileID: 1186824803}
   Name: passComplexOfVideoCards
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 3
   Level: 0
   Type: 1
@@ -39378,9 +39380,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -7829.926}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554782878
@@ -39460,9 +39462,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -616.48047}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558999307
@@ -40828,9 +40830,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -5284.004}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618651894
@@ -42448,7 +42450,7 @@ MonoBehaviour:
   Image: {fileID: 98936093}
   Name: passExchangeTradingButton
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 2
   Level: 0
   Type: 1
@@ -43687,9 +43689,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -9102.887}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751801927
@@ -43800,7 +43802,7 @@ MonoBehaviour:
   Image: {fileID: 1676452705}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 20
   Level: 0
   Type: 0
@@ -44545,7 +44547,7 @@ MonoBehaviour:
   Image: {fileID: 642735659}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 15
   Level: 0
   Type: 0
@@ -46225,7 +46227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810653354
 GameObject:
@@ -46297,7 +46299,7 @@ MonoBehaviour:
   Image: {fileID: 621982779}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 18
   Level: 0
   Type: 0
@@ -46740,7 +46742,7 @@ MonoBehaviour:
   Image: {fileID: 178787151}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 11
   Level: 0
   Type: 0
@@ -47173,7 +47175,7 @@ MonoBehaviour:
   Image: {fileID: 606420281}
   Name: actVideoCard
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 2
   Level: 0
   Type: 0
@@ -49215,7 +49217,7 @@ MonoBehaviour:
   Image: {fileID: 1412918592}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 11
   Level: 0
   Type: 1
@@ -49421,7 +49423,7 @@ MonoBehaviour:
   Image: {fileID: 483530283}
   Name: actInternet
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 1
   Level: 0
   Type: 0
@@ -50076,7 +50078,7 @@ MonoBehaviour:
   Image: {fileID: 977330920}
   Name: passRealtor
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 4
   Level: 0
   Type: 1
@@ -50720,7 +50722,7 @@ MonoBehaviour:
   Image: {fileID: 1839177654}
   Name: actFreezing
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 4
   Level: 0
   Type: 0
@@ -51299,9 +51301,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6981.285}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1992439249
@@ -52405,9 +52407,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -3162.4023}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021123476
@@ -53026,13 +53028,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034160678}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 858448064}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2034459147
 GameObject:
@@ -53071,7 +53073,7 @@ MonoBehaviour:
   Image: {fileID: 2144158615}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 17
   Level: 0
   Type: 0
@@ -53864,9 +53866,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4859.6836}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068344033
@@ -54895,7 +54897,7 @@ MonoBehaviour:
   Image: {fileID: 38838750}
   Name: 
   task: {fileID: 0}
-  itemsToAllowBuy: 
+  itemsToAllowBuyIndexex: 
   NumberInParent: 19
   Level: 0
   Type: 0
@@ -55343,9 +55345,9 @@ RectTransform:
   m_Father: {fileID: 596549415}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4011.043}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124671920
