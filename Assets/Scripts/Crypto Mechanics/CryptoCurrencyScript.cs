@@ -17,6 +17,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     [SerializeField] public TextMeshProUGUI TextTotalCurrencyCnt;
     [SerializeField] public TextMeshProUGUI textPassive;
     [SerializeField] public TextMeshProUGUI textCurrencyCntPerClick;
+    [SerializeField] public PurshareManager purshareManager;
 
     public bool IsInGame;
     private const double OfflinePassiveIncomeCf = 0.1;
@@ -74,57 +75,27 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
         if (newData != null && playerData != null) playerData.Init(newData);
     }
 
-    public void SaveUpgradableItemListData(
-        List<UpgradableItem> lst, 
-        UpgradableItem[] buttons)
+    public void SaveUpgradableItemListData(List<UpgradableItem> lst, UpgradableItem[] buttons)
     {
         for (int i = 0; i < lst.Count; i++)
-            InitilizeUpgradableItemList(lst, i, buttons);
+            if (buttons[i] != null)
+            {
+                lst[i].Level = buttons[i].Level;
+                lst[i].Income = buttons[i].Income;
+                lst[i].Price = buttons[i].Price;
+            }
     }
 
-    public void SaveOneItemListData(
-        List<OneTimeItem> lst,
-        OneTimeItem[] buttons)
+    public void SaveOneItemListData(List<OneTimeItem> lst, OneTimeItem[] buttons)
     {
         for (int i = 0; i < lst.Count; i++)
-            InitilizeOneItemList(lst, i, buttons);
+            if (buttons[i] != null) lst[i].Price = buttons[i].Price;
     }
 
-    public void SaveTaskListData(
-        List<Task> lst,
-        Task[] buttons)
+    public void SaveTaskListData(List<Task> lst, Task[] buttons)
     {
         for (int i = 0; i < lst.Count; i++)
-            InitilizeTaskItemList(lst, i, buttons);
-    }
-
-    public void InitilizeUpgradableItemList(
-        List<UpgradableItem> lst, 
-        int i, 
-        UpgradableItem[] buttons)
-    {
-        if (buttons[i] != null)
-        {
-            lst[i].Level = buttons[i].Level;
-            lst[i].Income = buttons[i].Income;
-            lst[i].Price = buttons[i].Price;
-        }
-    }
-
-    public void InitilizeOneItemList(
-        List<OneTimeItem> lst, 
-        int i, 
-        OneTimeItem[] buttons)
-    {
-        if (buttons[i] != null) lst[i].Price = buttons[i].Price;
-    }
-
-    public void InitilizeTaskItemList(
-        List<Task> lst,
-        int i,
-        Task[] buttons)
-    {
-        if (buttons[i] != null) lst[i].Cost = buttons[i].Cost;
+            if (buttons[i] != null) lst[i].Cost = buttons[i].Cost;
     }
 
     public void AddOnlinePassiveIncome()
