@@ -17,10 +17,10 @@ public class OneTimeItem : Item
 
     private void Start()
     {
-        if (!File.Exists(Application.dataPath + "/savedData.json")) return;
+        if (!File.Exists(Application.dataPath + "/One Time Items.json")) return;
 
-        var json = File.ReadAllText(Application.dataPath + "/savedData.json");
-        var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
+        var newData = JsonUtility.FromJson<SavedOneTimeItems>(
+            File.ReadAllText(Application.dataPath + "/One Time Items.json"));
 
         if (newData.SerializableOneTimeItems.Count > 0)
         {

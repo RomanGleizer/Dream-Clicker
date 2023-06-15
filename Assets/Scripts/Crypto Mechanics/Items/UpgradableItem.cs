@@ -45,18 +45,26 @@ public class UpgradableItem : Item
         var json = File.ReadAllText(Application.dataPath + "/savedData.json");
         var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
 
-        if (gameObject.GetComponent<ActiveButton>()  
-            && newData.SerializableUpActiveItems.Count >= NumberInParent)
-            InitializeTextes(newData.SerializableUpActiveItems);
+        if (!File.Exists(Application.dataPath + "/Actives.json")) return;
+        var activesData = JsonUtility.FromJson<SavedActives>(
+            File.ReadAllText(Application.dataPath + "/Actives.json"));
+
+        if (!File.Exists(Application.dataPath + "/Passives.json")) return;
+        var passivesData = JsonUtility.FromJson<SavedPassives>(
+            File.ReadAllText(Application.dataPath + "/Passives.json"));
+
+        if (gameObject.GetComponent<ActiveButton>()
+            && activesData.SerializableUpActiveItems.Count >= NumberInParent)
+            InitializeTextes(activesData.SerializableUpActiveItems);
 
         if (gameObject.GetComponent<PassiveButton>()
-            && newData.SerializableUpPassiveItems.Count >= NumberInParent)
-            InitializeTextes(newData.SerializableUpPassiveItems);
+            && passivesData.SerializableUpPassiveItems.Count >= NumberInParent)
+            InitializeTextes(passivesData.SerializableUpPassiveItems);
 
         if ((gameObject.GetComponent<Button>() 
-            && newData.SerializableUpActiveItems.Count < NumberInParent)
+            && activesData.SerializableUpActiveItems.Count < NumberInParent)
             || (gameObject.GetComponent<Button>() 
-            && newData.SerializableUpPassiveItems.Count < NumberInParent))
+            && passivesData.SerializableUpPassiveItems.Count < NumberInParent))
             SetTextes(Level, Income, Price);
     }
 

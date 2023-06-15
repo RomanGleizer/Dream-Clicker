@@ -21,10 +21,10 @@ public class Task : MonoBehaviour
 
     private void Start()
     {
-        if (!File.Exists(Application.dataPath + "/savedData.json")) return;
+        if (!File.Exists(Application.dataPath + "/Tasks.json")) return;
 
-        var json = File.ReadAllText(Application.dataPath + "/savedData.json");
-        var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
+        var newData = JsonUtility.FromJson<SavedTasks>(
+            File.ReadAllText(Application.dataPath + "/Tasks.json"));
 
         if (PlaceInParent == 0) return;
         IsTaskBuy = newData.Tasks[PlaceInParent - 1].IsTaskWasBuy;
