@@ -36,13 +36,22 @@ namespace Crypto_Mechanics
             lastOnlineTime = DateTime
                 .Parse(File.ReadAllText(Application.dataPath + "/Last Visit Data.json"))
                 .ToString(CultureInfo.CurrentCulture);
+
+            if (!File.Exists(Application.dataPath + "/Balance.json")) return;
+
+            var json = File.ReadAllText(Application.dataPath + "/Balance.json");
+            var newData = JsonUtility.FromJson<SavedBalance>(json);
+
+            PlayerName = newData.Name;
+            TotalCurrencyCnt = newData.TotalCurrencyCnt;
+            TotalIncomes = newData.totalIncomes;
         }
 
         private void Update()
         {
             File.WriteAllText(
                 Application.dataPath + "/Last Visit Data.json",
-                DateTime.Now.ToString(CultureInfo.CurrentCulture));
+                DateTime.Now.ToString(CultureInfo.CurrentCulture));;
         }
 
         public void Init(SerializablePlayerData playerData)

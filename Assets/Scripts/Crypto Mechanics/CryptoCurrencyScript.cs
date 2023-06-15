@@ -32,13 +32,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void Awake()
     {
-        if (File.Exists(Application.dataPath + "/savedData.json")) LoadData();
-        else
-        {
-            SaveData();
-            LoadData();
-        }
-
         InvokeRepeating(nameof(AddOfflinePassiveIncome), 0f, PassiveIncomeRepeatRate);
         InvokeRepeating(nameof(AddOnlinePassiveIncome), 0f, PassiveIncomeRepeatRate);
     }
@@ -53,6 +46,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     public void Update()
     {
         SaveData();
+        Start();
     }
 
     public void Tap()
@@ -69,10 +63,6 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     public void LoadData()
     {
-        var json = File.ReadAllText(Application.dataPath + "/savedData.json");
-        var newData = JsonUtility.FromJson<SerializablePlayerData>(json);
-
-        if (newData != null && playerData != null) playerData.Init(newData);
     }
 
     public void SaveUpgradableItemListData(List<UpgradableItem> lst, UpgradableItem[] buttons)
@@ -116,8 +106,23 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     public void SaveData()
     {
         SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
+        File.WriteAllText(Application.dataPath + "/Actives.json",
+            JsonUtility.ToJson(new SavedActives(playerData)));
+
         SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
+        File.WriteAllText(Application.dataPath + "/Passives.json",
+            JsonUtility.ToJson(new SavedPassives(playerData)));
+
         SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
+        File.WriteAllText(Application.dataPath + "/One Time Items.json",
+            JsonUtility.ToJson(new SavedOneTimeItems(playerData)));
+
+        SaveTaskListData(playerData.Tasks, Tasks);
+        File.WriteAllText(Application.dataPath + "/Tasks.json",
+            JsonUtility.ToJson(new SavedTasks(playerData)));
+
+        File.WriteAllText(Application.dataPath + "/Balance.json",
+            JsonUtility.ToJson(new SavedBalance(playerData)));
 
         var json = JsonUtility.ToJson(new SerializablePlayerData(playerData));
         File.WriteAllText(Application.dataPath + "/savedData.json", json);
