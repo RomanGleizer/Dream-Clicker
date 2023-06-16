@@ -9,10 +9,6 @@ public class LoadGameManager : MonoBehaviour
     [SerializeField] private DataSaver dataSaver;
     [SerializeField] private PlayerData data;
     [SerializeField] private PurshareManager purshareManager;
-    [SerializeField] private UpgradableItem[] actives;
-    [SerializeField] private UpgradableItem[] passives;
-    [SerializeField] private OneTimeItem[] oneTimeItems;
-    [SerializeField] private Task[] tasks;
 
     private Action[] saveOperations;
 
@@ -53,7 +49,7 @@ public class LoadGameManager : MonoBehaviour
         {
             var item = activesData.SerializableUpActiveItems[i];
             if (purshareManager.IsUpItemWasBought(item))
-                actives[i].InitializeTextes(activesData.SerializableUpActiveItems);
+                dataSaver.ActiveButtons[i].InitializeTextes(activesData.SerializableUpActiveItems);
         }
     }
 
@@ -65,7 +61,7 @@ public class LoadGameManager : MonoBehaviour
         {
             var item = passivesData.SerializableUpPassiveItems[i];
             if (purshareManager.IsUpItemWasBought(item))
-                passives[i].InitializeTextes(passivesData.SerializableUpPassiveItems);
+                dataSaver.PassiveButtons[i].InitializeTextes(passivesData.SerializableUpPassiveItems);
         }
     }
 
@@ -77,7 +73,7 @@ public class LoadGameManager : MonoBehaviour
         {
             var item = data.SerializableOneTimeItems[i];
             if (purshareManager.IsOneTimeItemWasBought(item))
-                oneTimeItems[i].InitializeTextes(data);
+                dataSaver.OneTimeButtons[i].InitializeTextes(data);
         }
     }
 
@@ -89,7 +85,7 @@ public class LoadGameManager : MonoBehaviour
         {
             var item = tasksData.Tasks[i];
             if (purshareManager.IsTaskWasBought(item))
-                tasks[i].InitializeTextes(tasksData);
+                data.Tasks[i].InitializeTextes(tasksData);
         }
     }
 
