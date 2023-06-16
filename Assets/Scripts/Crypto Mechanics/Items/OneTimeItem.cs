@@ -1,6 +1,3 @@
-using Crypto_Mechanics;
-using Crypto_Mechanics.Serialization;
-using System.IO;
 using TMPro;
 using UnityEngine;
 
@@ -9,49 +6,20 @@ public class OneTimeItem : Item
     [SerializeField] private CryptoCurrencyScript currencyScript;
     [SerializeField] public double Price;
     [SerializeField] public int NumberInParent;
-    [SerializeField] private Task task;
-    [SerializeField] private OneTimeItem[] items;
+    [SerializeField] public Task task;
+    [SerializeField] public OneTimeItem[] items;
     [SerializeField] public TextMeshProUGUI Text;
 
-    private bool isPossibleToBuy;
+    public bool isPossibleToBuy;
 
-    private void Start()
+    public void InitializeTextes(SavedOneTimeItems items)
     {
-        if (!File.Exists(Application.dataPath + "/One Time Items.json")) return;
-
-        var newData = JsonUtility.FromJson<SavedOneTimeItems>(
-            File.ReadAllText(Application.dataPath + "/One Time Items.json"));
-
-        if (newData.SerializableOneTimeItems.Count > 0)
+        if (items.SerializableOneTimeItems.Count > 0)
         {
-            if (newData.SerializableOneTimeItems[NumberInParent - 1].Text != "Приобретено")
+            if (items.SerializableOneTimeItems[NumberInParent - 1].Text != "Приобретено")
                 Text.text = Price.ToString() + " D";
             else Text.text = "Приобретено";
         }
         else Text.text = Price.ToString() + " D";
-    }
-
-    public override void BuyOrUpgrade(PlayerData playerData)
-    {
-        for (int i = 0; i < items.Length; i++)
-        {
-            if (items[i].Text.text == "Приобретено") isPossibleToBuy = true;
-            else
-            {
-                isPossibleToBuy = false;
-                break;
-            }
-        }
-
-        if (playerData.TotalCurrencyCnt < Price && Text.text == "Приобретено") 
-            return;
-        else if (playerData.TotalCurrencyCnt >= Price 
-            && task.Text.text == "Приобретено" 
-            && (isPossibleToBuy || items.Length == 0))
-        {
-            playerData.TotalCurrencyCnt -= Price;
-            Text.text = "Приобретено";
-            currencyScript.TextTotalCurrencyCnt.text = playerData.TotalCurrencyCnt.ToString();
-        }
     }
 }

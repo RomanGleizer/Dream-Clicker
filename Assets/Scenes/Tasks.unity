@@ -491,6 +491,7 @@ MonoBehaviour:
   levelText: {fileID: 1485112912}
   incomeText: {fileID: 1317885652}
   priceText: {fileID: 1882804016}
+  isPossibleToBuy: 0
 --- !u!114 &14053626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,13 +536,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 14053625}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1020,8 +1021,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -1092,6 +1093,8 @@ MonoBehaviour:
   Cost: 500000000
   SingleBonus: 25000
   Text: {fileID: 316570092}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &38450666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,7 +1153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 7000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -1899,8 +1902,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -1968,6 +1971,8 @@ MonoBehaviour:
   Cost: 10000000000
   SingleBonus: 1000000
   Text: {fileID: 437058438}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &79337155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,7 +2113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 25000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -2592,8 +2597,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -2664,6 +2669,8 @@ MonoBehaviour:
   Cost: 3200000000
   SingleBonus: 80000
   Text: {fileID: 267830049}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &109048628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,6 +3087,7 @@ MonoBehaviour:
   levelText: {fileID: 886070302}
   incomeText: {fileID: 346524314}
   priceText: {fileID: 1933173200}
+  isPossibleToBuy: 0
 --- !u!114 &135402618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3124,13 +3132,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 135402617}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3780,6 +3788,7 @@ MonoBehaviour:
   levelText: {fileID: 1508732903}
   incomeText: {fileID: 1891335898}
   priceText: {fileID: 1265284208}
+  isPossibleToBuy: 0
 --- !u!114 &165489959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3824,13 +3833,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 165489958}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4730,6 +4739,7 @@ MonoBehaviour:
   levelText: {fileID: 1892936232}
   incomeText: {fileID: 544791809}
   priceText: {fileID: 1155158530}
+  isPossibleToBuy: 0
 --- !u!224 &211916064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4807,13 +4817,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 211916063}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4905,6 +4915,7 @@ MonoBehaviour:
   levelText: {fileID: 1402487247}
   incomeText: {fileID: 2021538767}
   priceText: {fileID: 1901758563}
+  isPossibleToBuy: 0
 --- !u!224 &215796951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4982,13 +4993,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 215796950}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6351,7 +6362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 3200000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -6476,6 +6487,7 @@ MonoBehaviour:
   levelText: {fileID: 791992137}
   incomeText: {fileID: 1514027732}
   priceText: {fileID: 1445603968}
+  isPossibleToBuy: 0
 --- !u!224 &267975446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6541,13 +6553,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 267975445}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6877,7 +6889,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 4000000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -7561,6 +7573,7 @@ MonoBehaviour:
   - {fileID: 659100790}
   - {fileID: 1038065775}
   Text: {fileID: 1792081169}
+  isPossibleToBuy: 0
 --- !u!224 &303134088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7626,13 +7639,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 303134087}
-        m_TargetAssemblyTypeName: OneTimeItem, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyOneTimeItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 303134087}
+          m_ObjectArgumentAssemblyTypeName: OneTimeItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7734,7 +7747,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 500000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -8777,7 +8790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 50000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -10174,6 +10187,7 @@ MonoBehaviour:
   items:
   - {fileID: 1987446002}
   Text: {fileID: 1911396124}
+  isPossibleToBuy: 0
 --- !u!114 &408664109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10218,13 +10232,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 408664107}
-        m_TargetAssemblyTypeName: OneTimeItem, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyOneTimeItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 408664107}
+          m_ObjectArgumentAssemblyTypeName: OneTimeItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10650,6 +10664,7 @@ MonoBehaviour:
   levelText: {fileID: 1350097794}
   incomeText: {fileID: 2071842160}
   priceText: {fileID: 1995418260}
+  isPossibleToBuy: 0
 --- !u!114 &431895766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10694,13 +10709,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 431895765}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10802,7 +10817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 10000000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -11072,7 +11087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 2100000000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -13244,6 +13259,7 @@ MonoBehaviour:
   levelText: {fileID: 1848728025}
   incomeText: {fileID: 21924616}
   priceText: {fileID: 1272191075}
+  isPossibleToBuy: 0
 --- !u!114 &518115278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13288,13 +13304,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 518115277}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14181,6 +14197,7 @@ MonoBehaviour:
   levelText: {fileID: 875192030}
   incomeText: {fileID: 1806256946}
   priceText: {fileID: 1149793238}
+  isPossibleToBuy: 0
 --- !u!114 &554463795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14225,13 +14242,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 554463794}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15380,6 +15397,112 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581788302}
   m_CullTransparentMesh: 1
+--- !u!1 &583320137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583320139}
+  - component: {fileID: 583320138}
+  m_Layer: 0
+  m_Name: Load Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &583320138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583320137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a78d07ad7e3314cbabdd88b7b8929c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyScript: {fileID: 1276309522}
+  data: {fileID: 1276309521}
+  purshareManager: {fileID: 1146429770}
+  actives:
+  - {fileID: 1550561563}
+  - {fileID: 1581504115}
+  - {fileID: 1571595774}
+  - {fileID: 431895765}
+  - {fileID: 1758263549}
+  - {fileID: 1212661869}
+  - {fileID: 1938027117}
+  - {fileID: 1154745717}
+  - {fileID: 2017364199}
+  - {fileID: 1000424748}
+  - {fileID: 1924545795}
+  - {fileID: 1898345460}
+  - {fileID: 554463794}
+  - {fileID: 1312445525}
+  - {fileID: 267975445}
+  - {fileID: 1380698749}
+  - {fileID: 2067227271}
+  - {fileID: 165489958}
+  - {fileID: 1580239185}
+  - {fileID: 135402617}
+  passives:
+  - {fileID: 585865373}
+  - {fileID: 14053625}
+  - {fileID: 1001196061}
+  - {fileID: 785846814}
+  - {fileID: 1603048061}
+  - {fileID: 677159076}
+  - {fileID: 211916063}
+  - {fileID: 215796950}
+  - {fileID: 1138473719}
+  - {fileID: 1833667521}
+  - {fileID: 518115277}
+  - {fileID: 1822094307}
+  - {fileID: 704812002}
+  - {fileID: 1301546757}
+  - {fileID: 1903836968}
+  oneTimeItems:
+  - {fileID: 1987446002}
+  - {fileID: 408664107}
+  - {fileID: 2019001325}
+  - {fileID: 659100790}
+  - {fileID: 1038065775}
+  - {fileID: 303134087}
+  - {fileID: 1323629094}
+  tasks:
+  - {fileID: 614913275}
+  - {fileID: 1933519204}
+  - {fileID: 887894331}
+  - {fileID: 656119455}
+  - {fileID: 1526837117}
+  - {fileID: 1548691315}
+  - {fileID: 37526692}
+  - {fileID: 1124161996}
+  - {fileID: 1855970736}
+  - {fileID: 105010174}
+  - {fileID: 1782831682}
+  - {fileID: 1843170361}
+  - {fileID: 73384702}
+--- !u!4 &583320139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583320137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6222192, y: 0.8820225, z: -9.939036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &585865370
 GameObject:
   m_ObjectHideFlags: 0
@@ -15460,6 +15583,7 @@ MonoBehaviour:
   levelText: {fileID: 1818140921}
   incomeText: {fileID: 1192019463}
   priceText: {fileID: 481409150}
+  isPossibleToBuy: 0
 --- !u!114 &585865374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15504,13 +15628,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 585865373}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16361,13 +16485,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 614913275}
-        m_TargetAssemblyTypeName: Task, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 614913275}
+          m_ObjectArgumentAssemblyTypeName: Task, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16432,6 +16556,8 @@ MonoBehaviour:
   Cost: 2000
   SingleBonus: 5
   Text: {fileID: 703683730}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &615264811
 GameObject:
   m_ObjectHideFlags: 0
@@ -17469,8 +17595,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -17542,6 +17668,8 @@ MonoBehaviour:
   Cost: 7000000
   SingleBonus: 1000
   Text: {fileID: 38450668}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &658755461
 GameObject:
   m_ObjectHideFlags: 0
@@ -17658,6 +17786,7 @@ MonoBehaviour:
   task: {fileID: 1782831682}
   items: []
   Text: {fileID: 1666194455}
+  isPossibleToBuy: 0
 --- !u!224 &659100791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17723,13 +17852,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659100790}
-        m_TargetAssemblyTypeName: OneTimeItem, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyOneTimeItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 659100790}
+          m_ObjectArgumentAssemblyTypeName: OneTimeItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18275,6 +18404,7 @@ MonoBehaviour:
   levelText: {fileID: 936112489}
   incomeText: {fileID: 1776266855}
   priceText: {fileID: 683983289}
+  isPossibleToBuy: 0
 --- !u!114 &677159077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18319,13 +18449,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 677159076}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19150,7 +19280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 2000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -19295,6 +19425,7 @@ MonoBehaviour:
   levelText: {fileID: 1101776982}
   incomeText: {fileID: 353642184}
   priceText: {fileID: 1318192869}
+  isPossibleToBuy: 0
 --- !u!114 &704812003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19339,13 +19470,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 704812002}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -20907,6 +21038,7 @@ MonoBehaviour:
   levelText: {fileID: 1900492885}
   incomeText: {fileID: 1718293020}
   priceText: {fileID: 492156487}
+  isPossibleToBuy: 0
 --- !u!114 &785846815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20951,13 +21083,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 785846814}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21059,7 +21191,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0.129 D
+  m_text: 0 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -23360,8 +23492,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -23433,6 +23565,8 @@ MonoBehaviour:
   Cost: 1000000
   SingleBonus: 500
   Text: {fileID: 1648375915}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &896249759
 GameObject:
   m_ObjectHideFlags: 0
@@ -25156,6 +25290,7 @@ MonoBehaviour:
   levelText: {fileID: 1766232908}
   incomeText: {fileID: 1400769238}
   priceText: {fileID: 283341820}
+  isPossibleToBuy: 0
 --- !u!224 &1000424749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25221,13 +25356,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1000424748}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -25363,6 +25498,7 @@ MonoBehaviour:
   levelText: {fileID: 457652575}
   incomeText: {fileID: 1978440460}
   priceText: {fileID: 1650950010}
+  isPossibleToBuy: 0
 --- !u!114 &1001196062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25407,13 +25543,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1001196061}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -25986,7 +26122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 23500000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -26104,6 +26240,7 @@ MonoBehaviour:
   items:
   - {fileID: 659100790}
   Text: {fileID: 2143560362}
+  isPossibleToBuy: 0
 --- !u!224 &1038065776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26169,13 +26306,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038065775}
-        m_TargetAssemblyTypeName: OneTimeItem, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyOneTimeItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1038065775}
+          m_ObjectArgumentAssemblyTypeName: OneTimeItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27678,8 +27815,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -27750,6 +27887,8 @@ MonoBehaviour:
   Cost: 1000000000
   SingleBonus: 70000
   Text: {fileID: 1472726366}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &1134048964
 GameObject:
   m_ObjectHideFlags: 0
@@ -27914,6 +28053,7 @@ MonoBehaviour:
   levelText: {fileID: 1422287861}
   incomeText: {fileID: 1701183721}
   priceText: {fileID: 1526724808}
+  isPossibleToBuy: 0
 --- !u!114 &1138473720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27958,13 +28098,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1138473719}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28084,6 +28224,52 @@ RectTransform:
   m_AnchoredPosition: {x: -320, y: 100}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1146429769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146429771}
+  - component: {fileID: 1146429770}
+  m_Layer: 0
+  m_Name: Purshare Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1146429770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146429769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c8587c784e81944a8fce5ca787f56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 1276309521}
+  currencyScript: {fileID: 1276309522}
+--- !u!4 &1146429771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146429769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6222192, y: 0.8820225, z: -9.939036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149793236
 GameObject:
   m_ObjectHideFlags: 0
@@ -28289,6 +28475,7 @@ MonoBehaviour:
   levelText: {fileID: 896249760}
   incomeText: {fileID: 373601347}
   priceText: {fileID: 1511247756}
+  isPossibleToBuy: 0
 --- !u!114 &1154745718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28333,13 +28520,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1154745717}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29996,6 +30183,7 @@ MonoBehaviour:
   levelText: {fileID: 1625350686}
   incomeText: {fileID: 709665871}
   priceText: {fileID: 250175002}
+  isPossibleToBuy: 0
 --- !u!224 &1212661870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30061,13 +30249,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1212661869}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -31556,6 +31744,7 @@ MonoBehaviour:
   levelText: {fileID: 243135498}
   incomeText: {fileID: 1386685111}
   priceText: {fileID: 1921294544}
+  isPossibleToBuy: 0
 --- !u!224 &1301546758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31621,13 +31810,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1301546757}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -31730,6 +31919,7 @@ MonoBehaviour:
   levelText: {fileID: 1955427734}
   incomeText: {fileID: 232834431}
   priceText: {fileID: 109048629}
+  isPossibleToBuy: 0
 --- !u!224 &1312445526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31795,13 +31985,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1312445525}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -32405,6 +32595,7 @@ MonoBehaviour:
   - {fileID: 1038065775}
   - {fileID: 303134087}
   Text: {fileID: 232937665}
+  isPossibleToBuy: 0
 --- !u!114 &1323629095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32449,13 +32640,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1323629094}
-        m_TargetAssemblyTypeName: OneTimeItem, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyOneTimeItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1323629094}
+          m_ObjectArgumentAssemblyTypeName: OneTimeItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -32559,6 +32750,8 @@ MonoBehaviour:
   Cost: 0
   SingleBonus: 0
   Text: {fileID: 1812279750}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!114 &1329646820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33902,6 +34095,7 @@ MonoBehaviour:
   levelText: {fileID: 718591277}
   incomeText: {fileID: 1551180118}
   priceText: {fileID: 1468362995}
+  isPossibleToBuy: 0
 --- !u!114 &1380698750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33946,13 +34140,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1380698749}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -36101,7 +36295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 1000000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -38097,8 +38291,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -38172,6 +38366,8 @@ MonoBehaviour:
   Cost: 23500000
   SingleBonus: 3500
   Text: {fileID: 1027544102}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &1527184992
 GameObject:
   m_ObjectHideFlags: 0
@@ -38630,8 +38826,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -38704,6 +38900,8 @@ MonoBehaviour:
   Cost: 50000000
   SingleBonus: 10000
   Text: {fileID: 357145443}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &1550561560
 GameObject:
   m_ObjectHideFlags: 0
@@ -38784,6 +38982,7 @@ MonoBehaviour:
   levelText: {fileID: 1734914883}
   incomeText: {fileID: 1707382569}
   priceText: {fileID: 452039050}
+  isPossibleToBuy: 0
 --- !u!114 &1550561564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38828,13 +39027,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1550561563}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -39500,6 +39699,7 @@ MonoBehaviour:
   levelText: {fileID: 1476874176}
   incomeText: {fileID: 561996585}
   priceText: {fileID: 702094920}
+  isPossibleToBuy: 0
 --- !u!114 &1571595775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39544,13 +39744,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1571595774}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -39913,6 +40113,7 @@ MonoBehaviour:
   levelText: {fileID: 950621150}
   incomeText: {fileID: 284352537}
   priceText: {fileID: 148630745}
+  isPossibleToBuy: 0
 --- !u!224 &1580239186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39978,13 +40179,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1580239185}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -40120,6 +40321,7 @@ MonoBehaviour:
   levelText: {fileID: 2051846859}
   incomeText: {fileID: 1391454449}
   priceText: {fileID: 1782711866}
+  isPossibleToBuy: 0
 --- !u!114 &1581504116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40164,13 +40366,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1581504115}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1571595774}
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -40418,6 +40620,7 @@ MonoBehaviour:
   levelText: {fileID: 296617574}
   incomeText: {fileID: 2144374386}
   priceText: {fileID: 537522454}
+  isPossibleToBuy: 0
 --- !u!114 &1603048062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40462,13 +40665,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1603048061}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -41583,7 +41786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 1000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -43648,7 +43851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0426\u0435\u043D\u0430"
+  m_text: 5000000000 D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
   m_sharedMaterial: {fileID: -565734532980420628, guid: b61a066b4c9566e488bab4f6fd94210d, type: 2}
@@ -43941,6 +44144,7 @@ MonoBehaviour:
   levelText: {fileID: 956448929}
   incomeText: {fileID: 659926511}
   priceText: {fileID: 1173137578}
+  isPossibleToBuy: 0
 --- !u!114 &1758263550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43985,13 +44189,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1758263549}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -44798,8 +45002,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -44871,6 +45075,8 @@ MonoBehaviour:
   Cost: 4000000000
   SingleBonus: 150000
   Text: {fileID: 284269266}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &1788911955
 GameObject:
   m_ObjectHideFlags: 0
@@ -46135,6 +46341,7 @@ MonoBehaviour:
   levelText: {fileID: 1408005524}
   incomeText: {fileID: 61925289}
   priceText: {fileID: 1795422994}
+  isPossibleToBuy: 0
 --- !u!114 &1822094308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46179,13 +46386,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1822094307}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -46309,6 +46516,7 @@ MonoBehaviour:
   levelText: {fileID: 823117457}
   incomeText: {fileID: 626816730}
   priceText: {fileID: 499646176}
+  isPossibleToBuy: 0
 --- !u!114 &1833667522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46353,13 +46561,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1833667521}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -46639,8 +46847,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -46712,6 +46920,8 @@ MonoBehaviour:
   Cost: 5000000000
   SingleBonus: 250000
   Text: {fileID: 1752278080}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &1848728024
 GameObject:
   m_ObjectHideFlags: 0
@@ -46932,8 +47142,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -47006,6 +47216,8 @@ MonoBehaviour:
   Cost: 2100000000
   SingleBonus: 100000
   Text: {fileID: 452554493}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &1864777386
 GameObject:
   m_ObjectHideFlags: 0
@@ -48225,6 +48437,7 @@ MonoBehaviour:
   levelText: {fileID: 1345706295}
   incomeText: {fileID: 1910830333}
   priceText: {fileID: 859540832}
+  isPossibleToBuy: 0
 --- !u!224 &1898345461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48290,13 +48503,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1898345460}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -48841,6 +49054,7 @@ MonoBehaviour:
   levelText: {fileID: 194941060}
   incomeText: {fileID: 1184055970}
   priceText: {fileID: 1488202495}
+  isPossibleToBuy: 0
 --- !u!114 &1903836969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48885,13 +49099,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1903836968}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -49611,6 +49825,7 @@ MonoBehaviour:
   levelText: {fileID: 858948067}
   incomeText: {fileID: 2005512549}
   priceText: {fileID: 687955563}
+  isPossibleToBuy: 0
 --- !u!114 &1924545796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49655,13 +49870,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1924545795}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -50072,8 +50287,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
         m_MethodName: BuyTask
         m_Mode: 2
         m_Arguments:
@@ -50144,6 +50359,8 @@ MonoBehaviour:
   Cost: 25000
   SingleBonus: 100
   Text: {fileID: 87786840}
+  IsTaskBuy: 0
+  isPossibleToBuy: 0
 --- !u!1 &1938027115
 GameObject:
   m_ObjectHideFlags: 0
@@ -50213,6 +50430,7 @@ MonoBehaviour:
   levelText: {fileID: 1265662296}
   incomeText: {fileID: 512566536}
   priceText: {fileID: 1955014847}
+  isPossibleToBuy: 0
 --- !u!114 &1938027118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50257,13 +50475,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1938027117}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -51662,6 +51880,7 @@ MonoBehaviour:
   task: {fileID: 37526692}
   items: []
   Text: {fileID: 403998134}
+  isPossibleToBuy: 0
 --- !u!114 &1987446004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51706,13 +51925,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1987446002}
-        m_TargetAssemblyTypeName: OneTimeItem, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyOneTimeItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1987446002}
+          m_ObjectArgumentAssemblyTypeName: OneTimeItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -52244,6 +52463,7 @@ MonoBehaviour:
   levelText: {fileID: 1557737378}
   incomeText: {fileID: 1754757627}
   priceText: {fileID: 630258679}
+  isPossibleToBuy: 0
 --- !u!114 &2017364200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52288,13 +52508,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2017364199}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -52414,6 +52634,7 @@ MonoBehaviour:
   - {fileID: 1987446002}
   - {fileID: 408664107}
   Text: {fileID: 1717539749}
+  isPossibleToBuy: 0
 --- !u!114 &2019001327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52458,13 +52679,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2019001325}
-        m_TargetAssemblyTypeName: OneTimeItem, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyOneTimeItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1276309521}
-          m_ObjectArgumentAssemblyTypeName: Crypto_Mechanics.PlayerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 2019001325}
+          m_ObjectArgumentAssemblyTypeName: OneTimeItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -53424,6 +53645,7 @@ MonoBehaviour:
   levelText: {fileID: 201860926}
   incomeText: {fileID: 661575872}
   priceText: {fileID: 1195014514}
+  isPossibleToBuy: 0
 --- !u!224 &2067227272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53489,13 +53711,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1276309522}
-        m_TargetAssemblyTypeName: CryptoCurrencyScript, Assembly-CSharp
-        m_MethodName: BuyOrUpgrade
+      - m_Target: {fileID: 1146429770}
+        m_TargetAssemblyTypeName: PurshareManager, Assembly-CSharp
+        m_MethodName: BuyUpgradableItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2067227271}
-          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UpgradableItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
