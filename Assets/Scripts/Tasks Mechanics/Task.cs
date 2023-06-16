@@ -2,13 +2,10 @@
 using Crypto_Mechanics;
 using UnityEngine;
 using TMPro;
-using Crypto_Mechanics.Serialization;
-using System.IO;
-using System;
 
 public class Task : MonoBehaviour
 {
-    [SerializeField] private PlayerData data;
+    [SerializeField] public PlayerData data;
     [SerializeField] public List<UpgradableItem> items;
     [SerializeField] public List<OneTimeItem> oneTimeItems;
     [SerializeField] public int PlaceInParent;
@@ -17,59 +14,17 @@ public class Task : MonoBehaviour
     [SerializeField] public TextMeshProUGUI Text;
 
     public bool IsTaskBuy = false;
-    private bool isPossibleToBuy = false;
+    public bool isPossibleToBuy = false;
 
-    private void Start()
+    public void InitializeTextes(SavedTasks tasks)
     {
-        if (!File.Exists(Application.dataPath + "/Tasks.json")) return;
-
-        var newData = JsonUtility.FromJson<SavedTasks>(
-            File.ReadAllText(Application.dataPath + "/Tasks.json"));
-
         if (PlaceInParent == 0) return;
-        IsTaskBuy = newData.Tasks[PlaceInParent - 1].IsTaskWasBuy;
+        IsTaskBuy = tasks.Tasks[PlaceInParent - 1].IsTaskWasBuy;
 
-        if (newData.Tasks[PlaceInParent - 1].IsTaskWasBuy) Text.text = $"Приобретено";
+        if (tasks.Tasks[PlaceInParent - 1].IsTaskWasBuy) Text.text = $"Приобретено";
         else Text.text = $"{Cost} D";
     }
-
-    public void Buy(PlayerData data)
-    {
-        for (int i = 0; i < items.Count; i++)
-        {
-            if (items[i].Level > 0) isPossibleToBuy = true;
-            else
-            {
-                isPossibleToBuy = false;
-                break;
-            }
-        }
-
-        for (int i = 0; i < oneTimeItems.Count; i++)
-        {
-            if (oneTimeItems[i].Text.text == "Приобретено") isPossibleToBuy = true;
-            else
-            {
-                isPossibleToBuy = false;
-                break;
-            }
-        }
-
-        if ((data.TotalCurrencyCnt >= Cost && isPossibleToBuy && Text.text != "Приобретено")
-            || (PlaceInParent == 4 && data.Tasks.Count > 0 && data.Tasks[2].Text.text == "Приобретено")
-            || (PlaceInParent == 13 && data.Tasks.Count > 0 && data.Tasks[11].Text.text == "Приобретено")
-            )
-        {
-            data.TotalCurrencyCnt -= Cost;
-            data.TotalCurrencyCnt += SingleBonus;
-            data.CurrencyScript.TextTotalCurrencyCnt.text = $"{Math.Round(data.TotalCurrencyCnt, 1)}";
-            IsTaskBuy = true;
-            //data.Tasks.Add(this);
-            Text.text = "Приобретено";
-        }
-    }
 }
-
 
 #region
 //Зачатки вывода задач
