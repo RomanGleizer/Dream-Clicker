@@ -4,13 +4,13 @@ using UnityEngine;
 public class OneTimeItem : Item
 {
     [SerializeField] private CryptoCurrencyScript currencyScript;
-    [SerializeField] public double Price;
-    [SerializeField] public int NumberInParent;
-    [SerializeField] public Task task;
-    [SerializeField] public OneTimeItem[] items;
-    [SerializeField] public TextMeshProUGUI Text;
 
-    public bool isPossibleToBuy;
+    public double Price;
+    public int NumberInParent;
+    public Task task;
+    public OneTimeItem[] items;
+    public TextMeshProUGUI Text;
+    public bool IsPossibleToBuy;
 
     public void InitializeTextes(SavedOneTimeItems items)
     {

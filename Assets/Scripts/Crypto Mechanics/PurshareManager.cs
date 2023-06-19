@@ -1,12 +1,14 @@
 using Crypto_Mechanics;
 using System;
+using System.IO;
 using UnityEngine;
 
 public class PurshareManager : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
-    [SerializeField] protected CryptoCurrencyScript currencyScript;
-    
+    [SerializeField] private CryptoCurrencyScript currencyScript;
+    [SerializeField] private DataSaver dataSaver;
+
     public Predicate<SerializableUpItem> IsUpItemWasBought = 
         x => x.Level > 0;
     public Predicate<SerializableOneTimeUpgradableItem> IsOneTimeItemWasBought =
@@ -20,37 +22,51 @@ public class PurshareManager : MonoBehaviour
 
         for (int i = 0; i < item.items.Length; i++)
         {
-            if (item.items[i].Level > 0) item.isPossibleToBuy = true;
+            if (item.items[i].Level > 0) item.IsPossibleToBuy = true;
             else
             {
-                item.isPossibleToBuy = false;
+                item.IsPossibleToBuy = false;
                 break;
             }
         }
-        if ((item.task.Text.text == "Приобретено" && item.isPossibleToBuy)
-            || ((item.task.Text.text == "Приобретено" || item.task.Text.text == "Пусто") 
-            && item.items.Length == 0))
-        {
-            var deltaIncome = item.Income;
-            var previousIncome = item.Income;
 
+        var checkedText = item.Task.Text.text;
+        if ((checkedText == "Приобретено" && item.IsPossibleToBuy)
+            || ((checkedText == "Приобретено" || checkedText == "Пусто") && item.items.Length == 0))
+        {
+            var previousIncome = item.Income;
             item.Income = Math.Round(item.Income * 1.3, 1);
-            deltaIncome = item.Income - previousIncome;
+            var deltaIncome = item.Income - previousIncome;
 
             if (item.Level == 0) deltaIncome = item.Income;
-            if (item.Type == IncomeType.Active)
-                playerData.TotalIncomes.Active += deltaIncome;
-            else if (item.Type == IncomeType.Passive)
-                playerData.TotalIncomes.Passive += deltaIncome;
+            if (item.Type == IncomeType.Active) playerData.TotalIncomes.Active += deltaIncome;
+            else if (item.Type == IncomeType.Passive) playerData.TotalIncomes.Passive += deltaIncome;
             playerData.TotalCurrencyCnt -= item.Price;
 
             currencyScript.TextTotalCurrencyCnt.text = $"{(playerData.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(playerData.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Е{Math.Round(playerData.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(playerData.TotalCurrencyCnt, 1))} D";
-            currencyScript.textCurrencyCntPerClick.text = $"{(playerData.TotalIncomes.Active > 10000 ? $"{Math.Round(double.Parse(playerData.TotalIncomes.Active.ToString().Substring(0, 3)) / 100, 2)}Е{Math.Round(playerData.TotalIncomes.Active).ToString().Length - 1}" : playerData.TotalIncomes.Active)} D";
-            currencyScript.textPassive.text = $"{(playerData.TotalIncomes.Passive > 10000 ? $"{Math.Round(double.Parse(playerData.TotalIncomes.Passive.ToString().Substring(0, 3)) / 100, 2)}Е{Math.Round(playerData.TotalIncomes.Passive).ToString().Length - 1}" : playerData.TotalIncomes.Passive)} D/s";
+            currencyScript.TextCurrencyCntPerClick.text = $"{(playerData.TotalIncomes.Active > 10000 ? $"{Math.Round(double.Parse(playerData.TotalIncomes.Active.ToString().Substring(0, 3)) / 100, 2)}Е{Math.Round(playerData.TotalIncomes.Active).ToString().Length - 1}" : playerData.TotalIncomes.Active)} D";
+            currencyScript.TextPassive.text = $"{(playerData.TotalIncomes.Passive > 10000 ? $"{Math.Round(double.Parse(playerData.TotalIncomes.Passive.ToString().Substring(0, 3)) / 100, 2)}Е{Math.Round(playerData.TotalIncomes.Passive).ToString().Length - 1}" : playerData.TotalIncomes.Passive)} D/s";
 
             item.Level++;
             item.Price = Math.Round(item.Price * 1.3, 1);
             item.SetTextes(item.Level, item.Income, item.Price);
+
+            if (item.Type == IncomeType.Active)
+            {
+                dataSaver.SaveUpgradableItemListData(
+                    playerData.UpgradableActiveItemList, 
+                    dataSaver.ActiveButtons, 
+                    Application.dataPath + "/Actives.json", 
+                    new SavedActives(playerData));
+            }
+            else if (item.Type == IncomeType.Passive)
+            {
+                dataSaver.SaveUpgradableItemListData(
+                    playerData.UpgradablePassiveItemList,
+                    dataSaver.PassiveButtons,
+                    Application.dataPath + "/Passives.json",
+                    new SavedPassives(playerData));
+            }
         }
     }
 
@@ -58,58 +74,70 @@ public class PurshareManager : MonoBehaviour
     {
         for (int i = 0; i < oneTimeItem.items.Length; i++)
         {
-            if (oneTimeItem.items[i].Text.text == "Приобретено") oneTimeItem.isPossibleToBuy = true;
+            if (oneTimeItem.items[i].Text.text == "Приобретено") oneTimeItem.IsPossibleToBuy = true;
             else
             {
-                oneTimeItem.isPossibleToBuy = false;
+                oneTimeItem.IsPossibleToBuy = false;
                 break;
             }
         }
 
         if (playerData.TotalCurrencyCnt < oneTimeItem.Price && oneTimeItem.Text.text == "Приобретено")
             return;
-        else if (playerData.TotalCurrencyCnt >= oneTimeItem.Price
+        
+        if (playerData.TotalCurrencyCnt >= oneTimeItem.Price
             && oneTimeItem.task.Text.text == "Приобретено"
-            && (oneTimeItem.isPossibleToBuy || oneTimeItem.items.Length == 0))
+            && (oneTimeItem.IsPossibleToBuy || oneTimeItem.items.Length == 0))
         {
             playerData.TotalCurrencyCnt -= oneTimeItem.Price;
             currencyScript.TextTotalCurrencyCnt.text = $"{(playerData.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(playerData.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Е{Math.Round(playerData.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(playerData.TotalCurrencyCnt, 1))} D";
             oneTimeItem.Text.text = "Приобретено";
+            dataSaver.SaveOneItemListData(
+                playerData.OneTimeItems, 
+                dataSaver.OneTimeButtons, 
+                Application.dataPath + "/OneTimeItems.json", 
+                new SavedOneTimeItems(playerData));
         }
     }
 
     public void BuyTask(Task task)
     {
-        for (int i = 0; i < task.items.Count; i++)
+        if (playerData.TotalCurrencyCnt < task.Cost) return;
+
+        for (int i = 0; i < task.Items.Count; i++)
         {
-            if (task.items[i].Level > 0) task.isPossibleToBuy = true;
+            if (task.Items[i].Level > 0) task.IsPossibleToBuy = true;
             else
             {
-                task.isPossibleToBuy = false;
+                task.IsPossibleToBuy = false;
+                break;
+            }
+        }
+        for (int i = 0; i < task.OneTimeItems.Count; i++)
+        {
+            if (task.OneTimeItems[i].Text.text == "Приобретено") task.IsPossibleToBuy = true;
+            else
+            {
+                task.IsPossibleToBuy = false;
                 break;
             }
         }
 
-        for (int i = 0; i < task.oneTimeItems.Count; i++)
-        {
-            if (task.oneTimeItems[i].Text.text == "Приобретено") task.isPossibleToBuy = true;
-            else
-            {
-                task.isPossibleToBuy = false;
-                break;
-            }
-        }
-
-        if ((task.data.TotalCurrencyCnt >= task.Cost && task.isPossibleToBuy && task.Text.text != "Приобретено")
-            || (task.PlaceInParent == 4 && task.data.Tasks.Count > 0 && task.data.Tasks[2].Text.text == "Приобретено")
-            || (task.PlaceInParent == 13 && task.data.Tasks.Count > 0 && task.data.Tasks[11].Text.text == "Приобретено")
+        if ((task.IsPossibleToBuy && task.Text.text != "Приобретено")
+            || (task.PlaceInParent == 4 && task.Data.Tasks[2].Text.text == "Приобретено")
+            || (task.PlaceInParent == 13 && task.Data.Tasks[11].Text.text == "Приобретено")
             )
         {
-            task.data.TotalCurrencyCnt -= task.Cost;
-            task.data.TotalCurrencyCnt += task.SingleBonus;
-            task.data.CurrencyScript.TextTotalCurrencyCnt.text = $"{(playerData.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(playerData.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Е{Math.Round(playerData.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(playerData.TotalCurrencyCnt, 1))} D";
+            task.Data.TotalCurrencyCnt -= task.Cost;
+            task.Data.TotalCurrencyCnt += task.SingleBonus;
+            task.Data.CurrencyScript.TextTotalCurrencyCnt.text = $"{(playerData.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(playerData.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Е{Math.Round(playerData.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(playerData.TotalCurrencyCnt, 1))} D";
             task.IsTaskBuy = true;
             task.Text.text = "Приобретено";
+            dataSaver.SaveTaskListData(
+                playerData.Tasks, 
+                dataSaver.Tasks, 
+                Application.dataPath + "/Tasks.json", 
+                new SavedTasks(playerData));
         }
     }
 }
