@@ -10,20 +10,19 @@ public class UpgradableItem : Item
     public const int MaxLevel = 25;
     public const double UpgradeActiveCoefficient = 1.3;
 
-    [SerializeField] public string Name;
-    [SerializeField] public Task task;
-    [SerializeField] public UpgradableItem[] items;
-    [SerializeField] public int NumberInParent;
     [SerializeField] private PlayerData playerData;
-    [SerializeField] public int Level;
-    [SerializeField] public IncomeType Type;
-    [SerializeField] public double Income;
-    [SerializeField] public double Price;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI incomeText;
     [SerializeField] private TextMeshProUGUI priceText;
 
-    public bool isPossibleToBuy;
+    public Task Task;
+    public UpgradableItem[] items;
+    public int NumberInParent;
+    public int Level;
+    public IncomeType Type;
+    public double Income;
+    public double Price;
+    public bool IsPossibleToBuy;
 
     public void InitializeTextes<T>(List<T> lst)
         where T : SerializableUpItem

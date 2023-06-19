@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using Crypto_Mechanics;
 using TMPro;
@@ -8,9 +7,10 @@ using UnityEngine;
 public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 {
     [SerializeField] private PlayerData playerData;
-    [SerializeField] public TextMeshProUGUI TextTotalCurrencyCnt;
-    [SerializeField] public TextMeshProUGUI textPassive;
-    [SerializeField] public TextMeshProUGUI textCurrencyCntPerClick;
+
+    public TextMeshProUGUI TextTotalCurrencyCnt;
+    public TextMeshProUGUI TextPassive;
+    public TextMeshProUGUI TextCurrencyCntPerClick;
 
     private const double OfflinePassiveIncomeCf = 0.1;
     private const double OnlineassiveIncomeCf = 0.3;

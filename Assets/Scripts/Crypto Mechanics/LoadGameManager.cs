@@ -35,7 +35,7 @@ public class LoadGameManager : MonoBehaviour
             || File.Exists(Application.dataPath + "/Tasks.json")
             || File.Exists(Application.dataPath + "/Balance.json"))
         {
-            dataSaver.SaveGameData();
+            SaveAllData();
             foreach (var operation in saveOperations)
                 operation();
         }
@@ -97,8 +97,35 @@ public class LoadGameManager : MonoBehaviour
         data.TotalIncomes.Passive = balance.totalIncomes.Passive;
 
         currencyScript.TextTotalCurrencyCnt.text = $"{(data.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(data.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Å{Math.Round(data.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(data.TotalCurrencyCnt, 1))} D";
-        currencyScript.textCurrencyCntPerClick.text = $"{(data.TotalIncomes.Active > 10000 ? $"{Math.Round(double.Parse(data.TotalIncomes.Active.ToString().Substring(0, 3)) / 100, 2)}Å{Math.Round(data.TotalIncomes.Active).ToString().Length - 1}" : data.TotalIncomes.Active)} D";
-        currencyScript.textPassive.text = $"{(data.TotalIncomes.Passive > 10000 ? $"{Math.Round(double.Parse(data.TotalIncomes.Passive.ToString().Substring(0, 3)) / 100, 2)}Å{Math.Round(data.TotalIncomes.Passive).ToString().Length - 1}" : data.TotalIncomes.Passive)} D/s";
+        currencyScript.TextCurrencyCntPerClick.text = $"{(data.TotalIncomes.Active > 10000 ? $"{Math.Round(double.Parse(data.TotalIncomes.Active.ToString().Substring(0, 3)) / 100, 2)}Å{Math.Round(data.TotalIncomes.Active).ToString().Length - 1}" : data.TotalIncomes.Active)} D";
+        currencyScript.TextPassive.text = $"{(data.TotalIncomes.Passive > 10000 ? $"{Math.Round(double.Parse(data.TotalIncomes.Passive.ToString().Substring(0, 3)) / 100, 2)}Å{Math.Round(data.TotalIncomes.Passive).ToString().Length - 1}" : data.TotalIncomes.Passive)} D/s";
+    }
+
+    private void SaveAllData()
+    {
+        dataSaver.SaveUpgradableItemListData(
+            data.UpgradableActiveItemList,
+            dataSaver.ActiveButtons,
+            Application.dataPath + "/Actives.json",
+            new SavedPassives(data));
+
+        dataSaver.SaveUpgradableItemListData(
+            data.UpgradablePassiveItemList,
+            dataSaver.PassiveButtons,
+            Application.dataPath + "/Passives.json",
+            new SavedPassives(data));
+
+        dataSaver.SaveOneItemListData(
+            data.OneTimeItems,
+            dataSaver.OneTimeButtons,
+            Application.dataPath + "/OneTimeItems.json",
+            new SavedOneTimeItems(data));
+
+        dataSaver.SaveTaskListData(
+            data.Tasks,
+            dataSaver.Tasks,
+            Application.dataPath + "/Tasks.json",
+            new SavedTasks(data));
     }
 
     private T GetData<T>(string path)

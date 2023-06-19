@@ -5,16 +5,15 @@ using TMPro;
 
 public class Task : MonoBehaviour
 {
-    [SerializeField] public PlayerData data;
-    [SerializeField] public List<UpgradableItem> items;
-    [SerializeField] public List<OneTimeItem> oneTimeItems;
-    [SerializeField] public int PlaceInParent;
-    [SerializeField] public double Cost;
-    [SerializeField] public double SingleBonus;
-    [SerializeField] public TextMeshProUGUI Text;
-
+    public PlayerData Data;
+    public List<UpgradableItem> Items;
+    public List<OneTimeItem> OneTimeItems;
+    public int PlaceInParent;
+    public double Cost;
+    public double SingleBonus;
+    public TextMeshProUGUI Text;
     public bool IsTaskBuy = false;
-    public bool isPossibleToBuy = false;
+    public bool IsPossibleToBuy = false;
 
     public void InitializeTextes(SavedTasks tasks)
     {

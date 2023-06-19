@@ -6,37 +6,24 @@ using UnityEngine;
 public class DataSaver : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
-    [SerializeField] public UpgradableItem[] ActiveButtons;
-    [SerializeField] public UpgradableItem[] PassiveButtons;
-    [SerializeField] public OneTimeItem[] OneTimeButtons;
-    [SerializeField] public Task[] Tasks;
+    
+    public UpgradableItem[] ActiveButtons;
+    public UpgradableItem[] PassiveButtons;
+    public OneTimeItem[] OneTimeButtons;
+    public Task[] Tasks;
 
     public void Update() 
-        => SaveGameData();
+        => SaveMoneyData();
 
-    public void SaveGameData()
-    {
-        SaveUpgradableItemListData(playerData.UpgradableActiveItemList, ActiveButtons);
-        File.WriteAllText(Application.dataPath + "/Actives.json",
-            JsonUtility.ToJson(new SavedActives(playerData)));
-
-        SaveUpgradableItemListData(playerData.UpgradablePassiveItemList, PassiveButtons);
-        File.WriteAllText(Application.dataPath + "/Passives.json",
-            JsonUtility.ToJson(new SavedPassives(playerData)));
-
-        SaveOneItemListData(playerData.OneTimeItems, OneTimeButtons);
-        File.WriteAllText(Application.dataPath + "/OneTimeItems.json",
-            JsonUtility.ToJson(new SavedOneTimeItems(playerData)));
-
-        SaveTaskListData(playerData.Tasks, Tasks);
-        File.WriteAllText(Application.dataPath + "/Tasks.json",
-            JsonUtility.ToJson(new SavedTasks(playerData)));
-
-        File.WriteAllText(Application.dataPath + "/Balance.json",
+    public void SaveMoneyData() 
+        => File.WriteAllText(Application.dataPath + "/Balance.json",
             JsonUtility.ToJson(new SavedBalance(playerData)));
-    }
 
-    private void SaveUpgradableItemListData(List<UpgradableItem> lst, UpgradableItem[] buttons)
+    public void SaveUpgradableItemListData<T>(
+        List<UpgradableItem> lst,
+        UpgradableItem[] buttons,
+        string path,
+        T savedData)
     {
         for (int i = 0; i < lst.Count; i++)
             if (buttons[i] != null)
@@ -45,17 +32,38 @@ public class DataSaver : MonoBehaviour
                 lst[i].Income = buttons[i].Income;
                 lst[i].Price = buttons[i].Price;
             }
+
+        File.WriteAllText(path, JsonUtility.ToJson(savedData));
     }
 
-    private void SaveOneItemListData(List<OneTimeItem> lst, OneTimeItem[] buttons)
+    public void SaveOneItemListData<T>(
+        List<OneTimeItem> lst, 
+        OneTimeItem[] buttons, 
+        string path,
+        T savedData)
     {
         for (int i = 0; i < lst.Count; i++)
-            if (buttons[i] != null) lst[i].Price = buttons[i].Price;
+            if (buttons[i] != null)
+            {
+                lst[i].Price = buttons[i].Price;
+                lst[i].NumberInParent = buttons[i].NumberInParent;
+            }
+        File.WriteAllText(path, JsonUtility.ToJson(savedData));
     }
 
-    private void SaveTaskListData(List<Task> lst, Task[] buttons)
+    public void SaveTaskListData<T>(
+        List<Task> lst, 
+        Task[] buttons, 
+        string path,
+        T savedData)
     {
         for (int i = 0; i < lst.Count; i++)
-            if (buttons[i] != null) lst[i].Cost = buttons[i].Cost;
+            if (buttons[i] != null)
+            {
+                lst[i].Cost = buttons[i].Cost;
+                lst[i].IsTaskBuy = buttons[i].IsTaskBuy;
+                lst[i].PlaceInParent = buttons[i].PlaceInParent;
+            }
+        File.WriteAllText(path, JsonUtility.ToJson(savedData));
     }
 }

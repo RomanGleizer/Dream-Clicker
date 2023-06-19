@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -412,10 +412,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 50e70500ced60500
-      m_LastClickedID: 382670
-      m_ExpandedIDs: b64cfffff683ffff0efbffff2e6200007a630000b8630000b66400003665000048650000a6650000ee650000b8660000e86600006667000060680000186a0000386a0000f46b0000106c0000ec6c0000006e0000ba700000c27000001071000028710000667200006a730000ee7400006e750000287600005476000018770000ae7800000c9b0400aa9c04007a9d0400e69d0400669e0400789e0400d69e04001e9f0400d89f0400e89f040010a0040018a0040096a0040026a204005aa2040048a3040068a30400eca4040024a504001ca6040038a70400eaa90400f2a9040038aa040058aa0400ceaa040096ab04008aac04009aac04009eae0400ccae040058af040084af040018b10400deb104007ce70500
+      scrollPos: {x: 0, y: 180}
+      m_SelectedIDs: 22250600
+      m_LastClickedID: 402722
+      m_ExpandedIDs: e2dffeff76e5feff1013ffff8436ffff5e6effff72f8ffff0efbffffae7b0000cc7c0000167d0000aa7d00001c7e0000887e0000c07f0000b2800000ba80000038810000be810000c8820000fc8200005a830000da830000ea83000032840000be860000da87000078890000088a0000208a0000b48a0000da8a0000708b0000388c00002c8d00003c8d00002690000054930000887f0200c87f0200148002007c8002009a800200f28002001a810200708102009682020048830200728402008e840200e8870200f087020028880200408802007e880200ea88020096890200a68902000c8b0200748b0200948b0200388c02003a8d0200942e0300a22e0300ea2e03000a2f0300402f0300c02f03002230030062300300a4300300ae300300ee30030016310300843103008c310300ac310300b43103000a32030068320300b43203001833030030330300383303008e330300da330300e2330300023403001a3403003e34030048340300e43403000c35030028350300ce3503001a3603004e36030076360300bc3703002e380300363803003e38030060380300723803007a380300823803008a380300aa380300b2380300ba380300c2380300da380300fa3803001839030084390300303a0300403a0300043b03005a3b0300a63b0300c63b03000e3c03002e3c0300d23c0300563d0300d43d0300663e030028130600721306008e1406003815060086160600081c0600c41c0600b21e0600ea200600f4220600c6230600462406009c24060022250600162c0600d22c0600a02e0600c02e0600f8300600
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -821,9 +821,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.2226304, y: 0.5835721, z: 557.15344}
+    m_Target: {x: 1.2518898, y: -0.70788497, z: 266.79184}
     speed: 2
-    m_Value: {x: 1.2226304, y: 0.5835721, z: 557.15344}
+    m_Value: {x: 1.2518898, y: -0.70788497, z: 266.79184}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -873,9 +873,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.45
+    m_Target: 5.720045
     speed: 2
-    m_Value: 10.45
+    m_Value: 5.720045
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -947,7 +947,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -955,16 +955,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Unity\Project\Dream-Clicker
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 667b0000
-    m_LastClickedID: 31590
-    m_ExpandedIDs: 000000002c7b00002e7b0000307b000000ca9a3b
+    m_SelectedIDs: 2c7b0000
+    m_LastClickedID: 31532
+    m_ExpandedIDs: 000000002c7b00002e7b0000307b00006c7b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1023,15 +1023,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300001665000026660000fe6500003c8e0000106600008a6a0000446d0000cc3f0500aa780500a4be010088710000447300004a6000004e600000ba6200006a670000baa6000078a8000000000000d0680000d268000058720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Task
-      m_OriginalName: Task
+      m_Name: PlayerData
+      m_OriginalName: PlayerData
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 8328
+      m_UserData: 2396
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -1123,7 +1123,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 778.4001
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
