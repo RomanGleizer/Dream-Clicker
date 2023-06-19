@@ -3,12 +3,19 @@ using System.Globalization;
 using System.IO;
 using UnityEngine;
 
-public class TimeHandler : MonoBehaviour
+public static class TimeHandler 
 {
-    private void Update()
+    private static string _currentTimeDataPath = null;
+
+    static TimeHandler()
+    {
+        _currentTimeDataPath = Application.dataPath + "/Last Visit Data.json";
+    }
+
+    public static void SaveTime()
     {
         File.WriteAllText(
-            Application.dataPath + "/Last Visit Data.json",
+            _currentTimeDataPath,
             DateTime.Now.ToString(CultureInfo.CurrentCulture));
     }
 }

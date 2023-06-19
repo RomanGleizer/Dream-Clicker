@@ -8,13 +8,8 @@ using UnityEngine;
 public class UpgradableItem : Item
 {
     public const int MaxLevel = 25;
-    public const double UpgradeActiveCoefficient = 1.3;
-
-    [SerializeField] private PlayerData playerData;
-    [SerializeField] private TextMeshProUGUI levelText;
-    [SerializeField] private TextMeshProUGUI incomeText;
-    [SerializeField] private TextMeshProUGUI priceText;
-
+    public double UpgradeCostCoefficient = 1.3;
+    public double UpgradeIncomeCoefficient = 1.3;
     public Task Task;
     public UpgradableItem[] items;
     public int NumberInParent;
@@ -23,6 +18,12 @@ public class UpgradableItem : Item
     public double Income;
     public double Price;
     public bool IsPossibleToBuy;
+
+    [SerializeField] private PlayerData playerData;
+    [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private TextMeshProUGUI incomeText;
+    [SerializeField] private TextMeshProUGUI priceText;
+    
 
     public void InitializeTextes<T>(List<T> lst)
         where T : SerializableUpItem

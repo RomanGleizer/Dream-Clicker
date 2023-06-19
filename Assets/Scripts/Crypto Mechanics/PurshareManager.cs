@@ -8,6 +8,10 @@ public class PurshareManager : MonoBehaviour
     [SerializeField] private PlayerData playerData;
     [SerializeField] private CryptoCurrencyScript currencyScript;
     [SerializeField] private DataSaver dataSaver;
+    private string _activesDataPath = null;
+    private string _passivesDataPath = null;
+    private string _oneTimeItemsDataPath = null;
+    private string _taskDataPath = null;
 
     public Predicate<SerializableUpItem> IsUpItemWasBought = 
         x => x.Level > 0;
@@ -15,6 +19,14 @@ public class PurshareManager : MonoBehaviour
         x => x.Text == "Приобретено";
     public Predicate<SerializableTask> IsTaskWasBought =
         x => x.IsTaskWasBuy == true;
+
+    private void Start()
+    {
+        _activesDataPath = Application.dataPath + "/Actives.json";
+        _passivesDataPath = Application.dataPath + "/Passives.json";
+        _oneTimeItemsDataPath = Application.dataPath + "/OneTimeItems.json";
+        _taskDataPath = Application.dataPath + "/Tasks.json";
+    }
 
     public void BuyUpgradableItem(UpgradableItem item)
     {
@@ -35,7 +47,7 @@ public class PurshareManager : MonoBehaviour
             || ((checkedText == "Приобретено" || checkedText == "Пусто") && item.items.Length == 0))
         {
             var previousIncome = item.Income;
-            item.Income = Math.Round(item.Income * 1.3, 1);
+            item.Income = Math.Round(item.Income * item.UpgradeIncomeCoefficient, 1);
             var deltaIncome = item.Income - previousIncome;
 
             if (item.Level == 0) deltaIncome = item.Income;
@@ -48,7 +60,7 @@ public class PurshareManager : MonoBehaviour
             currencyScript.TextPassive.text = $"{(playerData.TotalIncomes.Passive > 10000 ? $"{Math.Round(double.Parse(playerData.TotalIncomes.Passive.ToString().Substring(0, 3)) / 100, 2)}Е{Math.Round(playerData.TotalIncomes.Passive).ToString().Length - 1}" : playerData.TotalIncomes.Passive)} D/s";
 
             item.Level++;
-            item.Price = Math.Round(item.Price * 1.3, 1);
+            item.Price = Math.Round(item.Price * item.UpgradeCostCoefficient, 1);
             item.SetTextes(item.Level, item.Income, item.Price);
 
             if (item.Type == IncomeType.Active)
@@ -56,7 +68,7 @@ public class PurshareManager : MonoBehaviour
                 dataSaver.SaveUpgradableItemListData(
                     playerData.UpgradableActiveItemList, 
                     dataSaver.ActiveButtons, 
-                    Application.dataPath + "/Actives.json", 
+                    _activesDataPath, 
                     new SavedActives(playerData));
             }
             else if (item.Type == IncomeType.Passive)
@@ -64,7 +76,7 @@ public class PurshareManager : MonoBehaviour
                 dataSaver.SaveUpgradableItemListData(
                     playerData.UpgradablePassiveItemList,
                     dataSaver.PassiveButtons,
-                    Application.dataPath + "/Passives.json",
+                    _passivesDataPath,
                     new SavedPassives(playerData));
             }
         }
@@ -95,7 +107,7 @@ public class PurshareManager : MonoBehaviour
             dataSaver.SaveOneItemListData(
                 playerData.OneTimeItems, 
                 dataSaver.OneTimeButtons, 
-                Application.dataPath + "/OneTimeItems.json", 
+                _oneTimeItemsDataPath, 
                 new SavedOneTimeItems(playerData));
         }
     }
@@ -136,7 +148,7 @@ public class PurshareManager : MonoBehaviour
             dataSaver.SaveTaskListData(
                 playerData.Tasks, 
                 dataSaver.Tasks, 
-                Application.dataPath + "/Tasks.json", 
+                _taskDataPath, 
                 new SavedTasks(playerData));
         }
     }

@@ -14,12 +14,14 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private const double OfflinePassiveIncomeCf = 0.1;
     private const double OnlineassiveIncomeCf = 0.3;
-    private const float PassiveIncomeRepeatRate = 10;
+    private const float PassiveIncomeRepeatRate = 1;
+    private string _lastVisitDataPath = null;
 
     private void Awake()
     {
-        InvokeRepeating(nameof(AddOfflinePassiveIncome), 0f, PassiveIncomeRepeatRate);
-        InvokeRepeating(nameof(AddOnlinePassiveIncome), 0f, PassiveIncomeRepeatRate);
+        AddOfflinePassiveIncome();
+        InvokeRepeating(nameof(AddOnlinePassiveIncome), 1f, PassiveIncomeRepeatRate);
+        _lastVisitDataPath = Application.dataPath + "/Last Visit Data.json";
     }
 
     public void Tap()
@@ -36,9 +38,9 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void AddOfflinePassiveIncome()
     {
-        if (!File.Exists(Application.dataPath + "/Last Visit Data.json")) return;
+        if (!File.Exists(_lastVisitDataPath)) return;
 
-        var delta = DateTime.Now - DateTime.Parse(File.ReadAllText(Application.dataPath + "/Last Visit Data.json"));
+        var delta = DateTime.Now - DateTime.Parse(File.ReadAllText(_lastVisitDataPath));
         var income = playerData.TotalIncomes.Passive * (delta.TotalSeconds / PassiveIncomeRepeatRate) * OfflinePassiveIncomeCf;
         playerData.TotalCurrencyCnt += income;
     }

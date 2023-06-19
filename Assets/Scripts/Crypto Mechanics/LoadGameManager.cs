@@ -9,6 +9,11 @@ public class LoadGameManager : MonoBehaviour
     [SerializeField] private DataSaver dataSaver;
     [SerializeField] private PlayerData data;
     [SerializeField] private PurshareManager purshareManager;
+    private string _activesDataPath = null;
+    private string _passivesDataPath = null;
+    private string _oneTimeItemsDataPath = null;
+    private string _taskDataPath = null;
+    private string _balanceDataPath = null;
 
     private Action[] saveOperations;
 
@@ -23,17 +28,23 @@ public class LoadGameManager : MonoBehaviour
             LoadBalance
         };
 
-        if (File.Exists(Application.dataPath + "/Actives.json")) LoadActives();
-        if (File.Exists(Application.dataPath + "/Passives.json")) LoadPassives();
-        if (File.Exists(Application.dataPath + "/OneTimeItems.json")) LoadOneTimeItems();
-        if (File.Exists(Application.dataPath + "/Tasks.json")) LoadTasks();
-        if (File.Exists(Application.dataPath + "/Balance.json")) LoadBalance();
+        _activesDataPath = Application.dataPath + "/Actives.json";
+        _passivesDataPath = Application.dataPath + "/Passives.json";
+        _oneTimeItemsDataPath = Application.dataPath + "/OneTimeItems.json";
+        _taskDataPath = Application.dataPath + "/Tasks.json";
+        _balanceDataPath = Application.dataPath + "/Balance.json";
 
-        if (File.Exists(Application.dataPath + "/Actives.json")
-            || File.Exists(Application.dataPath + "/Passives.json")
-            || File.Exists(Application.dataPath + "/OneTimeItems.json")
-            || File.Exists(Application.dataPath + "/Tasks.json")
-            || File.Exists(Application.dataPath + "/Balance.json"))
+        if (File.Exists(_activesDataPath)) LoadActives();
+        if (File.Exists(_passivesDataPath)) LoadPassives();
+        if (File.Exists(_oneTimeItemsDataPath)) LoadOneTimeItems();
+        if (File.Exists(_taskDataPath)) LoadTasks();
+        if (File.Exists(_balanceDataPath)) LoadBalance();
+
+        if (File.Exists(_activesDataPath)
+            || File.Exists(_passivesDataPath)
+            || File.Exists(_oneTimeItemsDataPath)
+            || File.Exists(_taskDataPath)
+            || File.Exists(_balanceDataPath))
         {
             SaveAllData();
             foreach (var operation in saveOperations)
@@ -43,7 +54,7 @@ public class LoadGameManager : MonoBehaviour
 
     public void LoadActives()
     {
-        var activesData = GetData<SavedActives>(Application.dataPath + "/Actives.json");
+        var activesData = GetData<SavedActives>(_activesDataPath);
 
         for (int i = 0; i < activesData.SerializableUpActiveItems.Count; i++)
         {
@@ -55,7 +66,7 @@ public class LoadGameManager : MonoBehaviour
 
     public void LoadPassives()
     {
-        var passivesData = GetData<SavedPassives>(Application.dataPath + "/Passives.json");
+        var passivesData = GetData<SavedPassives>(_passivesDataPath);
 
         for (int i = 0; i < passivesData.SerializableUpPassiveItems.Count; i++)
         {
@@ -67,7 +78,7 @@ public class LoadGameManager : MonoBehaviour
 
     public void LoadOneTimeItems()
     {
-        var data = GetData<SavedOneTimeItems>(Application.dataPath + "/OneTimeItems.json");
+        var data = GetData<SavedOneTimeItems>(_oneTimeItemsDataPath);
 
         for (int i = 0; i < data.SerializableOneTimeItems.Count; i++)
         {
@@ -79,7 +90,7 @@ public class LoadGameManager : MonoBehaviour
 
     public void LoadTasks()
     {
-        var tasksData = GetData<SavedTasks>(Application.dataPath + "/Tasks.json");
+        var tasksData = GetData<SavedTasks>(_taskDataPath);
 
         for (int i = 0; i < tasksData.Tasks.Count; i++)
         {
@@ -91,7 +102,7 @@ public class LoadGameManager : MonoBehaviour
 
     public void LoadBalance()
     {
-        var balance = GetData<SavedBalance>(Application.dataPath + "/Balance.json");
+        var balance = GetData<SavedBalance>(_balanceDataPath);
         data.TotalCurrencyCnt = balance.TotalCurrencyCnt;
         data.TotalIncomes.Active = balance.totalIncomes.Active;
         data.TotalIncomes.Passive = balance.totalIncomes.Passive;
@@ -106,25 +117,25 @@ public class LoadGameManager : MonoBehaviour
         dataSaver.SaveUpgradableItemListData(
             data.UpgradableActiveItemList,
             dataSaver.ActiveButtons,
-            Application.dataPath + "/Actives.json",
+            _activesDataPath,
             new SavedPassives(data));
 
         dataSaver.SaveUpgradableItemListData(
             data.UpgradablePassiveItemList,
             dataSaver.PassiveButtons,
-            Application.dataPath + "/Passives.json",
+            _passivesDataPath,
             new SavedPassives(data));
 
         dataSaver.SaveOneItemListData(
             data.OneTimeItems,
             dataSaver.OneTimeButtons,
-            Application.dataPath + "/OneTimeItems.json",
+            _oneTimeItemsDataPath,
             new SavedOneTimeItems(data));
 
         dataSaver.SaveTaskListData(
             data.Tasks,
             dataSaver.Tasks,
-            Application.dataPath + "/Tasks.json",
+            _taskDataPath,
             new SavedTasks(data));
     }
 
