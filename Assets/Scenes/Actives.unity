@@ -363,9 +363,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6981.285}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15554902
@@ -1175,10 +1175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1028183403}
   Image: {fileID: 650569392}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 2039044852}
-  incomeText: {fileID: 136402404}
-  priceText: {fileID: 1235021786}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 953765080}
   items:
   - {fileID: 1645340330}
@@ -1188,6 +1186,10 @@ MonoBehaviour:
   Income: 110
   Price: 200000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 2039044852}
+  incomeText: {fileID: 136402404}
+  priceText: {fileID: 1235021786}
 --- !u!114 &66820232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2130,10 +2132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1206308810}
   Image: {fileID: 781329788}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1053166277}
-  incomeText: {fileID: 866152687}
-  priceText: {fileID: 837039117}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 834903001}
   items: []
   NumberInParent: 2
@@ -2142,6 +2142,10 @@ MonoBehaviour:
   Income: 3
   Price: 5000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1053166277}
+  incomeText: {fileID: 866152687}
+  priceText: {fileID: 837039117}
 --- !u!114 &109961750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2545,9 +2549,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1889.4414}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139478965
@@ -3548,10 +3552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 933279380}
   Image: {fileID: 144893726}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1859475758}
-  incomeText: {fileID: 1349380626}
-  priceText: {fileID: 1700961426}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1177352845}
   items: []
   NumberInParent: 10
@@ -3560,6 +3562,10 @@ MonoBehaviour:
   Income: 550
   Price: 20000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1859475758}
+  incomeText: {fileID: 1349380626}
+  priceText: {fileID: 1700961426}
 --- !u!114 &157563363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4155,9 +4161,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -2313.7617}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186872795
@@ -5159,10 +5165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 517632058}
   Image: {fileID: 177797765}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1322356664}
-  incomeText: {fileID: 506989620}
-  priceText: {fileID: 590695617}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 2009565323}
   items:
   - {fileID: 686978297}
@@ -5172,6 +5176,10 @@ MonoBehaviour:
   Income: 190
   Price: 2500000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1322356664}
+  incomeText: {fileID: 506989620}
+  priceText: {fileID: 590695617}
 --- !u!114 &224860574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5433,9 +5441,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -8678.566}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225048632
@@ -8440,50 +8448,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365898826}
   m_CullTransparentMesh: 1
---- !u!1 &377400819
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 377400821}
-  - component: {fileID: 377400820}
-  m_Layer: 0
-  m_Name: Time Handler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &377400820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377400819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b200a5a4fb8f5d04c8fcb582411bc49a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &377400821
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377400819}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34063077, y: 0.52700067, z: 529.7158}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390132390
 GameObject:
   m_ObjectHideFlags: 0
@@ -9569,10 +9533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1949304930}
   Image: {fileID: 1229417528}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1053381264}
-  incomeText: {fileID: 529917146}
-  priceText: {fileID: 892880931}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1981057237}
   items: []
   NumberInParent: 10
@@ -9581,6 +9543,10 @@ MonoBehaviour:
   Income: 475
   Price: 500000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1053381264}
+  incomeText: {fileID: 529917146}
+  priceText: {fileID: 892880931}
 --- !u!114 &439680973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10638,9 +10604,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -7829.926}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481346811
@@ -11216,10 +11182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 811362846}
   Image: {fileID: 1857943257}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 688478725}
-  incomeText: {fileID: 1077787991}
-  priceText: {fileID: 147513005}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 984072486}
   items: []
   NumberInParent: 11
@@ -11228,6 +11192,10 @@ MonoBehaviour:
   Income: 600
   Price: 800000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 688478725}
+  incomeText: {fileID: 1077787991}
+  priceText: {fileID: 147513005}
 --- !u!224 &497464911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12817,10 +12785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1664890433}
   Image: {fileID: 147089767}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 612764874}
-  incomeText: {fileID: 1255418111}
-  priceText: {fileID: 1586704014}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 984072486}
   items:
   - {fileID: 2052582888}
@@ -12831,6 +12797,10 @@ MonoBehaviour:
   Income: 2500
   Price: 1500000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 612764874}
+  incomeText: {fileID: 1255418111}
+  priceText: {fileID: 1586704014}
 --- !u!114 &538186182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13276,9 +13246,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -616.48047}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566720706
@@ -14667,10 +14637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 433082415}
   Image: {fileID: 299830882}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1122352927}
-  incomeText: {fileID: 1881784034}
-  priceText: {fileID: 2107552576}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 226002233}
   items: []
   NumberInParent: 14
@@ -14679,6 +14647,10 @@ MonoBehaviour:
   Income: 1500
   Price: 1800000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1122352927}
+  incomeText: {fileID: 1881784034}
+  priceText: {fileID: 2107552576}
 --- !u!224 &615721797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15363,10 +15335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 659604102}
   Image: {fileID: 327590630}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1607830116}
-  incomeText: {fileID: 601024014}
-  priceText: {fileID: 1904764631}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 226002233}
   items:
   - {fileID: 1667342899}
@@ -15376,6 +15346,10 @@ MonoBehaviour:
   Income: 15000
   Price: 3500000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1607830116}
+  incomeText: {fileID: 601024014}
+  priceText: {fileID: 1904764631}
 --- !u!114 &627959255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15795,9 +15769,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4859.6836}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650863068
@@ -16147,9 +16121,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -9102.887}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662550723
@@ -16983,10 +16957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1793069513}
   Image: {fileID: 1853834548}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 739367730}
-  incomeText: {fileID: 1914050773}
-  priceText: {fileID: 1191731815}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 2009565323}
   items: []
   NumberInParent: 5
@@ -16995,6 +16967,10 @@ MonoBehaviour:
   Income: 150
   Price: 1000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 739367730}
+  incomeText: {fileID: 1914050773}
+  priceText: {fileID: 1191731815}
 --- !u!224 &686978298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17569,9 +17545,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -3586.7227}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697110490
@@ -17838,10 +17814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1948926878}
   Image: {fileID: 1111355355}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1167785812}
-  incomeText: {fileID: 1258261461}
-  priceText: {fileID: 1644749509}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 2009565323}
   items:
   - {fileID: 1654331927}
@@ -17851,6 +17825,10 @@ MonoBehaviour:
   Income: 370
   Price: 3000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1167785812}
+  incomeText: {fileID: 1258261461}
+  priceText: {fileID: 1644749509}
 --- !u!114 &709348121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18151,10 +18129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1438465628}
   Image: {fileID: 1660478247}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 324275429}
-  incomeText: {fileID: 2031734127}
-  priceText: {fileID: 219047778}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1981057237}
   items:
   - {fileID: 2053618795}
@@ -18164,6 +18140,10 @@ MonoBehaviour:
   Income: 1200
   Price: 200000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 324275429}
+  incomeText: {fileID: 2031734127}
+  priceText: {fileID: 219047778}
 --- !u!114 &733115656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18623,9 +18603,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -3162.4023}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764698571
@@ -19504,9 +19484,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1465.1211}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &785768862
@@ -20562,10 +20542,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 2111220261}
   Image: {fileID: 1634743575}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 22658606}
-  incomeText: {fileID: 1089182248}
-  priceText: {fileID: 617626682}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 2009565323}
   items:
   - {fileID: 1654331927}
@@ -20576,6 +20554,10 @@ MonoBehaviour:
   Income: 400
   Price: 4000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 22658606}
+  incomeText: {fileID: 1089182248}
+  priceText: {fileID: 617626682}
 --- !u!114 &817709052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21875,10 +21857,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1087886805}
   Image: {fileID: 1352091578}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1579901391}
-  incomeText: {fileID: 474059325}
-  priceText: {fileID: 15774868}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 215475603}
   items: []
   NumberInParent: 17
@@ -21887,6 +21867,10 @@ MonoBehaviour:
   Income: 4000
   Price: 2200000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1579901391}
+  incomeText: {fileID: 474059325}
+  priceText: {fileID: 15774868}
 --- !u!114 &874902134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22237,10 +22221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 357544166}
   Image: {fileID: 1720597111}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 153503146}
-  incomeText: {fileID: 1860865340}
-  priceText: {fileID: 1120801491}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1177352845}
   items:
   - {fileID: 1206259887}
@@ -22251,6 +22233,10 @@ MonoBehaviour:
   Income: 360
   Price: 22000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 153503146}
+  incomeText: {fileID: 1860865340}
+  priceText: {fileID: 1120801491}
 --- !u!114 &910780909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22383,9 +22369,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6556.965}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &912166472
@@ -23120,10 +23106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1974027914}
   Image: {fileID: 1113135522}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1279630663}
-  incomeText: {fileID: 1334825457}
-  priceText: {fileID: 1189678946}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 591879482}
   items: []
   NumberInParent: 1
@@ -23132,6 +23116,10 @@ MonoBehaviour:
   Income: 1
   Price: 350
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1279630663}
+  incomeText: {fileID: 1334825457}
+  priceText: {fileID: 1189678946}
 --- !u!114 &931137783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25649,10 +25637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1765266748}
   Image: {fileID: 475393984}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 915214353}
-  incomeText: {fileID: 1821585540}
-  priceText: {fileID: 805691880}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 984072486}
   items:
   - {fileID: 2052582888}
@@ -25662,6 +25648,10 @@ MonoBehaviour:
   Income: 1800
   Price: 1200000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 915214353}
+  incomeText: {fileID: 1821585540}
+  priceText: {fileID: 805691880}
 --- !u!114 &998208024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25711,9 +25701,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -5708.324}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998562948
@@ -25904,10 +25894,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1327460301}
   Image: {fileID: 1423934055}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1414637529}
-  incomeText: {fileID: 513847156}
-  priceText: {fileID: 323193087}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 215475603}
   items:
   - {fileID: 874902133}
@@ -25917,6 +25905,10 @@ MonoBehaviour:
   Income: 4500
   Price: 2700000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1414637529}
+  incomeText: {fileID: 513847156}
+  priceText: {fileID: 323193087}
 --- !u!114 &1010109602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28017,9 +28009,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -7405.6055}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107724629
@@ -31471,10 +31463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 679522793}
   Image: {fileID: 1528104183}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 433521632}
-  incomeText: {fileID: 1478944236}
-  priceText: {fileID: 1822685349}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1177352845}
   items: []
   NumberInParent: 7
@@ -31483,6 +31473,10 @@ MonoBehaviour:
   Income: 245
   Price: 10000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 433521632}
+  incomeText: {fileID: 1478944236}
+  priceText: {fileID: 1822685349}
 --- !u!224 &1206259888
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32611,9 +32605,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -1040.8008}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255131868
@@ -34146,9 +34140,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4011.043}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283113759
@@ -34228,9 +34222,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -4435.3633}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291734800
@@ -35691,9 +35685,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -2738.082}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355802789
@@ -35854,9 +35848,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -5284.004}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375258767
@@ -37001,9 +36995,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -8254.246}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438085488
@@ -38950,10 +38944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1646967095}
   Image: {fileID: 188023833}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 2013374449}
-  incomeText: {fileID: 664479255}
-  priceText: {fileID: 216003333}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 215475603}
   items: []
   NumberInParent: 13
@@ -38962,6 +38954,10 @@ MonoBehaviour:
   Income: 800
   Price: 1500000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 2013374449}
+  incomeText: {fileID: 664479255}
+  priceText: {fileID: 216003333}
 --- !u!114 &1529240070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41256,9 +41252,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -9527.207}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626586222
@@ -41782,10 +41778,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1119611139}
   Image: {fileID: 960776752}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 170510172}
-  incomeText: {fileID: 145036770}
-  priceText: {fileID: 1464178742}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 953765080}
   items: []
   NumberInParent: 3
@@ -41794,6 +41788,10 @@ MonoBehaviour:
   Income: 50
   Price: 100000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 170510172}
+  incomeText: {fileID: 145036770}
+  priceText: {fileID: 1464178742}
 --- !u!224 &1645340331
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42342,10 +42340,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 501065492}
   Image: {fileID: 1191763589}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1278221035}
-  incomeText: {fileID: 1986366817}
-  priceText: {fileID: 1917007512}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 2009565323}
   items: []
   NumberInParent: 6
@@ -42354,6 +42350,10 @@ MonoBehaviour:
   Income: 350
   Price: 1500000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1278221035}
+  incomeText: {fileID: 1986366817}
+  priceText: {fileID: 1917007512}
 --- !u!114 &1654331928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42727,10 +42727,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 874741576}
   Image: {fileID: 1156369277}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 951810352}
-  incomeText: {fileID: 1171701030}
-  priceText: {fileID: 1115954202}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 226002233}
   items: []
   NumberInParent: 19
@@ -42739,6 +42737,10 @@ MonoBehaviour:
   Income: 10000
   Price: 3300000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 951810352}
+  incomeText: {fileID: 1171701030}
+  priceText: {fileID: 1115954202}
 --- !u!114 &1667342900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42786,10 +42788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 404436334}
   Image: {fileID: 1195270635}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 2089711840}
-  incomeText: {fileID: 1186440808}
-  priceText: {fileID: 994875079}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1177352845}
   items:
   - {fileID: 1206259887}
@@ -42799,6 +42799,10 @@ MonoBehaviour:
   Income: 300
   Price: 17000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 2089711840}
+  incomeText: {fileID: 1186440808}
+  priceText: {fileID: 994875079}
 --- !u!224 &1667513497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45557,10 +45561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 570744476}
   Image: {fileID: 1270971781}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 95078516}
-  incomeText: {fileID: 666024348}
-  priceText: {fileID: 1861408736}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 226002233}
   items:
   - {fileID: 615721796}
@@ -45570,6 +45572,10 @@ MonoBehaviour:
   Income: 2000
   Price: 2000000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 95078516}
+  incomeText: {fileID: 666024348}
+  priceText: {fileID: 1861408736}
 --- !u!114 &1773961417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46853,9 +46859,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -6132.6445}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824943959
@@ -51153,10 +51159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1905045164}
   Image: {fileID: 269223252}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1928947773}
-  incomeText: {fileID: 1753299999}
-  priceText: {fileID: 1159894520}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 2009565323}
   items:
   - {fileID: 1654331927}
@@ -51168,6 +51172,10 @@ MonoBehaviour:
   Income: 420
   Price: 6000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1928947773}
+  incomeText: {fileID: 1753299999}
+  priceText: {fileID: 1159894520}
 --- !u!114 &1996799980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52121,10 +52129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1928581924}
   Image: {fileID: 1166252645}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1438353910}
-  incomeText: {fileID: 679733393}
-  priceText: {fileID: 433500526}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1177352845}
   items:
   - {fileID: 157563362}
@@ -52134,6 +52140,10 @@ MonoBehaviour:
   Income: 700
   Price: 30000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1438353910}
+  incomeText: {fileID: 679733393}
+  priceText: {fileID: 433500526}
 --- !u!114 &2034127242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52803,10 +52813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 617630044}
   Image: {fileID: 186334287}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1073123701}
-  incomeText: {fileID: 1238156554}
-  priceText: {fileID: 756970369}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 984072486}
   items: []
   NumberInParent: 14
@@ -52815,6 +52823,10 @@ MonoBehaviour:
   Income: 1500
   Price: 900000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1073123701}
+  incomeText: {fileID: 1238156554}
+  priceText: {fileID: 756970369}
 --- !u!114 &2052582889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52977,10 +52989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1762730811}
   Image: {fileID: 708803176}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1208524303}
-  incomeText: {fileID: 1596168646}
-  priceText: {fileID: 1184105730}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 1981057237}
   items: []
   NumberInParent: 12
@@ -52989,6 +52999,10 @@ MonoBehaviour:
   Income: 1000
   Price: 100000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1208524303}
+  incomeText: {fileID: 1596168646}
+  priceText: {fileID: 1184105730}
 --- !u!114 &2053618796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53723,10 +53737,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 2132157611}
   Image: {fileID: 2115769992}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1348657704}
-  incomeText: {fileID: 487496312}
-  priceText: {fileID: 1241669203}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 984072486}
   items:
   - {fileID: 497464910}
@@ -53736,6 +53748,10 @@ MonoBehaviour:
   Income: 720
   Price: 1000000000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1348657704}
+  incomeText: {fileID: 487496312}
+  priceText: {fileID: 1241669203}
 --- !u!114 &2102836530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54857,10 +54873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1673553892}
   Image: {fileID: 1176472782}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 1512547086}
-  incomeText: {fileID: 131356125}
-  priceText: {fileID: 5112589976127052204}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 834903001}
   items: []
   NumberInParent: 2
@@ -54869,6 +54883,10 @@ MonoBehaviour:
   Income: 5
   Price: 4500
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 1512547086}
+  incomeText: {fileID: 131356125}
+  priceText: {fileID: 5112589976127052204}
 --- !u!114 &1067275640853038151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55327,10 +55345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1690706373}
   Image: {fileID: 643496753}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 983227508}
-  incomeText: {fileID: 228194542}
-  priceText: {fileID: 2401400482882759542}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 834903001}
   items:
   - {fileID: 828439610556214209}
@@ -55340,6 +55356,10 @@ MonoBehaviour:
   Income: 9
   Price: 8000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 983227508}
+  incomeText: {fileID: 228194542}
+  priceText: {fileID: 2401400482882759542}
 --- !u!1 &3500378228398997195
 GameObject:
   m_ObjectHideFlags: 0
@@ -55632,10 +55652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 1887982024}
   Image: {fileID: 1267373982}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 773693584}
-  incomeText: {fileID: 1051763004}
-  priceText: {fileID: 3907813313889518813}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 953765080}
   items:
   - {fileID: 4641243434172746552}
@@ -55645,6 +55663,10 @@ MonoBehaviour:
   Income: 300
   Price: 150000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 773693584}
+  incomeText: {fileID: 1051763004}
+  priceText: {fileID: 3907813313889518813}
 --- !u!114 &4641243434172746552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55659,10 +55681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 979796376}
   Image: {fileID: 1251997815}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 811241110}
-  incomeText: {fileID: 1840490314}
-  priceText: {fileID: 1414237036364927224}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 953765080}
   items: []
   NumberInParent: 4
@@ -55671,6 +55691,10 @@ MonoBehaviour:
   Income: 150
   Price: 60000
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 811241110}
+  incomeText: {fileID: 1840490314}
+  priceText: {fileID: 1414237036364927224}
 --- !u!1 &4679600559878888171
 GameObject:
   m_ObjectHideFlags: 0
@@ -55728,9 +55752,9 @@ RectTransform:
   m_Father: {fileID: 1637115025}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.015, y: -192.16016}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 824.03, y: 384.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5030370814811442916
@@ -55976,10 +56000,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: {fileID: 5458105909439738596}
   Image: {fileID: 1067275640853038151}
-  playerData: {fileID: 631964784}
-  levelText: {fileID: 6679425604782122822}
-  incomeText: {fileID: 6384383864144086891}
-  priceText: {fileID: 6148384562970066523}
+  UpgradeCostCoefficient: 1.3
+  UpgradeIncomeCoefficient: 1.3
   Task: {fileID: 591879482}
   items: []
   NumberInParent: 1
@@ -55988,6 +56010,10 @@ MonoBehaviour:
   Income: 1
   Price: 10
   IsPossibleToBuy: 0
+  playerData: {fileID: 631964784}
+  levelText: {fileID: 6679425604782122822}
+  incomeText: {fileID: 6384383864144086891}
+  priceText: {fileID: 6148384562970066523}
 --- !u!1 &5425275592042393315
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using Crypto_Mechanics;
 using System.Collections.Generic;
 using System.IO;
@@ -6,17 +7,32 @@ using UnityEngine;
 public class DataSaver : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
+    private string _balanceDataPath = null;
     
     public UpgradableItem[] ActiveButtons;
     public UpgradableItem[] PassiveButtons;
     public OneTimeItem[] OneTimeButtons;
     public Task[] Tasks;
 
-    public void Update() 
-        => SaveMoneyData();
+
+    private void Awake()
+    {
+        _balanceDataPath = Application.dataPath + "/Balance.json";
+    }
+
+    private void OnApplicationFocus()
+    {
+        SaveLastTime();
+        SaveMoneyData();
+    }
+    
+    public void SaveLastTime()
+    {
+        TimeHandler.SaveTime();
+    }
 
     public void SaveMoneyData() 
-        => File.WriteAllText(Application.dataPath + "/Balance.json",
+        => File.WriteAllText(_balanceDataPath,
             JsonUtility.ToJson(new SavedBalance(playerData)));
 
     public void SaveUpgradableItemListData<T>(
