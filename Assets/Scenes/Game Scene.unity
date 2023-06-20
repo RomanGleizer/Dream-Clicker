@@ -6642,6 +6642,7 @@ MonoBehaviour:
   - {fileID: 1491029410}
   Text: {fileID: 40509944}
   IsPossibleToBuy: 0
+  IsItemWasBought: 0
 --- !u!224 &275950115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33120,6 +33121,7 @@ MonoBehaviour:
   items: []
   Text: {fileID: 1934768130}
   IsPossibleToBuy: 0
+  IsItemWasBought: 0
 --- !u!114 &1275541814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33427,6 +33429,7 @@ MonoBehaviour:
   - {fileID: 1711213580}
   Text: {fileID: 1447844854}
   IsPossibleToBuy: 0
+  IsItemWasBought: 0
 --- !u!114 &1278075212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33855,6 +33858,7 @@ MonoBehaviour:
   - {fileID: 1275541812}
   Text: {fileID: 1781286262}
   IsPossibleToBuy: 0
+  IsItemWasBought: 0
 --- !u!114 &1281611357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38289,6 +38293,7 @@ MonoBehaviour:
   items: []
   Text: {fileID: 1128551490}
   IsPossibleToBuy: 0
+  IsItemWasBought: 0
 --- !u!224 &1491029411
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43975,6 +43980,7 @@ MonoBehaviour:
   - {fileID: 275950114}
   Text: {fileID: 896156417}
   IsPossibleToBuy: 0
+  IsItemWasBought: 0
 --- !u!224 &1711213581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45710,6 +45716,7 @@ MonoBehaviour:
   - {fileID: 1281611355}
   Text: {fileID: 258145622}
   IsPossibleToBuy: 0
+  IsItemWasBought: 0
 --- !u!114 &1780303950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46330,10 +46337,10 @@ RectTransform:
   m_Father: {fileID: 149140770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.14}
-  m_SizeDelta: {x: 30, y: 15}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.105, y: -8.32}
+  m_SizeDelta: {x: 67.557, y: 17.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798154507
 MonoBehaviour:
@@ -46355,7 +46362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 931f55092e63ec34c93961acf082dbd0, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0dcd511c2f4a42f44b14e685eb62cca4, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

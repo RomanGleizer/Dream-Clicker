@@ -28,23 +28,26 @@ public class LoadGameManager : MonoBehaviour
             LoadBalance
         };
 
-        _activesDataPath = Application.dataPath + "/Actives.json";
-        _passivesDataPath = Application.dataPath + "/Passives.json";
-        _oneTimeItemsDataPath = Application.dataPath + "/OneTimeItems.json";
-        _taskDataPath = Application.dataPath + "/Tasks.json";
-        _balanceDataPath = Application.dataPath + "/Balance.json";
+        _activesDataPath = Application.persistentDataPath + "/Actives.json";
+        _passivesDataPath = Application.persistentDataPath + "/Passives.json";
+        _oneTimeItemsDataPath = Application.persistentDataPath + "/OneTimeItems.json";
+        _taskDataPath = Application.persistentDataPath + "/Tasks.json";
+        _balanceDataPath = Application.persistentDataPath + "/Balance.json";
+    }
 
+    private void Start()
+    {
         if (File.Exists(_activesDataPath)) LoadActives();
         if (File.Exists(_passivesDataPath)) LoadPassives();
         if (File.Exists(_oneTimeItemsDataPath)) LoadOneTimeItems();
         if (File.Exists(_taskDataPath)) LoadTasks();
         if (File.Exists(_balanceDataPath)) LoadBalance();
 
-        if (File.Exists(_activesDataPath)
-            || File.Exists(_passivesDataPath)
-            || File.Exists(_oneTimeItemsDataPath)
-            || File.Exists(_taskDataPath)
-            || File.Exists(_balanceDataPath))
+        if (!File.Exists(_activesDataPath)
+            || !File.Exists(_passivesDataPath)
+            || !File.Exists(_oneTimeItemsDataPath)
+            || !File.Exists(_taskDataPath)
+            || !File.Exists(_balanceDataPath))
         {
             SaveAllData();
             foreach (var operation in saveOperations)
@@ -102,6 +105,8 @@ public class LoadGameManager : MonoBehaviour
 
     public void LoadBalance()
     {
+        if (!File.Exists(_balanceDataPath)) return;
+
         var balance = GetData<SavedBalance>(_balanceDataPath);
         data.TotalCurrencyCnt = balance.TotalCurrencyCnt;
         data.TotalIncomes.Active = balance.totalIncomes.Active;

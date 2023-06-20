@@ -11,6 +11,7 @@ public class OneTimeItem : Item
     public OneTimeItem[] items;
     public TextMeshProUGUI Text;
     public bool IsPossibleToBuy;
+    public bool IsItemWasBought;
 
     public void InitializeTextes(SavedOneTimeItems items)
     {

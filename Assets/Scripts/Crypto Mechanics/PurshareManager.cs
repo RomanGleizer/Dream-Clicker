@@ -16,16 +16,16 @@ public class PurshareManager : MonoBehaviour
     public Predicate<SerializableUpItem> IsUpItemWasBought = 
         x => x.Level > 0;
     public Predicate<SerializableOneTimeUpgradableItem> IsOneTimeItemWasBought =
-        x => x.Text == "Приобретено";
+        x => x.IsItemWasBought == true;
     public Predicate<SerializableTask> IsTaskWasBought =
         x => x.IsTaskWasBuy == true;
 
-    private void Start()
+    private void Awake()
     {
-        _activesDataPath = Application.dataPath + "/Actives.json";
-        _passivesDataPath = Application.dataPath + "/Passives.json";
-        _oneTimeItemsDataPath = Application.dataPath + "/OneTimeItems.json";
-        _taskDataPath = Application.dataPath + "/Tasks.json";
+        _activesDataPath = Application.persistentDataPath + "/Actives.json";
+        _passivesDataPath = Application.persistentDataPath + "/Passives.json";
+        _oneTimeItemsDataPath = Application.persistentDataPath + "/OneTimeItems.json";
+        _taskDataPath = Application.persistentDataPath + "/Tasks.json";
     }
 
     public void BuyUpgradableItem(UpgradableItem item)
@@ -104,6 +104,7 @@ public class PurshareManager : MonoBehaviour
             playerData.TotalCurrencyCnt -= oneTimeItem.Price;
             currencyScript.TextTotalCurrencyCnt.text = $"{(playerData.TotalCurrencyCnt > 10000000 ? $"{Math.Round(double.Parse(playerData.TotalCurrencyCnt.ToString().Substring(0, 4)) / 1000, 3)}Е{Math.Round(playerData.TotalCurrencyCnt).ToString().Length - 1}" : Math.Round(playerData.TotalCurrencyCnt, 1))} D";
             oneTimeItem.Text.text = "Приобретено";
+            oneTimeItem.IsItemWasBought = true;
             dataSaver.SaveOneItemListData(
                 playerData.OneTimeItems, 
                 dataSaver.OneTimeButtons, 

@@ -14,13 +14,12 @@ public class DataSaver : MonoBehaviour
     public OneTimeItem[] OneTimeButtons;
     public Task[] Tasks;
 
-
-    private void Start()
+    private void Awake()
     {
-        _balanceDataPath = Application.dataPath + "/Balance.json";
+        _balanceDataPath = Application.persistentDataPath + "/Balance.json";
     }
 
-    private void OnApplicationFocus()
+    private void Update()
     {
         SaveLastTime();
         SaveMoneyData();

@@ -9,7 +9,7 @@ public static class TimeHandler
 
     static TimeHandler()
     {
-        _currentTimeDataPath = Application.dataPath + "/Last Visit Data.json";
+        _currentTimeDataPath = Application.persistentDataPath + "/Last Visit Data.json";
     }
 
     public static void SaveTime()
