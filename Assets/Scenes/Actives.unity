@@ -15373,7 +15373,6 @@ GameObject:
   - component: {fileID: 631964781}
   - component: {fileID: 631964779}
   - component: {fileID: 631964780}
-  - component: {fileID: 631964782}
   - component: {fileID: 631964783}
   - component: {fileID: 631964784}
   - component: {fileID: 631964785}
@@ -15458,18 +15457,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &631964782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631964778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db8d068a5add4e4a8121f86fa7fbe20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &631964783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41084,7 +41071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1625678985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41162,19 +41149,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1625678988}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 631964782}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1625678988
 MonoBehaviour:
   m_ObjectHideFlags: 0

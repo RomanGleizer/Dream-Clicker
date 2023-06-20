@@ -15,7 +15,7 @@ public class DataSaver : MonoBehaviour
     public Task[] Tasks;
 
 
-    private void Awake()
+    private void Start()
     {
         _balanceDataPath = Application.dataPath + "/Balance.json";
     }

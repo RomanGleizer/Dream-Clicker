@@ -7,26 +7,22 @@ public class SceneLoader : MonoBehaviour
 {
     void Start()
     {
-        //LoadScene(1);
+        LoadScene(1);
     }
 
     public void LoadScene(int id)
     {
-        SceneManager.LoadScene(id);
-    }
-    /*public void LoadScene(string sceneName)
-    {
-        StartCoroutine(LoadSceneAsync(sceneName));
+        StartCoroutine(LoadSceneAsync(id));
     }
 
-    IEnumerator LoadSceneAsync(string sceneName)
+    IEnumerator LoadSceneAsync(int id)
     {
-        AsyncOperation LoadingScene = SceneManager.LoadSceneAsync(sceneName);
+        AsyncOperation LoadingScene = SceneManager.LoadSceneAsync(id);
 
         while (!LoadingScene.isDone)
         {
             int progress = Mathf.RoundToInt(LoadingScene.progress * 100);
             yield return null;
         }
-    }*/
+    }
 }

@@ -17,7 +17,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
     private const float PassiveIncomeRepeatRate = 1;
     private string _lastVisitDataPath = null;
 
-    private void Awake()
+    private void Start()
     {
         AddOfflinePassiveIncome();
         InvokeRepeating(nameof(AddOnlinePassiveIncome), 1f, PassiveIncomeRepeatRate);
