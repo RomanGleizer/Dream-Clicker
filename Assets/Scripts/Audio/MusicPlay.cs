@@ -34,6 +34,11 @@ public class MusicPlay : MonoBehaviour
         musicVolume = value;
     }
 
+    public void UpdateVolume()
+    {
+        musicVolume = volumeSlider.value;
+    }
+
     public void MuteButton(SoundSwitch button)
     {
         if (muted)
