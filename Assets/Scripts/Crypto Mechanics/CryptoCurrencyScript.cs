@@ -24,7 +24,7 @@ public class CryptoCurrencyScript : MonoBehaviour, ICryptoCurrency
 
     private void Start()
     {
-        Invoke(nameof(AddOfflinePassiveIncome), 0.1f);
+        AddOfflinePassiveIncome();
         InvokeRepeating(nameof(AddOnlinePassiveIncome), 1f, PassiveIncomeRepeatRate);
     }
 

@@ -86,7 +86,7 @@ public class PurshareManager : MonoBehaviour
     {
         for (int i = 0; i < oneTimeItem.items.Length; i++)
         {
-            if (oneTimeItem.items[i].Text.text == "Приобретено") oneTimeItem.IsPossibleToBuy = true;
+            if (oneTimeItem.items[i].IsItemWasBought) oneTimeItem.IsPossibleToBuy = true;
             else
             {
                 oneTimeItem.IsPossibleToBuy = false;
@@ -94,11 +94,11 @@ public class PurshareManager : MonoBehaviour
             }
         }
 
-        if (playerData.TotalCurrencyCnt < oneTimeItem.Price && oneTimeItem.Text.text == "Приобретено")
+        if (playerData.TotalCurrencyCnt < oneTimeItem.Price)
             return;
         
         if (playerData.TotalCurrencyCnt >= oneTimeItem.Price
-            && oneTimeItem.task.Text.text == "Приобретено"
+            && oneTimeItem.task.IsTaskBuy
             && (oneTimeItem.IsPossibleToBuy || oneTimeItem.items.Length == 0))
         {
             playerData.TotalCurrencyCnt -= oneTimeItem.Price;
@@ -128,7 +128,7 @@ public class PurshareManager : MonoBehaviour
         }
         for (int i = 0; i < task.OneTimeItems.Count; i++)
         {
-            if (task.OneTimeItems[i].Text.text == "Приобретено") task.IsPossibleToBuy = true;
+            if (task.OneTimeItems[i].IsItemWasBought) task.IsPossibleToBuy = true;
             else
             {
                 task.IsPossibleToBuy = false;

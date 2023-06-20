@@ -33,16 +33,7 @@ public class LoadGameManager : MonoBehaviour
         _oneTimeItemsDataPath = Application.persistentDataPath + "/OneTimeItems.json";
         _taskDataPath = Application.persistentDataPath + "/Tasks.json";
         _balanceDataPath = Application.persistentDataPath + "/Balance.json";
-    }
-
-    private void Start()
-    {
-        if (File.Exists(_activesDataPath)) LoadActives();
-        if (File.Exists(_passivesDataPath)) LoadPassives();
-        if (File.Exists(_oneTimeItemsDataPath)) LoadOneTimeItems();
-        if (File.Exists(_taskDataPath)) LoadTasks();
-        if (File.Exists(_balanceDataPath)) LoadBalance();
-
+        
         if (!File.Exists(_activesDataPath)
             || !File.Exists(_passivesDataPath)
             || !File.Exists(_oneTimeItemsDataPath)
@@ -50,11 +41,12 @@ public class LoadGameManager : MonoBehaviour
             || !File.Exists(_balanceDataPath))
         {
             SaveAllData();
-            foreach (var operation in saveOperations)
-                operation();
         }
+        foreach (var operation in saveOperations)
+            operation();
+        
     }
-
+    
     public void LoadActives()
     {
         var activesData = GetData<SavedActives>(_activesDataPath);
