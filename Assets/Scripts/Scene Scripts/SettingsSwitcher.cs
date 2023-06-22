@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SettingsSwitcher : MonoBehaviour
@@ -9,7 +7,7 @@ public class SettingsSwitcher : MonoBehaviour
 
     public void SwitchSetting()
     {
-        _gameElements.SetActive(_gameElements.activeSelf!);
-        _settings.SetActive(_gameElements.activeSelf);
+        _gameElements.SetActive(_settings.activeSelf);
+        _settings.SetActive(!_gameElements.activeSelf);
     }
 }

@@ -4889,9 +4889,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 631964786}
-          m_TargetAssemblyTypeName: SettingsSwitcher, Assembly-CSharp
-          m_MethodName: SwitchSetting
+        - m_Target: {fileID: 631964787}
+          m_TargetAssemblyTypeName: PassiveSwitcher, Assembly-CSharp
+          m_MethodName: SwitchPassive
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6328,11 +6328,11 @@ RectTransform:
   m_Children:
   - {fileID: 306512730}
   - {fileID: 1531655638}
-  - {fileID: 440303750}
-  - {fileID: 1431536288}
   - {fileID: 663778414}
+  - {fileID: 440303750}
   - {fileID: 1492314635}
   - {fileID: 753650516}
+  - {fileID: 1431536288}
   - {fileID: 212246529}
   - {fileID: 2103517582}
   m_Father: {fileID: 0}
@@ -16886,6 +16886,9 @@ MonoBehaviour:
   TextTotalCurrencyCnt: {fileID: 925041011}
   TextPassive: {fileID: 538873269}
   TextCurrencyCntPerClick: {fileID: 1154454243}
+  passiveSwitcher: {fileID: 631964787}
+  textPassiveDialogIncomeCnt: {fileID: 753650517}
+  textPassiveDialogTimeCnt: {fileID: 1431536289}
 --- !u!114 &631964784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57732,9 +57735,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 631964786}
-          m_TargetAssemblyTypeName: SettingsSwitcher, Assembly-CSharp
-          m_MethodName: SwitchSetting
+        - m_Target: {fileID: 631964787}
+          m_TargetAssemblyTypeName: PassiveSwitcher, Assembly-CSharp
+          m_MethodName: SwitchPassive
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
