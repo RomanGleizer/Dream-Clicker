@@ -17,10 +17,10 @@ public class OneTimeItem : Item
     {
         if (items.SerializableOneTimeItems.Count > 0)
         {
-            if (items.SerializableOneTimeItems[NumberInParent - 1].Text != "Приобретено")
-                Text.text = Price.ToString() + " D";
-            else Text.text = "Приобретено";
+            if (items.SerializableOneTimeItems[NumberInParent - 1].Text != "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")
+                Text.text = Price + " D";
+            else Text.text = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
         }
-        else Text.text = Price.ToString() + " D";
+        else Text.text = Price + " D";
     }
 }

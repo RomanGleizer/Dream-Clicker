@@ -9,15 +9,7 @@ public class SettingsSwitcher : MonoBehaviour
 
     public void SwitchSetting()
     {
-        if (_gameElements.activeSelf)
-        {
-            _gameElements.SetActive(false);
-            _settings.SetActive(true);
-        }
-        else
-        {
-            _gameElements.SetActive(true);
-            _settings.SetActive(false);
-        }
+        _gameElements.SetActive(_gameElements.activeSelf!);
+        _settings.SetActive(_gameElements.activeSelf);
     }
 }

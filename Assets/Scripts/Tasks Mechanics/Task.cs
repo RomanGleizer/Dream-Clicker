@@ -12,16 +12,14 @@ public class Task : MonoBehaviour
     public double Cost;
     public double SingleBonus;
     public TextMeshProUGUI Text;
-    public bool IsTaskBuy = false;
-    public bool IsPossibleToBuy = false;
+    public bool IsTaskBuy;
+    public bool IsPossibleToBuy;
 
     public void InitializeTextes(SavedTasks tasks)
     {
         if (PlaceInParent == 0) return;
         IsTaskBuy = tasks.Tasks[PlaceInParent - 1].IsTaskWasBuy;
-
-        if (tasks.Tasks[PlaceInParent - 1].IsTaskWasBuy) Text.text = $"Приобретено";
-        else Text.text = $"{Cost} D";
+        Text.text = IsTaskBuy ? "Приобретено" : $"{Cost} D";
     }
 }
 

@@ -17,11 +17,11 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator LoadSceneAsync(int id)
     {
-        AsyncOperation LoadingScene = SceneManager.LoadSceneAsync(id);
+        var LoadingScene = SceneManager.LoadSceneAsync(id);
 
         while (!LoadingScene.isDone)
         {
-            int progress = Mathf.RoundToInt(LoadingScene.progress * 100);
+            var progress = Mathf.RoundToInt(LoadingScene.progress * 100);
             yield return null;
         }
     }
